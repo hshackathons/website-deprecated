@@ -1,1 +1,1 @@
-var mlhApp=angular.module("mlhApp",[]);mlhApp.controller("mainController",function(o,n){o.events={},n({method:"GET",url:"../data.json"}).success(function(n,l,e,r){o.events=n,console.log(n)}).error(function(o,n,l,e){console.log(n)})});
+var mlhApp=angular.module("mlhApp",[]);mlhApp.controller("mainController",function(n,o){n.events={},o({method:"GET",url:"../data.json"}).success(function(o,l,e,r){n.events=o}).error(function(n,o,l,e){console.log(o)})});
