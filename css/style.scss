@@ -61,6 +61,13 @@ p, h1, h2, h3, h4, h5 {
 		font-size:20px;
 		font-weight:700;
 	}
+	a {
+		color:black;
+		text-decoration:none;
+		&:hover {
+			opacity:0.8;
+		}
+	}
 	h3 {
 		font-weight:500;
 		font-size:15px;
@@ -102,6 +109,9 @@ p, h1, h2, h3, h4, h5 {
 		color:rgb(198, 194, 190);
 		font-weight:700;
 		text-decoration:none;
+		&:hover {
+			opacity:0.8;
+		}
 	}
 }
 

@@ -1,0 +1,1 @@
+var mlhApp=angular.module("mlhApp",[]);mlhApp.controller("mainController",function(o,n){o.events={},n({method:"GET",url:"../data.json"}).success(function(n,l,e,r){o.events=n,console.log(n)}).error(function(o,n,l,e){console.log(n)})});

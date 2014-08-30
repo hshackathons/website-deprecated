@@ -46,6 +46,11 @@ p, h1, h2, h3, h4, h5 {
 .event h1 {
   font-size: 20px;
   font-weight: 700; }
+.event a {
+  color: black;
+  text-decoration: none; }
+  .event a:hover {
+    opacity: 0.8; }
 .event h3 {
   font-weight: 500;
   font-size: 15px; }
@@ -80,6 +85,8 @@ p, h1, h2, h3, h4, h5 {
     color: #c6c2be;
     font-weight: 700;
     text-decoration: none; }
+    .about a:hover {
+      opacity: 0.8; }
 
 .footer {
   margin-bottom: 25px; }
