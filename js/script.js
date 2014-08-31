@@ -3,7 +3,7 @@ var mlhApp = angular.module('mlhApp', []);
 	// create the controller and inject Angular's $scope
 	mlhApp.controller('mainController', function($scope, $http) {
 		$scope.events = {};
-		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=0&format=csv'}).
+		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=1214435617&format=csv'}).
 		    success(function(csv, status, headers, config) {
 		      var lines=csv.split("\n");
  			  var result = [];
