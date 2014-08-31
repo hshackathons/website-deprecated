@@ -1,1 +1,126 @@
-Minor League Hacking
+<!DOCTYPE html>
+<html lang="en" ng-app="mlhApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minor League Hacking</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="js/script.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body ng-controller="mainController">
+    
+
+    <div class="header" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <h1>Minor League Hacking</h1>
+          </div>
+          <div class="col-lg-7">
+            <ul class="text-right">
+              <li><a href="#header">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="mailto:sicong.liu98@gmail.com">CONTACT</a></li>
+              <li><a href="http://mlh.io">MLH.IO</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="dim">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 class="text-center">Events 2014 Season</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="events">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>UPCOMING EVENTS</h3><br>
+          </div>
+        </div>
+
+        <div class="event" ng-repeat="event in events">
+          <div class="row">
+            <hr>
+            <div class="col-lg-2">
+              <img ng-src="{{event.IMG}}" width="100%">
+            </div>
+            <div class="col-lg-5 col-lg-offset-1">
+              <a href="{{event.URL}}"><h1>{{event.Name}}</h1></a>
+              <p><i>{{event.Desc}}</i></p>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1">
+              <h3><i class="fa fa-calendar-o"></i>&nbsp;<b>{{event.Date}}</b></h3>
+              <h3><i class="fa fa-university"></i>{{event.Location}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <center>
+              <br><br><br><br>
+              <button class="add">+ Add Hackathon</button>
+              <button class="add">Thinking about organizing?</button>
+            </center>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>What is Minor League Hacking?</h1><br>
+            <p>Minor League Hacking is the definative high school hackathon league. We are an subset of <a href="http://mlh.io">Major League Hacking</a>, the official college hackathon league, with a focus on High School students interested in computer science and programming. We aim to inspire students to build cool products and change the world through hackathons.</p>
+            <p>You may be interested in reading about <a href="https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601">hackathons</a> and <a href="https://medium.com/hs-hackers/the-rise-of-the-high-school-hacker-81a5d7da7f51">high school hackers</a>.</p>
+            <br>
+            <p>Thinking of organizing a hackathon admitting high schoolers? We would love to get in touch with you!</p>
+            <p>Managed by the fine folks at MLH and <a href="http://twitter.com/lablayers">@lablayers</a> plus <a href="http://twitter.com/jimmyliu">@jimmyliu</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <center><p>&copy; Minor League Hacking 2014. Hackathons are of their respective owners.</p></center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
