@@ -76,6 +76,27 @@ p, h1, h2, h3, h4, h5 {
 		color:gray;
 		margin-right:10px;
 	}
+	border-top: 1px solid #ecf0f1;
+}
+
+.click {
+	padding: 30px 0px 30px 0px;
+}
+
+.expand {
+	padding: 0px 0px 30px 0px;
+	h3 {
+		font-weight:700;
+	}
+	h2 {
+		font-size:15px;
+		font-weight:400;
+		font-style: italic;
+		color:#95a5a6;
+		a {
+			color:#95a5a6;
+		}
+	}
 }
 
 .add {

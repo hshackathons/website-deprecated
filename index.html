@@ -64,18 +64,52 @@
         </div>
 
         <div class="event" ng-repeat="event in events">
-          <div class="row">
-            <hr>
-            <div class="col-lg-2">
-              <img ng-src="{{event.Image}}" width="165px" height="99px">
+          <div class="click" style="cursor: pointer;" ng-click="addClient = !addClient">
+            <div class="row">
+              <div class="col-lg-2">
+                <img ng-src="{{event.Image}}" width="165px" height="99px">
+              </div>
+              <div class="col-lg-5 col-lg-offset-1">
+                <a><h1>{{event.Name}}</h1></a>
+                <p><i>{{event.Desc}}</i></p>
+              </div>
+              <div class="col-lg-3 col-lg-offset-1">
+                <h3><i class="fa fa-calendar-o"></i>&nbsp;<b>{{event.Date}}</b></h3>
+                <h3><i class="fa fa-university"></i>{{event.Location}}</h3>
+              </div>
             </div>
-            <div class="col-lg-5 col-lg-offset-1">
-              <a href="{{event.URL}}"><h1>{{event.Name}}</h1></a>
-              <p><i>{{event.Desc}}</i></p>
-            </div>
-            <div class="col-lg-3 col-lg-offset-1">
-              <h3><i class="fa fa-calendar-o"></i>&nbsp;<b>{{event.Date}}</b></h3>
-              <h3><i class="fa fa-university"></i>{{event.Location}}</h3>
+          </div>
+          <div class="expand" ng-show="addClient">
+            <div class="row">
+              <div class="col-lg-offset-3 col-lg-4">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>Website</h3>
+                    <h3>High School Admitted</h3>
+                    <h3>College Admitted</h3>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2><a href="{{event.URL}}">{{event.URL}}</a></h2>
+                    <h2>{{event.hs}}</h2>
+                    <h2>{{event.college}}</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-offset-1 col-lg-4">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <h3>Travel $</h3>
+                    <h3>Application Admit</h3>
+                    <h3>Hardware</h3>
+                  </div>
+                  <div class="col-lg-7">
+                    <h2>{{event.travel}}</h2>
+                    <h2>{{event.application}}</h2>
+                    <h2>{{event.hardware}}</h2>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
