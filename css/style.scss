@@ -149,6 +149,36 @@ p, h1, h2, h3, h4, h5 {
 	}
 }
 
+.aboutus {
+	margin: 30px 0px 80px 0px;
+	h1 {
+		font-size:23px;
+		font-weight:700;
+		margin-bottom:20px;
+	}
+	p {
+		line-height:23px;
+		margin-bottom:15px;
+	}
+	h3 {
+		font-size:20px;
+	}
+	h4 {
+		font-size:24px;
+	}
+	img {
+		border-radius:180px;
+	}
+	a {
+		font-size:14px;
+		color:#95a5a6;
+		text-decoration:none;
+		&:hover {
+			opacity:0.8;
+		}
+	}
+}
+
 .footer {
 	margin-bottom:25px;
 	p {

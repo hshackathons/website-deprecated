@@ -115,6 +115,28 @@ p, h1, h2, h3, h4, h5 {
     .about a:hover {
       opacity: 0.8; }
 
+.aboutus {
+  margin: 30px 0px 80px 0px; }
+  .aboutus h1 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .aboutus p {
+    line-height: 23px;
+    margin-bottom: 15px; }
+  .aboutus h3 {
+    font-size: 20px; }
+  .aboutus h4 {
+    font-size: 24px; }
+  .aboutus img {
+    border-radius: 180px; }
+  .aboutus a {
+    font-size: 14px;
+    color: #95a5a6;
+    text-decoration: none; }
+    .aboutus a:hover {
+      opacity: 0.8; }
+
 .footer {
   margin-bottom: 25px; }
   .footer p {
