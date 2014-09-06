@@ -1,9 +1,33 @@
-var mlhApp = angular.module('mlhApp', []);
+var mlhApp = angular.module('mlhApp', ['ngRoute']);
+	
+	mlhApp.config(function($routeProvider) {
+		$routeProvider
+
+			// route for the home page
+			.when('/', {
+				templateUrl : 'views/home.html',
+				controller  : 'mainController'
+			})
+
+			// route for the about page
+			.when('/about', {
+				templateUrl : 'views/about.html',
+				controller  : 'aboutController'
+			});
+	});
 
 	// create the controller and inject Angular's $scope
 	mlhApp.controller('mainController', function($scope, $http) {
+		$scope.message = '2014 Season Events';
+	});
+
+	mlhApp.controller('aboutController', function($scope, $http) {
+		$scope.message = 'About Us';
+	});
+
+	mlhApp.controller('indexController', function($scope, $http) {
 		$scope.events = {};
-		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=0&format=csv'}).
+		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=1214435617&format=csv'}).
 		    success(function(csv, status, headers, config) {
 		      var lines=csv.split("\n");
  			  var result = [];
