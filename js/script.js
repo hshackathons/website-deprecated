@@ -9,6 +9,16 @@ var mlhApp = angular.module('mlhApp', ['ngRoute']);
 				controller  : 'mainController'
 			})
 
+			.when('/events', {
+				templateUrl : 'views/events.html',
+				controller  : 'eventsController'
+			})
+
+			.when('/organize', {
+				templateUrl : 'views/organize.html',
+				controller  : 'organizeController'
+			})
+
 			// route for the about page
 			.when('/about', {
 				templateUrl : 'views/about.html',
@@ -18,11 +28,19 @@ var mlhApp = angular.module('mlhApp', ['ngRoute']);
 
 	// create the controller and inject Angular's $scope
 	mlhApp.controller('mainController', function($scope, $http) {
+		$scope.message = 'The Official High School Hackathon League';
+	});
+
+	mlhApp.controller('eventsController', function($scope, $http) {
 		$scope.message = '2014 Season Events';
 	});
 
 	mlhApp.controller('aboutController', function($scope, $http) {
 		$scope.message = 'About Us';
+	});
+
+	mlhApp.controller('organizeController', function($scope, $http) {
+		$scope.message = 'Organize An Event';
 	});
 
 	mlhApp.controller('indexController', function($scope, $http) {

@@ -1,0 +1,105 @@
+
+      <div class="cat">
+        <div class="dim">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h1 class="text-center">{{ message }}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="events">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>UPCOMING EVENTS</h3><br>
+          </div>
+        </div>
+
+        <div class="event" ng-repeat="event in events">
+          <div class="click" style="cursor: pointer;" ng-click="addClient = !addClient">
+            <div class="row">
+              <div class="col-lg-2">
+                <img ng-src="{{event.Image}}" width="165px" height="99px">
+              </div>
+              <div class="col-lg-5 col-lg-offset-1">
+                <a><h1>{{event.Name}}</h1></a>
+                <p><i>{{event.Desc}}</i></p>
+              </div>
+              <div class="col-lg-3 col-lg-offset-1">
+                <h3><i class="fa fa-calendar-o"></i>&nbsp;<b>{{event.Date}}</b></h3>
+                <h3><i class="fa fa-university"></i>{{event.Location}}</h3>
+              </div>
+            </div>
+          </div>
+          <div class="expand" ng-show="addClient">
+            <div class="row">
+              <div class="col-lg-offset-3 col-lg-4">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3>Website</h3>
+                    <h3>High School Admitted</h3>
+                    <h3>College Admitted</h3>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2><a href="{{event.URL}}">{{event.URL}}</a></h2>
+                    <h2>{{event.hs}}</h2>
+                    <h2>{{event.college}}</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-offset-1 col-lg-4">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <h3>Travel $</h3>
+                    <h3>Application Admit</h3>
+                    <h3>Hardware</h3>
+                  </div>
+                  <div class="col-lg-7">
+                    <h2>{{event.travel}}</h2>
+                    <h2>{{event.application}}</h2>
+                    <h2>{{event.hardware}}</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-lg-offset-3 col-lg-9">
+                <h3>Review from past attendee</h3>
+                <h4>{{event.review}}</h4>
+                <h4 class="text-right">- {{event.reviewname}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <center>
+              <br><br><br><br>
+              <a href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing"><button class="add">+ Add Hackathon</button></a>
+              <button class="add">Thinking about organizing?</button>
+            </center>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>What is Minor League Hacking?</h1><br>
+            <p>Minor League Hacking (MiLH) is the definitive hackathon league for high school students. We help support and organize weekend long programming competitions where students get together to show off their technical skills. Each season, we bring together thousands of teenage hackers around the nation at various events ranging from 30 to 1,000 hackers. </p>
+            <p><a href="#about">Read More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
