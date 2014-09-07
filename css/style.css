@@ -165,6 +165,17 @@ p, h1, h2, h3, h4, h5 {
   .organize h2 {
     font-weight: 600;
     font-size: 20px; }
+  .organize h3 {
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 180px;
+    padding: 23px 10px 10px 10px;
+    height: 52px;
+    font-size: 30px;
+    width: 80%;
+    line-height: 0px; }
 
 .footer {
   margin-bottom: 25px; }
