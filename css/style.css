@@ -157,6 +157,15 @@ p, h1, h2, h3, h4, h5 {
     .aboutus a:hover {
       opacity: 0.8; }
 
+.organize {
+  margin: 30px 0px 100px 0px; }
+  .organize h1 {
+    font-size: 20px;
+    font-weight: 900; }
+  .organize h2 {
+    font-weight: 600;
+    font-size: 20px; }
+
 .footer {
   margin-bottom: 25px; }
   .footer p {
