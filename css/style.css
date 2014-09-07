@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Liberator;
+  src: url("../fonts/Liberator.ttf"); }
 p, h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif; }
 
@@ -26,6 +29,23 @@ p, h1, h2, h3, h4, h5 {
 .dim {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 75px 0px 75px 0px; }
+
+.home {
+  background: url("../img/yc.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 15px; }
+  .home h1 {
+    font-family: Liberator;
+    font-weight: 300;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30px; }
+  .home span {
+    background-color: #BF4D33;
+    padding: 10px 5px 0px 5px; }
 
 .cat {
   background: url("../img/yc.jpg") no-repeat center center;
