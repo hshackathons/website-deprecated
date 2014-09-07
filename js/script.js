@@ -1,6 +1,6 @@
 var mlhApp = angular.module('mlhApp', ['ngRoute']);
 	
-	mlhApp.config(function($routeProvider) {
+	mlhApp.config(function($routeProvider, $locationProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -24,6 +24,8 @@ var mlhApp = angular.module('mlhApp', ['ngRoute']);
 				templateUrl : 'views/about.html',
 				controller  : 'aboutController'
 			});
+
+			$locationProvider.html5Mode(true)
 	});
 
 	// create the controller and inject Angular's $scope
