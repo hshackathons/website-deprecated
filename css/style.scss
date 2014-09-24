@@ -2,13 +2,19 @@
 @import "material";
 @import "ripples";
 
+$dark: #455a64;
+
 @font-face {
     font-family: Liberator;
     src: url('../fonts/Liberator.ttf');
 }
 
+body {
+	font-weight: 300;
+}
+
 p, h1, h2, h3, h4, h5 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -38,6 +44,12 @@ p, h1, h2, h3, h4, h5 {
 		margin-top:7px;
 		font-weight:500;
 	}
+}
+
+.navbar .navbar-nav > li > a, .navbar .navbar-brand {
+	padding: 30px 20px;
+	font-size: 16px;
+	height: auto;
 }
 
 .dim {
@@ -233,9 +245,7 @@ p, h1, h2, h3, h4, h5 {
 }
 
 .footer {
-	margin-bottom:25px;
-	p {
-		margin:0px;
-		color:#95a5a6;
-	}
+	background-color: $dark;
+	padding: 50px 0;
+	color: white;
 }

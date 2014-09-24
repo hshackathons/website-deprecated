@@ -35,24 +35,34 @@
 </head>
   <body ng-controller="indexController">
     
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Minor League Hacking</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li><a class="withripple" href="#/">Home</a></li>
+              <li class="dropdown">
+                  <a href="#events" class="dropdown-toggle" data-toggle="dropdown">Schedule <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#events">Fall 2014</a></li>
+                      <li><a href="#events">Spring 2015</a></li>
+                  </ul>
+              </li>
+              <li><a class="withripple" href="#news">News</a></li>
+            </ul>
 
-    <div class="header" id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <h1>Minor League Hacking</h1>
-          </div>
-          <div class="col-lg-7">
-            <ul class="text-right">
-              <li><a class="withripple" href="#/">HOME</a></li>
-              <li><a class="withripple" href="#events">SCHEDULE</a></li>
-              <li><a class="withripple" href="#about">ABOUT</a></li>
-              <li><a class="withripple" href="#organize">ORGANIZE</a></li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="withripple" href="#about">About</a></li>
+              <li><a class="withripple" href="#organize">Organize</a></li>
               <li><a class="withripple" href="http://mlh.io">MLH.IO</a></li>
             </ul>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="main">
@@ -61,15 +71,12 @@
       <div ng-view autoscroll="true"></div>
     </div>
 
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <center><p>&copy; Minor League Hacking 2014. Part of <a href="http://mlh.io">MLH</a>. Hackathons are of their respective owners.</p></center>
-          </div>
+        <p>&copy; Minor League Hacking 2014. Part of <a href="http://mlh.io">MLH</a>. Hackathons are of their respective owners.</p>
         </div>
       </div>
-    </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
