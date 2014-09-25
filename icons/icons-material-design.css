@@ -10,7 +10,7 @@
 }
 
 [class^="icon-material-"], [class*=" icon-material-"] {
-	font-family: 'Material-Design';
+	font-family: 'Material-Design'!important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

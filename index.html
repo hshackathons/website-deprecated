@@ -37,35 +37,21 @@
 </head>
   <body ng-controller="indexController">
     
-    <div class="navbar navbar-inverse">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/">Minor League Hacking</a>
+    <nav class="navbar-material-teal" id="top">
+      <div class="container">
+        <a href="#" class="btn btn-brand hidden-xs withripple">Minor League Hacking</a>
+        <a href="#" class="btn btn-fab icon-material-home withripple" data-toggle="tooltip" data-placement="bottom" title="Home">
+        <a href="#events" class="btn btn-fab icon-material-event withripple" data-toggle="tooltip" data-placement="bottom" title="Events">
+        <a href="#news" class="btn btn-fab icon-material-news withripple" data-toggle="tooltip" data-placement="bottom" title="News">
+        </a>
+        <div class="pull-right">
+          <a href="#about" class="btn btn-fab icon-material-info withripple" data-toggle="tooltip" data-placement="bottom" title="About">
+          </a>
+          <a href="#organize" class="btn btn-fab icon-material-add withripple" data-toggle="tooltip" data-placement="bottom" title="Organize">
+          </a>
         </div>
-        <div class="navbar-collapse collapse navbar-inverse-collapse">
-            <ul class="nav navbar-nav">
-              <li><a class="withripple" href="#/">Home</a></li>
-              <li class="dropdown">
-                  <a href="#events" class="dropdown-toggle" data-toggle="dropdown">Schedule <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                      <li><a href="#events">Fall 2014</a></li>
-                      <li><a href="#events">Spring 2015</a></li>
-                  </ul>
-              </li>
-              <li><a class="withripple" href="#news">News</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="withripple" href="#about">About</a></li>
-              <li><a class="withripple" href="#organize">Organize</a></li>
-              <li><a class="withripple" href="http://mlh.io">MLH.IO</a></li>
-            </ul>
-        </div>
-    </div>
+      </div>
+    </nav>
 
     <div id="main">
       <!-- angular templating -->
@@ -75,7 +61,30 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; Minor League Hacking 2014. Part of <a href="http://mlh.io">MLH</a>. Hackathons are of their respective owners.</p>
+        <div class="logo hidden-xs">
+          <a href="http://mlh.io/" class="btn withripple" target="_blank" data-toggle="tooltip" data-placement="top" title="Back to Top">
+            <b>Proudly part of</b>
+            <br>
+            <br>
+            <img src="/img/mlh.png" alt="">
+          </a>
+        </div>
+        <a href="javascript:$('html, body').animate({ scrollTop: 0 }, 'slow');" class="btn btn-warning btn-fab btn-raised icon-pointer-up to-the-moon"></a>
+        <p class="social">
+          <a href="http://facebook.com/groups/PennAppsHS/" target="_blank" class="btn btn-fab btn-facebook icon-facebook withripple" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+          </a>
+          <a href="http://twitter.com/MLHacks" target="_blank" class="btn btn-fab btn-twitter icon-twitter withripple" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+          </a>
+          <a href="http://github.com/" target="_blank" class="btn btn-fab btn-twitter icon-github withripple" data-toggle="tooltip" data-placement="bottom" title="GitHub (Soon)">
+          </a>
+        </p>
+        <p>
+          v1.0 Stargazing Starlord - <a href="#changelog">Changelog</a>.
+          <br>
+          &copy; Minor League Hacking. Hackathons are of their respective owners.
+          <br>
+          
+        </p>
         </div>
       </div>
     </footer>
@@ -85,6 +94,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/material.js"></script>
-    <script src="js/ripples.js"></script>    
+    <script src="js/ripples.js"></script>   
+    <script>
+      /* Move this to JS file */
+      $('[data-toggle="tooltip"]').tooltip();
+    </script> 
   </body>
 </html>

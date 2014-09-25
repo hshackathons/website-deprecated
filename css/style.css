@@ -6126,14 +6126,46 @@ fieldset[disabled] .navbar .btn-link:focus {
   transition: opacity 0.1s linear 0s !important;
   opacity: 0; }
 
-@font-face {
-  font-family: Liberator;
-  src: url("../fonts/Liberator.ttf"); }
 body {
-  font-weight: 300; }
+  font-weight: 300;
+  background: white; }
 
 p, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif; }
+
+nav {
+  padding: 10px 0; }
+  nav a {
+    display: inline-block;
+    padding: 14px;
+    font-size: 24px;
+    color: white;
+    border-radius: 100px;
+    margin-right: 10px !important;
+    vertical-align: middle; }
+    nav a:hover {
+      color: white;
+      text-decoration: none; }
+    nav a.btn-brand {
+      color: white !important;
+      text-decoration: none;
+      text-transform: none;
+      font-size: 18px;
+      padding: 12px 20px;
+      background: rgba(0, 0, 0, 0.15); }
+  nav .pull-right {
+    padding-top: 3px; }
+  nav .container {
+    position: relative;
+    z-index: 9001; }
+
+header {
+  text-align: center;
+  padding-top: 190px;
+  background: #009688;
+  margin-top: -90px;
+  padding-bottom: 100px;
+  color: white; }
 
 .header {
   padding: 25px 0px 15px 0px;
@@ -6310,6 +6342,23 @@ p, h1, h2, h3, h4, h5 {
     line-height: 0px; }
 
 .footer {
-  background-color: #455a64;
-  padding: 50px 0;
-  color: white; }
+  background-color: #EEEEEE;
+  padding: 50px 0; }
+  .footer .container {
+    position: relative; }
+  .footer .logo {
+    float: left;
+    padding-right: 30px;
+    border-right: 1px solid gray;
+    margin-right: 30px; }
+    .footer .logo img {
+      max-height: 5em;
+      width: auto; }
+  .footer .to-the-moon {
+    position: absolute;
+    right: 24px;
+    top: -80px; }
+  .footer .social {
+    vertical-align: middle; }
+    .footer .social .btn-fab {
+      color: inherit; }
