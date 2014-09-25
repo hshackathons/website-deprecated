@@ -6126,12 +6126,52 @@ fieldset[disabled] .navbar .btn-link:focus {
   transition: opacity 0.1s linear 0s !important;
   opacity: 0; }
 
+.at-view-slide-in-bottom.ng-enter {
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transform: translate(0px, 100%);
+  -ms-transform: translate(0px, 100%);
+  transform: translate(0px, 100%);
+  opacity: 0;
+  z-index: 1;
+  position: absolute; }
+
+.at-view-slide-in-bottom.ng-enter-active {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+  position: absolute; }
+
+.at-view-slide-out-bottom.ng-leave {
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+  z-index: 3;
+  position: absolute; }
+
+.at-view-slide-out-bottom.ng-leave-active {
+  -webkit-transform: translate(0px, 100%);
+  -ms-transform: translate(0px, 100%);
+  transform: translate(0px, 100%);
+  opacity: 0; }
+
 body {
   font-weight: 300;
   background: white; }
 
 p, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif; }
+
+h4 {
+  font-weight: 300; }
 
 nav {
   padding: 10px 0; }
@@ -6317,9 +6357,18 @@ section {
 .no-padding {
   padding: 0 0; }
 
-.section-dark {
+.section-gray {
+  background: #eeeeee; }
+
+.section-dark, .section-black {
   background: #1f1d1f;
   color: white; }
+
+.events a.well {
+  display: block;
+  padding: 0px; }
+  .events a.well h4, .events a.well p {
+    padding: 15px 0; }
 
 .header {
   padding: 25px 0px 15px 0px;

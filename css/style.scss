@@ -14,6 +14,10 @@ p, h1, h2, h3, h4, h5 {
 	font-family: 'Roboto', sans-serif;
 }
 
+h4 {
+	font-weight: 300;
+}
+
 // Navigation
 nav {
 	padding: 10px 0;
@@ -198,9 +202,23 @@ section {
 .no-padding {
 	padding: 0 0;
 }
-.section-dark {
+.section-gray {
+	background: #eeeeee;
+}
+.section-dark, .section-black {
 	background: #1f1d1f;
 	color: white;
+}
+
+// Events
+.events {
+	a.well {
+		display: block;
+		padding: 0px;
+		h4, p {
+			padding: 15px 0;
+		}
+	}
 }
 
 // Old header
