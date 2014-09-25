@@ -19,6 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.js"></script>
     <script src="js/script.js"></script>
     <script>
       !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
@@ -56,7 +57,7 @@
     <div id="main">
       <!-- angular templating -->
       <!-- this is where content will be injected -->
-      <div ng-view autoscroll="true" class="at-view-slide-in-bottom at-view-slide-out-bottom"></div>
+      <div ng-view autoscroll="true" class="animate at-view-slide-in-bottom at-view-slide-out-bottom" style="width:100%"></div>
     </div>
 
     <footer class="footer">
@@ -76,6 +77,8 @@
           <a href="http://twitter.com/MLHacks" target="_blank" class="btn btn-fab btn-twitter icon-twitter withripple" data-toggle="tooltip" data-placement="top" title="@MLHacks">
           </a>
           <a href="javascript:void(0)" target="_blank" class="btn btn-fab btn-twitter icon-github withripple" data-toggle="tooltip" data-placement="top" title="GitHub (Soon)">
+          </a>
+          <a href="http://hshackers.org/" target="_blank" class="btn btn-fab btn-twitter icon-tools withripple" data-toggle="tooltip" data-placement="top" title="Meetups">
           </a>
         </p>
         <p>

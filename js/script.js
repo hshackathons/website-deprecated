@@ -1,4 +1,4 @@
-var mlhApp = angular.module('mlhApp', ['ngRoute']);
+var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 	
 	mlhApp.config(function($routeProvider, $locationProvider) {
 		$routeProvider
