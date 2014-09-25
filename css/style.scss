@@ -5,9 +5,23 @@
 
 $dark: #455a64;
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-weight: 300;
 	background: white;
+}
+
+#main {
+	min-height: 150%;
+	margin: 0 auto -250px;
+
+	.push {
+		display: block;
+		height: 250px;
+	}
 }
 
 p, h1, h2, h3, h4, h5 {

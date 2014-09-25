@@ -6163,9 +6163,19 @@ fieldset[disabled] .navbar .btn-link:focus {
   transform: translate(0px, 100%);
   opacity: 0; }
 
+html, body {
+  height: 100%; }
+
 body {
   font-weight: 300;
   background: white; }
+
+#main {
+  min-height: 150%;
+  margin: 0 auto -250px; }
+  #main .push {
+    display: block;
+    height: 250px; }
 
 p, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif; }
