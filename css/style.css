@@ -6165,6 +6165,160 @@ header {
   background: #009688;
   margin-top: -90px;
   padding-bottom: 100px;
+  color: white;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: middle;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-transform: rotateZ(0);
+  transform: rotateZ(0); }
+
+.header-sunset {
+  background-image: url(/img/header/metropolis.png);
+  background-position: bottom;
+  -webkit-background-size: contain;
+  background-size: contain;
+  -webkit-animation: header-sunset-inverse 25s linear infinite;
+  animation: header-sunset-inverse 25s linear infinite;
+  overflow: hidden; }
+  .header-sunset .container {
+    z-index: 500;
+    position: relative; }
+  .header-sunset .moon {
+    -webkit-animation: header-sunset-moon 25s linear infinite;
+    animation: header-sunset-moon 25s linear infinite;
+    z-index: 400;
+    position: absolute;
+    background: #e4f3ff;
+    padding: 5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+    display: inline-block;
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    margin-top: 100px;
+    margin-left: -60px; }
+    .header-sunset .moon .half-circle {
+      height: 30px;
+      width: 70px;
+      border-radius: 70px 70px 0 0;
+      background: gray; }
+  .header-sunset .sun {
+    -webkit-animation: header-sunset-sun 25s linear infinite;
+    animation: header-sunset-sun 25s linear infinite;
+    z-index: 400;
+    position: absolute;
+    background: yellow;
+    padding: 5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+    display: inline-block;
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    margin-top: 100px;
+    margin-left: -60px; }
+
+@-webkit-keyframes header-sunset {
+  0% {
+    background-color: #28446E; }
+
+  10% {
+    background-color: #69BAD9; }
+
+  65% {
+    background-color: #69BAD9; }
+
+  70% {
+    background-color: #28446E; }
+
+  100% {
+    background-color: #28446E; } }
+@keyframes header-sunset {
+  0% {
+    background-color: #28446E; }
+
+  10% {
+    background-color: #69BAD9; }
+
+  65% {
+    background-color: #69BAD9; }
+
+  70% {
+    background-color: #28446E; }
+
+  100% {
+    background-color: #28446E; } }
+@-webkit-keyframes header-sunset-inverse {
+  0% {
+    background-color: #69BAD9; }
+
+  10% {
+    background-color: #28446E; }
+
+  50% {
+    background-color: #28446E; }
+
+  60% {
+    background-color: #69BAD9; }
+
+  100% {
+    background-color: #69BAD9; } }
+@keyframes header-sunset-inverse {
+  0% {
+    background-color: #69BAD9; }
+
+  10% {
+    background-color: #28446E; }
+
+  50% {
+    background-color: #28446E; }
+
+  60% {
+    background-color: #69BAD9; }
+
+  100% {
+    background-color: #69BAD9; } }
+@-webkit-keyframes header-sunset-moon {
+  from {
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg); }
+
+  to {
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(-360deg); } }
+@keyframes header-sunset-moon {
+  from {
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg);
+    transform: rotate(0deg) translate(-500px) rotate(120deg); }
+
+  to {
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(-360deg);
+    transform: rotate(360deg) translate(-500px) rotate(-360deg); } }
+@-webkit-keyframes header-sunset-sun {
+  from {
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(360deg); }
+
+  to {
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg); } }
+@keyframes header-sunset-sun {
+  from {
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(360deg);
+    transform: rotate(360deg) translate(-500px) rotate(360deg); }
+
+  to {
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg);
+    transform: rotate(0deg) translate(-500px) rotate(120deg); } }
+section {
+  padding: 60px 0; }
+
+.no-padding {
+  padding: 0 0; }
+
+.section-dark {
+  background: #1f1d1f;
   color: white; }
 
 .header {
