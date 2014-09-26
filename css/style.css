@@ -6180,6 +6180,9 @@ body {
 p, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif; }
 
+h1 {
+  font-size: 48px; }
+
 h4 {
   font-weight: 300; }
 
@@ -6374,11 +6377,34 @@ section {
   background: #1f1d1f;
   color: white; }
 
-.events a.well {
+.events .event {
   display: block;
-  padding: 0px; }
-  .events a.well h4, .events a.well p {
-    padding: 15px 0; }
+  padding: 0px;
+  -webkit-transition: 300ms all linear;
+  transition: 300ms all linear;
+  border-radius: 6px;
+  overflow: hidden; }
+  .events .event:hover, .events .event:focus, .events .event:active {
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    text-decoration: none; }
+  .events .event .cover {
+    height: 150px;
+    display: block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: middle;
+    background-color: gray;
+    background-image: url(/img/hackathons/cover/placeholder.png);
+    position: relative; }
+  .events .event h3, .events .event p {
+    padding: 5px 15px; }
+  .events .event h3 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px; }
+  .events .event p {
+    padding-bottom: 20px; }
 
 .dim {
   background-color: rgba(0, 0, 0, 0.6);
