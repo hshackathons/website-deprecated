@@ -25,6 +25,12 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 				controller  : 'aboutController'
 			})
 
+			//route for the faq page
+			.when('/faq', {
+				templateUrl : 'views/faq.html',
+				controller  : 'faqController'
+			})
+
 			// route for the news page
 			.when('/news', {
 				templateUrl : 'views/news.html',
@@ -53,6 +59,10 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 
 	mlhApp.controller('newsController', function($scope, $http) {
 		$scope.message = 'News';
+	});
+
+	mlhApp.controller('faqController', function($scope, $http) {
+		$scope.message = 'FAQ';
 	});
 
 	mlhApp.controller('indexController', function($scope, $http) {
