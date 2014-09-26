@@ -6129,11 +6129,11 @@ fieldset[disabled] .navbar .btn-link:focus {
 .at-view-slide-in-bottom.ng-enter {
   -webkit-transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transform: translate(0px, 100%);
-  -ms-transform: translate(0px, 100%);
-  transform: translate(0px, 100%);
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transform: translate(0px, 90px);
+  -ms-transform: translate(0px, 90px);
+  transform: translate(0px, 90px);
   opacity: 0;
   z-index: 1;
   position: absolute; }
@@ -6148,8 +6148,8 @@ fieldset[disabled] .navbar .btn-link:focus {
 .at-view-slide-out-bottom.ng-leave {
   -webkit-transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
@@ -6158,10 +6158,11 @@ fieldset[disabled] .navbar .btn-link:focus {
   position: absolute; }
 
 .at-view-slide-out-bottom.ng-leave-active {
-  -webkit-transform: translate(0px, 100%);
-  -ms-transform: translate(0px, 100%);
-  transform: translate(0px, 100%);
-  opacity: 0; }
+  -webkit-transform: translate(0px, 0%);
+  -ms-transform: translate(0px, 0%);
+  transform: translate(0px, 0%);
+  opacity: 1;
+  z-index: 1; }
 
 html, body {
   height: 100%; }
@@ -6214,9 +6215,9 @@ nav {
 
 header {
   text-align: center;
-  padding-top: 190px;
   background: #009688;
-  margin-top: -90px;
+  margin-top: -390px;
+  padding-top: 490px;
   padding-bottom: 100px;
   color: white;
   -webkit-background-size: cover;

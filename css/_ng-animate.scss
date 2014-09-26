@@ -3,15 +3,15 @@
     -moz-transition-property: -moz-transform, opacity;
     -o-transition-property: -o-transform, opacity;
     transition-property: transform, opacity;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transform: translate(0px, 100%);
-    -moz-transform: translate(0px, 100%);
-    -ms-transform: translate(0px, 100%);
-    -o-transform: translate(0px, 100%);
-    transform: translate(0px, 100%);
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+    -o-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transform: translate(0px, 90px);
+    -moz-transform: translate(0px, 90px);
+    -ms-transform: translate(0px, 90px);
+    -o-transform: translate(0px, 90px);
+    transform: translate(0px, 90px);
     opacity: 0;
     z-index: 1;
     position: absolute;
@@ -32,10 +32,10 @@
     -moz-transition-property: -moz-transform, opacity;
     -o-transition-property: -o-transform, opacity;
     transition-property: transform, opacity;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    transition-duration: 0.15s;
     -webkit-transform: translate(0px, 0px);
     -moz-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
@@ -47,10 +47,11 @@
 }
 
 .at-view-slide-out-bottom.ng-leave-active {
-    -webkit-transform: translate(0px, 100%);
-    -moz-transform: translate(0px, 100%);
-    -ms-transform: translate(0px, 100%);
-    -o-transform: translate(0px, 100%);
-    transform: translate(0px, 100%);
-    opacity: 0;
+    -webkit-transform: translate(0px, 0%);
+    -moz-transform: translate(0px, 0%);
+    -ms-transform: translate(0px, 0%);
+    -o-transform: translate(0px, 0%);
+    transform: translate(0px, 0%);
+    opacity: 1;
+    z-index: 1;
 }
