@@ -26,7 +26,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 			})
 
 			//route for the faq page
-			.when('/faq', {
+			.when('/faq/:param?', {
 				templateUrl : 'views/faq.html',
 				controller  : 'faqController'
 			})
@@ -37,7 +37,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 				controller  : 'newsController'
 			});
 
-			//$locationProvider.html5Mode(true)
+			$locationProvider.html5Mode(true)
 	});
 
 	// create the controller and inject Angular's $scope
@@ -61,10 +61,19 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 		$scope.message = 'News';
 	});
 
-	mlhApp.controller('faqController', function($scope, $http) {
+	mlhApp.controller('faqController', function($scope, $http, $routeParams) {
+		var param = $routeParams.param;
 		$scope.s = true;
 		$scope.t = false;
 		$scope.p = false;
+		if (param == "teacher") {
+			$scope.t = true;
+			$scope.s = false;
+		}
+		if (param == "parent") {
+			$scope.p = true;
+			$scope.s = false;
+		}
 		$scope.message = 'FAQ';
 		$scope.student = function() {
 			$scope.s = true;
