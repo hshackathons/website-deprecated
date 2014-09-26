@@ -23,6 +23,12 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 			.when('/about', {
 				templateUrl : 'views/about.html',
 				controller  : 'aboutController'
+			})
+
+			// route for the news page
+			.when('/news', {
+				templateUrl : 'views/news.html',
+				controller  : 'newsController'
 			});
 
 			$locationProvider.html5Mode(true)
@@ -43,6 +49,10 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 
 	mlhApp.controller('organizeController', function($scope, $http) {
 		$scope.message = 'Organize An Event';
+	});
+
+	mlhApp.controller('newsController', function($scope, $http) {
+		$scope.message = 'News';
 	});
 
 	mlhApp.controller('indexController', function($scope, $http) {
