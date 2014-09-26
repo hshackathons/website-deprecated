@@ -62,7 +62,25 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 	});
 
 	mlhApp.controller('faqController', function($scope, $http) {
+		$scope.s = true;
+		$scope.t = false;
+		$scope.p = false;
 		$scope.message = 'FAQ';
+		$scope.student = function() {
+			$scope.s = true;
+			$scope.t = false;
+			$scope.p = false;
+		};
+		$scope.teacher = function() {
+			$scope.t = true;
+			$scope.s = false;
+			$scope.p = false;
+		};
+		$scope.parent = function() {
+			$scope.p = true;
+			$scope.s = false;
+			$scope.t = false;
+		};
 	});
 
 	mlhApp.controller('indexController', function($scope, $http) {
