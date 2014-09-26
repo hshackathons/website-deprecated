@@ -6265,6 +6265,9 @@ section {
   .faq .question {
     margin-bottom: 30px; }
 
+.news {
+  margin: 30px 0px 80px 0px; }
+
 .footer {
   background-color: #EEEEEE;
   padding: 50px 0; }
