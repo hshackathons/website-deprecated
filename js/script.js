@@ -59,6 +59,18 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 
 	mlhApp.controller('newsController', function($scope, $http) {
 		$scope.message = 'News';
+		$scope.news = {};
+		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+		    success(function(feed, status, headers, config) {
+		      $scope.news = feed.responseData.feed.entries;
+		      console.log($scope.news);
+		    }).
+		    error(function(data, status, headers, config) {
+		      console.log(status);
+		      console.log(data);
+		      console.log(headers);
+		      console.log(config);
+		});
 	});
 
 	mlhApp.controller('faqController', function($scope, $http, $routeParams) {
