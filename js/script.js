@@ -1,4 +1,4 @@
-var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
+var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	
 	mlhApp.config(function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -37,7 +37,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 				controller  : 'newsController'
 			});
 
-			$locationProvider.html5Mode(true)
+			//$locationProvider.html5Mode(true)
 	});
 
 	// create the controller and inject Angular's $scope
@@ -57,7 +57,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 		$scope.message = 'Organize An Event';
 	});
 
-	mlhApp.controller('newsController', function($scope, $http) {
+	mlhApp.controller('newsController', function($scope, $http, $sanitize) {
 		$scope.message = 'News';
 		$scope.news = {};
 		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
@@ -67,9 +67,6 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate']);
 		    }).
 		    error(function(data, status, headers, config) {
 		      console.log(status);
-		      console.log(data);
-		      console.log(headers);
-		      console.log(config);
 		});
 	});
 
