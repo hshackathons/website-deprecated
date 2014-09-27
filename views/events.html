@@ -10,7 +10,7 @@
 </header>
 <section class="toolbar">
   <div class="container">
-    <input class="form-control floating-label input-lg" id="focusedInput" type="text" placeholder="Search Events">
+    <input class="form-control floating-label input-lg" id="focusedInput" ng-model="search.Name" type="text" placeholder="Search Events">
   </div>
 </section>
 <section class="events section-events section-gray" id="events">
@@ -45,7 +45,7 @@
 <div class="events">
       <div class="container">
 
-        <div class="event" ng-repeat="event in events">
+        <div class="event" ng-repeat="event in events | filter:search">
           <div class="click" style="cursor: pointer;" ng-click="addClient = !addClient">
             <div class="row">
               <div class="col-lg-2">
