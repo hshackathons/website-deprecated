@@ -4,15 +4,27 @@
   </div>
 </header>
 
+<a href="#">
+  <article class="news">
+  
+    <div class="container">
+      <h1>Article Title</h1>
+    </div>
+
+  </article>
+</a>
+
+
+  
 <div class="news">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="article" ng-repeat="article in news">
-					<a ng-click="showDetails = ! showDetails"><h3>{{article.title}}</h3></a>
-					<div ng-bind-html="article.content" ng-show="showDetails"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="article" ng-repeat="article in news">
+          <a ng-click="showDetails = ! showDetails"><h3>{{article.title}}</h3></a>
+          <div ng-bind-html="article.content" ng-show="showDetails"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

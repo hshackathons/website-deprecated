@@ -14,6 +14,12 @@ body {
 	background: white;
 }
 
+::selection {
+	background: #4285f4;
+	color: white;
+	text-shadow: 0 1px rgba(0,0,0,.5);
+}
+
 #main {
 	min-height: 150%;
 	margin: 0 auto -250px;
@@ -238,7 +244,11 @@ section {
 		transition: 300ms all linear;
 		border-radius: 6px;
 		overflow: hidden;	
-		&:hover, &:focus, &:active {
+		&:hover {
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
+			text-decoration: none;
+		}
+		&:focus, &:active {
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 			text-decoration: none;
 		}
@@ -249,7 +259,33 @@ section {
 			background-position: middle;
 			background-color: gray;
 			background-image: url(/img/hackathons/cover/placeholder.png);
-			position: relative;			
+			position: relative;
+			.banner.national {
+				background: #FFF480;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 20px;
+				right: -32px;
+				padding: 4px 40px;
+				color: #3E4B07;
+				font-weight: bold;
+				text-shadow: 0 1px 0 #FEFFDA;
+				font-size: 10px;
+				box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+			}
+			.banner.major {
+				background: rgb(176, 255, 113);
+				transform: rotate(45deg);
+				position: absolute;
+				top: 20px;
+				right: -44px;
+				padding: 4px 40px;
+				color: rgb(35, 78, 0);
+				font-weight: bold;
+				text-shadow: 0 1px 0 rgb(139, 190, 98);
+				font-size: 10px;
+				box-shadow: 0 4px 0 0 rgba(0,0,0,.25);
+			}	
 		}
 		h3, p {
 			padding: 5px 15px;
@@ -260,6 +296,9 @@ section {
 			margin-bottom: 0px;
 		}
 		p {
+			padding-bottom: 0px;
+		}
+		p:last-of-type {
 			padding-bottom: 20px;
 		}
 	}
@@ -381,6 +420,15 @@ section {
 }
 
 .news {
+	background: gray;
+	color: white;
+	padding: 60px 0;
+	a {
+		color: white;
+	}
+}
+
+.news-old {
 	margin: 30px 0px 80px 0px;
 	.article {
 		a {
