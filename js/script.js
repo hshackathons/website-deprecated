@@ -73,6 +73,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			      	console.log(articles[x].link.substring(19, articles[x].link.length));
 			      	if (articles[x].link.substring(19, articles[x].link.length) == param) {
 			      		$scope.news.push(articles[x]);
+			      		$scope.showDetails = true;
 			      	}
 			      }
 			      console.log($scope.news);
