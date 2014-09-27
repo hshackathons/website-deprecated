@@ -60,7 +60,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	mlhApp.controller('newsController', function($scope, $http, $routeParams, $filter) {
 		$scope.message = 'News';
 		var param = $routeParams.param;
-		$scope.news = {};
+		$scope.news = [];
 		//display only the blog post in the $routeParams
 		if (param != null) {
 			//var url = param.substring(19, param.length);
@@ -68,7 +68,13 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			console.log(param);
 			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
 			    success(function(feed, status, headers, config) {
-			      $scope.news = feed.responseData.feed.entries[0];
+			      var articles = feed.responseData.feed.entries;
+			      for (x in articles) {
+			      	console.log(articles[x].link.substring(19, articles[x].link.length));
+			      	if (articles[x].link.substring(19, articles[x].link.length) == param) {
+			      		$scope.news.push(articles[x]);
+			      	}
+			      }
 			      console.log($scope.news);
 			    }).
 			    error(function(data, status, headers, config) {
