@@ -382,6 +382,16 @@ section {
 
 .news {
 	margin: 30px 0px 80px 0px;
+	.article {
+		a {
+			color:black;
+			text-decoration:none;
+			cursor:pointer;
+			&:hover {
+				color:gray;
+			}
+		}
+	}
 }
 
 .footer {

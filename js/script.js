@@ -59,15 +59,6 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 
 	mlhApp.controller('newsController', function($scope, $http, $sanitize) {
 		$scope.message = 'News';
-		$scope.news = {};
-		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
-		    success(function(feed, status, headers, config) {
-		      $scope.news = feed.responseData.feed.entries;
-		      console.log($scope.news);
-		    }).
-		    error(function(data, status, headers, config) {
-		      console.log(status);
-		});
 	});
 
 	mlhApp.controller('faqController', function($scope, $http, $routeParams) {
@@ -120,6 +111,15 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			  }
   			  $scope.events = angular.fromJson(result); //JSON
   			  console.log($scope.events);
+		    }).
+		    error(function(data, status, headers, config) {
+		      console.log(status);
+		});
+		$scope.news = {};
+		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+		    success(function(feed, status, headers, config) {
+		      $scope.news = feed.responseData.feed.entries;
+		      console.log($scope.news);
 		    }).
 		    error(function(data, status, headers, config) {
 		      console.log(status);
