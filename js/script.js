@@ -32,7 +32,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			})
 
 			// route for the news page
-			.when('/news', {
+			.when('/news/:param?', {
 				templateUrl : 'views/news.html',
 				controller  : 'newsController'
 			});
@@ -57,8 +57,35 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 		$scope.message = 'Organize An Event';
 	});
 
-	mlhApp.controller('newsController', function($scope, $http, $sanitize) {
+	mlhApp.controller('newsController', function($scope, $http, $routeParams, $filter) {
 		$scope.message = 'News';
+		var param = $routeParams.param;
+		$scope.news = {};
+		//display only the blog post in the $routeParams
+		if (param != null) {
+			//var url = param.substring(19, param.length);
+			//console.log(url);
+			console.log(param);
+			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+			    success(function(feed, status, headers, config) {
+			      $scope.news = feed.responseData.feed.entries[0];
+			      console.log($scope.news);
+			    }).
+			    error(function(data, status, headers, config) {
+			      console.log(status);
+			});
+		}
+		//display all blog posts
+		else {
+			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+			    success(function(feed, status, headers, config) {
+			      $scope.news = feed.responseData.feed.entries;
+			      console.log($scope.news);
+			    }).
+			    error(function(data, status, headers, config) {
+			      console.log(status);
+			});
+		}
 	});
 
 	mlhApp.controller('faqController', function($scope, $http, $routeParams) {
@@ -115,17 +142,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 		    error(function(data, status, headers, config) {
 		      console.log(status);
 		});
-		$scope.news = {};
-		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
-		    success(function(feed, status, headers, config) {
-		      $scope.news = feed.responseData.feed.entries;
-		      console.log($scope.news);
-		    }).
-		    error(function(data, status, headers, config) {
-		      console.log(status);
-		});
 	});
-
 
 /* Move this to JS file */
 $('[data-toggle="tooltip"]').tooltip();
