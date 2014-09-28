@@ -6161,7 +6161,8 @@ section {
   padding: 0px;
   transition: 300ms all linear;
   border-radius: 6px;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .events .event:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
     text-decoration: none; }
@@ -6172,7 +6173,7 @@ section {
     height: 150px;
     display: block;
     background-size: cover;
-    background-position: middle;
+    background-position: center;
     background-color: gray;
     background-image: url(/img/hackathons/cover/placeholder.png);
     position: relative; }
@@ -6208,8 +6209,19 @@ section {
     margin-bottom: 0px; }
   .events .event p {
     padding-bottom: 0px; }
-  .events .event p:last-of-type {
-    padding-bottom: 20px; }
+  .events .event > p:last-of-type {
+    padding-bottom: 0.25em; }
+  .events .event .event-footer {
+    background: #e5e5e5;
+    text-align: left;
+    padding: 1em 1em; }
+  .events .event .event-link {
+    color: white;
+    padding: 1em 1em;
+    text-align: left; }
+    .events .event .event-link i {
+      color: white;
+      padding-right: 0.5em; }
 
 .dim {
   background-color: rgba(0, 0, 0, 0.6);
@@ -6274,6 +6286,12 @@ section {
     font-size: 30px;
     width: 80%;
     line-height: 0px; }
+  .organize .col-lg-3 {
+    font-size: 54px;
+    margin-top: 20px;
+    text-align: right; }
+    .organize .col-lg-3 img {
+      margin-top: -20px; }
 
 .faq {
   margin: 30px 0px 80px 0px; }

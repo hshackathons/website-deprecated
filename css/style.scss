@@ -244,6 +244,7 @@ section {
 		transition: 300ms all linear;
 		border-radius: 6px;
 		overflow: hidden;	
+		text-align: center;
 		&:hover {
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
 			text-decoration: none;
@@ -256,7 +257,7 @@ section {
 			height: 150px;
 			display: block;
 			background-size: cover;
-			background-position: middle;
+			background-position: center;
 			background-color: gray;
 			background-image: url(/img/hackathons/cover/placeholder.png);
 			position: relative;
@@ -298,8 +299,22 @@ section {
 		p {
 			padding-bottom: 0px;
 		}
-		p:last-of-type {
-			padding-bottom: 20px;
+		& > p:last-of-type {
+			padding-bottom: 0.25em;
+		}
+		.event-footer {
+			background: rgb(229, 229, 229);
+			text-align: left;
+			padding: 1em 1em;
+		}
+		.event-link {
+			color: white;
+			padding: 1em 1em;
+			text-align: left;
+			i {
+				color: white;
+				padding-right: 0.5em;
+			}
 		}
 	}
 }
@@ -383,6 +398,14 @@ section {
 		font-size:30px;
 		width:80%;
 		line-height:0px;
+	}
+	.col-lg-3 {
+		font-size: 54px;
+		margin-top: 20px;
+		text-align: right;
+		img {
+			margin-top: -20px;
+		}
 	}
 }
 
