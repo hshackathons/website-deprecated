@@ -2,20 +2,16 @@
   <div class="container">
     <h1>{{ message }}</h1>
     <div class="btn-group">
-      <a href="#events" class="btn btn-material-orange btn-disabled" disabled>Fall 2014</a>
-      <a href="#events" class="btn btn-material-lightgreen">Spring 2015</a>
-      <a href="#events" class="btn btn-primary">More Events</a>
+      <a href="#events" class="btn btn-material-orange btn-disabled" data-toggle="tooltip" data-placement="top" title="Coming Soon!" disabled>Fall 2014</a>
+      <a href="#events" class="btn btn-material-lightgreen" data-toggle="tooltip" data-placement="top" title="Coming Soon!">Spring 2015</a>
     </div>
   </div>
 </header>
-<section class="toolbar">
-  <div class="container">
-    <input class="form-control floating-label input-lg" id="focusedInput" ng-model="search.Name" type="text" placeholder="Search Events">
-  </div>
 </section>
 <section class="events section-events section-gray" id="events">
   <div class="container">
-
+    <div class="form-control-wrapper"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus=""><div class="floating-label">Search Events</div><span class="material-input"></span></div>
+    <br><br>
         <!-- <a class="well event withripple" href="">
           <div class="cover">
             <div class="details">
@@ -42,7 +38,7 @@
           </div>
         </a> -->
       <div class="event-wrapper" ng-repeat="event in events | filter:search" >
-        <a class="well event withripple" href="{{event.URL}}">
+        <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details">
               <div class="banner major">MAJOR LEAGUE</div>
@@ -54,7 +50,7 @@
             <br>
             {{event.Location}}
           </p>
-          <div class="event-details">
+          <div class="event-details" ng-show="addClient">
             <span class="desc">{{event.Desc}}</span>
             <br>
             HS({{event.hs}}) &amp; College({{event.college}}) Admitted
@@ -63,80 +59,30 @@
             <br>
             Hardware({{event.hardware}}) Application({{event.application}})
           </div>
-          <div class="event-link navbar-primary">
+          <a href="{{event.URL}}" class="event-link navbar-primary">
             <i class="icon icon-material-arrow-forward"></i> {{event.URL}}
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
+      
+      <h2 ng-show="(events | filter:search).length == 0" class="text-center" class="loading-message">
+        <i class="icon icon-poo"></i>
+        <br>
+        Nothing here!
+      </h2>
+
+      <h2 ng-show="(events | filter:search).length == 0" class="text-center" class="loading-message">
+        <i class="icon icon-poo"></i>
+        <br>
+        Nothing here!
+      </h2>
+
   </div>
 </section>
-<div class="events">
-      <div class="container">
-
-        <div class="event" ng-repeat="event in events | filter:search">
-          <div class="click" style="cursor: pointer;" ng-click="addClient = !addClient">
-            <div class="row">
-              <div class="col-lg-2">
-                <img ng-src="{{event.Image}}" width="165px" height="99px">
-              </div>
-              <div class="col-lg-5 col-lg-offset-1">
-                <a><h1>{{event.Name}}</h1></a>
-                <p><i>{{event.Desc}}</i></p>
-              </div>
-              <div class="col-lg-3 col-lg-offset-1">
-                <h3><i class="fa fa-calendar-o"></i>&nbsp;<b>{{event.Date}}</b></h3>
-                <h3><i class="fa fa-university"></i>{{event.Location}}</h3>
-              </div>
-            </div>
-          </div>
-          <div class="expand" ng-show="addClient">
-            <div class="row">
-              <div class="col-lg-offset-3 col-lg-4">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <h3>Website</h3>
-                    <h3>High School Admitted</h3>
-                    <h3>College Admitted</h3>
-                  </div>
-                  <div class="col-lg-6">
-                    <h2><a href="{{event.URL}}">{{event.URL}}</a></h2>
-                    <h2>{{event.hs}}</h2>
-                    <h2>{{event.college}}</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-offset-1 col-lg-4">
-                <div class="row">
-                  <div class="col-lg-5">
-                    <h3>Travel $</h3>
-                    <h3>Application Admit</h3>
-                    <h3>Hardware</h3>
-                  </div>
-                  <div class="col-lg-7">
-                    <h2>{{event.travel}}</h2>
-                    <h2>{{event.application}}</h2>
-                    <h2>{{event.hardware}}</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-lg-offset-3 col-lg-9">
-                <h3>Review from past attendee</h3>
-                <h4>{{event.review}}</h4>
-                <h4 class="text-right">- {{event.reviewname}}</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
 <section class="text-center">
   <div class="container">
-    <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank">+ Add Hackathon</a>
+    <h2>Where's your hackation?</h2>
+    <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank"><i class="icon icon-material-add"></i> Add Hackathon</a>
     <a class="btn btn-primary btn-lg hasripple" href="#organize" target="_blank">Thinking about organizing?</a>
   </div>
 </section>
