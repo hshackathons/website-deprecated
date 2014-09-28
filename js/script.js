@@ -31,9 +31,26 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 				controller  : 'faqController'
 			})
 
+			//route for the chagelog page
+			.when('/changelog/', {
+				templateUrl : 'views/changelog.html',
+				controller  : 'faqController'
+			})
+
+			//route for the style page
+			.when('/style/', {
+				templateUrl : 'views/style.html',
+				controller  : 'faqController'
+			})
+
 			// route for the news page
 			.when('/news/:param?', {
 				templateUrl : 'views/news.html',
+				controller  : 'newsController'
+			})
+
+			.otherwise({
+				templateUrl : 'views/404.html',
 				controller  : 'newsController'
 			});
 
