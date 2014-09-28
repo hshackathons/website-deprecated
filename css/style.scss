@@ -95,18 +95,28 @@ header {
 
 // Header Day Cycle
 .header-sunset {
-	background-image: url(/img/header/metropolis.png);
-	background-position: bottom;
-	background-size: contain;
-	animation: header-sunset-inverse 25s linear infinite;
+	animation: header-sunset-inverse 24s linear infinite;
 	overflow: hidden;
+	position: relative;
+	.metropolis {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(/img/header/metropolis.png);
+		background-position: bottom;
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 400;
+	}
 	.container {
 		z-index: 500;
 		position: relative;
 	}
 	.moon {
-		animation: header-sunset-moon 25s linear infinite;
-		z-index: 400;
+		animation: header-sunset-moon 24s linear infinite;
+		z-index: 300;
 		position: absolute;
 		background: rgb(228, 243, 255);
 		padding: 5px;
@@ -126,8 +136,8 @@ header {
 		}
 	}
 	.sun {
-		animation: header-sunset-sun 25s linear infinite;
-		z-index: 400;
+		animation: header-sunset-moon 24s linear infinite;
+		z-index: 300;
 		position: absolute;
 		background: yellow;
 		padding: 5px;
@@ -137,6 +147,7 @@ header {
 		display: inline-block;
 		transform: rotate(120deg);
 		-webkit-transform: rotate(120deg);
+		animation-delay: 12s;
 		margin-top: 100px;
 		margin-left: -60px;
 	}
@@ -192,30 +203,6 @@ header {
 		transform: rotate(360deg)
 		translate(-500px) 
 		rotate(-360deg);
-	}
-}
-@-webkit-keyframes header-sunset-sun {
-	from {
-		-webkit-transform: rotate(360deg)
-		translate(-500px) 
-		rotate(360deg);
-	}
-	to {
-		-webkit-transform: rotate(0deg)
-		translate(-500px)
-		rotate(120deg);
-	}
-}
-@keyframes header-sunset-sun {
-	from {
-		transform: rotate(360deg)
-		translate(-500px) 
-		rotate(360deg);
-	}
-	to {
-		transform: rotate(0deg)
-		translate(-500px)
-		rotate(120deg);
 	}
 }
 
