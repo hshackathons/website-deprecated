@@ -59,6 +59,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 
 	mlhApp.controller('newsController', function($scope, $http, $routeParams, $filter) {
 		$scope.message = 'News';
+		$scope.single = false;
 		var param = $routeParams.param;
 		$scope.news = [];
 		//display only the blog post in the $routeParams
@@ -74,6 +75,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			      	if (articles[x].link.substring(19, articles[x].link.length) == param) {
 			      		$scope.news.push(articles[x]);
 			      		$scope.showDetails = true;
+			      		$scope.single = true;
 			      	}
 			      }
 			      console.log($scope.news);
