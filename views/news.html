@@ -10,7 +10,8 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <h1 ng-click="showDetails = ! showDetails" style="cursor:pointer; text-transform:uppercase;">{{article.title}}</h1><br>
-        <div ng-bind-html="article.content" ng-show="showDetails"></div>
+        <div ng-bind-html="article.content" ng-show="showDetails"></div><br>
+        <a ng-click="showDetails = ! showDetails" ng-show="showDetails" style="cursor:pointer;">COLLAPSE</a>
       </div>
     </div>
   </div>
