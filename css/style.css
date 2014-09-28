@@ -6385,6 +6385,11 @@ section {
   background: #1f1d1f;
   color: white; }
 
+.events .event-wrapper {
+  display: inline-block;
+  width: 25%;
+  padding: 10px;
+  min-width: 285px; }
 .events .event {
   display: block;
   padding: 0px;
@@ -6392,7 +6397,8 @@ section {
   transition: 300ms all linear;
   border-radius: 6px;
   overflow: hidden;
-  text-align: center; }
+  text-align: center;
+  vertical-align: top; }
   .events .event:hover {
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
@@ -6407,7 +6413,7 @@ section {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
-    background-color: gray;
+    background-color: #dfdfdf;
     background-image: url(/img/hackathons/cover/placeholder.png);
     position: relative; }
     .events .event .cover .banner.national {
@@ -6450,10 +6456,13 @@ section {
     padding-bottom: 0px; }
   .events .event > p:last-of-type {
     padding-bottom: 0.25em; }
-  .events .event .event-footer {
+  .events .event .event-details {
     background: #e5e5e5;
     text-align: left;
     padding: 1em 1em; }
+    .events .event .event-details .desc {
+      display: block;
+      min-height: 3em; }
   .events .event .event-link {
     color: white;
     padding: 1em 1em;

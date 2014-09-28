@@ -10,9 +10,8 @@
 </header>
 <section class="events section-events section-gray" id="events">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <a class="well event withripple" href="">
+
+        <!-- <a class="well event withripple" href="">
           <div class="cover">
             <div class="details">
               <div class="banner major">MAJOR LEAGUE</div>
@@ -24,7 +23,7 @@
             <br>
             Philadelphia, PA
           </p>
-          <div class="event-footer">
+          <div class="event-details">
             The most spookiest hackathon ever.
             <br>
             High School &amp; College Admitted
@@ -36,28 +35,34 @@
           <div class="event-link navbar-primary">
             <i class="icon icon-material-arrow-forward"></i> http://voodoohacks.com/
           </div>
-
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a class="well event withripple" href="">
-          <div class="cover">
+        </a> -->
+      <div class="event-wrapper" ng-repeat="event in events | filter:search" >
+        <a class="well event withripple" href="{{event.URL}}">
+          <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details">
               <div class="banner major">MAJOR LEAGUE</div>
             </div>
           </div>
-          <h3>VoodooHacks</h3>
+          <h3>{{event.Name}}</h3>
           <p>
-            September 10-14
+            {{event.Date}}
             <br>
-            Philadelphia, PA
+            {{event.Location}}
           </p>
-          <div class="event-link navbar-primary">
-            <i class="icon icon-material-arrow-forward"></i> http://voodoohacks.com/
+          <div class="event-details">
+            <span class="desc">{{event.Desc}}</span>
+            <br>
+            HS({{event.hs}}) &amp; College({{event.college}}) Admitted
+            <br>
+            {{event.travel}} Travel Reimbursement
+            <br>
+            Hardware({{event.hardware}}) Application({{event.application}})
           </div>
-
+          <div class="event-link navbar-primary">
+            <i class="icon icon-material-arrow-forward"></i> {{event.URL}}
+          </div>
         </a>
-      </div>    </div>
+      </div>
   </div>
 </section>
 <section class="toolbar">

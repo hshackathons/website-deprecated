@@ -225,6 +225,12 @@ section {
 
 // Events
 .events {
+	.event-wrapper {
+		display: inline-block;
+		width: 25%;
+		padding: 10px;
+		min-width: 285px;
+	}
 	.event {
 		display: block;
 		padding: 0px;
@@ -232,6 +238,7 @@ section {
 		border-radius: 6px;
 		overflow: hidden;	
 		text-align: center;
+		vertical-align: top;
 		&:hover {
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
 			text-decoration: none;
@@ -245,7 +252,7 @@ section {
 			display: block;
 			background-size: cover;
 			background-position: center;
-			background-color: gray;
+			background-color: rgb(223, 223, 223);
 			background-image: url(/img/hackathons/cover/placeholder.png);
 			position: relative;
 			.banner.national {
@@ -289,10 +296,14 @@ section {
 		& > p:last-of-type {
 			padding-bottom: 0.25em;
 		}
-		.event-footer {
+		.event-details {
 			background: rgb(229, 229, 229);
 			text-align: left;
 			padding: 1em 1em;
+			.desc {
+				display: block;
+				min-height: 3em;
+			}
 		}
 		.event-link {
 			color: white;
