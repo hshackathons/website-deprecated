@@ -4,11 +4,15 @@
   </div>
 </header>
 
-<article class="news" ng-repeat="article in news" ng-click="showDetails = ! showDetails">
+<article class="news" ng-repeat="article in news">
 
   <div class="container">
-    <h1>{{article.title}}</h1>
-    <div ng-bind-html="article.content" ng-show="showDetails"></div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1 ng-click="showDetails = ! showDetails" style="cursor:pointer; text-transform:uppercase;">{{article.title}}</h1><br>
+        <div ng-bind-html="article.content" ng-show="showDetails"></div>
+      </div>
+    </div>
   </div>
 
 </article>
