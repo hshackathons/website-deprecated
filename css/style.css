@@ -413,7 +413,8 @@ h6,
 
 .checkbox {
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg); }
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg); }
 
 .checkbox label {
   cursor: pointer;
@@ -556,7 +557,8 @@ h6,
 .checkbox input[type=checkbox][disabled] ~ .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
 
 .checkbox input[type=checkbox]:checked ~ .check:after,
 .checkbox-default input[type=checkbox]:checked ~ .check:after {
@@ -703,7 +705,8 @@ h6,
     left: 17px;
     width: 10px;
     height: 21px;
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     border-color: #0f9d58;
     border-left-color: transparent;
     border-top-color: transparent; }
@@ -715,7 +718,8 @@ h6,
     left: 17px;
     width: 4px;
     height: 4px;
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     border-color: #5a5a5a;
     border-left-color: #5a5a5a;
     border-top-color: #5a5a5a; }
@@ -724,7 +728,8 @@ h6,
     left: 12px;
     width: 18px;
     height: 18px;
-    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     border-color: #5a5a5a;
     border-left-color: #5a5a5a;
     border-top-color: #5a5a5a; } }
@@ -828,7 +833,8 @@ h6,
   width: 34px;
   border-radius: 100%;
   -webkit-transform: scale(0);
-  transform: scale(0);
+  -ms-transform: scale(0);
+      transform: scale(0);
   -webkit-transition: -webkit-transform .1s, opacity 0.2s 0.4s;
   transition: transform .1s, opacity 0.2s 0.4s;
   z-index: 1;
@@ -837,7 +843,8 @@ h6,
 
 .radio label .ripple.animate {
   -webkit-transform: scale(1);
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
   opacity: 0; }
 
 .radio label .circle {
@@ -852,7 +859,8 @@ h6,
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: scale(0);
-  transform: scale(0); }
+  -ms-transform: scale(0);
+      transform: scale(0); }
 
 .radio input[type=radio]:checked ~ .check,
 .radio-default input[type=radio]:checked ~ .check {
@@ -1003,7 +1011,8 @@ h6,
 
 .radio input[type=radio]:checked ~ .check {
   -webkit-transform: scale(0.55);
-  transform: scale(0.55); }
+  -ms-transform: scale(0.55);
+      transform: scale(0.55); }
 
 .radio input[type=radio][disabled] ~ .circle {
   border-color: rgba(0, 0, 0, 0.84); }
@@ -1108,14 +1117,16 @@ select[multiple].form-control.focus {
   background-color: #5264ae;
   bottom: -1px;
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  -ms-transform: scaleX(0);
+      transform: scaleX(0);
   -webkit-transition: -webkit-transform 0s;
   transition: transform 0s; }
 
 .form-control-wrapper .form-control:focus ~ .material-input:before,
 .form-control-wrapper .form-control.focus ~ .material-input:before {
   -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out; }
 
@@ -1130,7 +1141,8 @@ select[multiple].form-control.focus {
   pointer-events: none;
   opacity: 0.9;
   -webkit-transform-origin: left;
-  transform-origin: left; }
+  -ms-transform-origin: left;
+      transform-origin: left; }
 
 .form-control-wrapper .input-lg ~ .material-input:after {
   height: 26px; }
@@ -1581,9 +1593,11 @@ select.form-control.focus {
 @-ms-keyframes input-highlight {
   0% {
     left: 20%;
-    transform: scaleX(20%); }
+    -ms-transform: scaleX(20%);
+        transform: scaleX(20%); }
   99% {
-    transform: scaleX(0);
+    -ms-transform: scaleX(0);
+        transform: scaleX(0);
     left: 0;
     opacity: 1; }
   100% {
@@ -2506,7 +2520,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: translateY(200%);
-  transform: translateY(200%); }
+  -ms-transform: translateY(200%);
+      transform: translateY(200%); }
 
 .snackbar.snackbar-opened {
   padding: 14px 15px;
@@ -2515,7 +2530,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: none;
-  transform: none; }
+  -ms-transform: none;
+      transform: none; }
 
 .snackbar.toast {
   border-radius: 200px; }
@@ -2607,7 +2623,8 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .noUi-horizontal .noUi-handle:active {
   -webkit-transform: scale(2.5);
-  transform: scale(2.5); }
+  -ms-transform: scale(2.5);
+      transform: scale(2.5); }
 
 [disabled].noUi-slider {
   opacity: 0.5; }
@@ -3559,7 +3576,8 @@ body .jumbotron-material-lightgrey,
 
 .checkbox {
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg); }
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg); }
 
 .checkbox label {
   cursor: pointer;
@@ -3702,7 +3720,8 @@ body .jumbotron-material-lightgrey,
 .checkbox input[type=checkbox][disabled] ~ .check:after {
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
 
 .checkbox input[type=checkbox]:checked ~ .check:after,
 .checkbox-default input[type=checkbox]:checked ~ .check:after {
@@ -3849,7 +3868,8 @@ body .jumbotron-material-lightgrey,
     left: 17px;
     width: 10px;
     height: 21px;
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     border-color: #0f9d58;
     border-left-color: transparent;
     border-top-color: transparent; }
@@ -3861,7 +3881,8 @@ body .jumbotron-material-lightgrey,
     left: 17px;
     width: 4px;
     height: 4px;
-    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
     border-color: #5a5a5a;
     border-left-color: #5a5a5a;
     border-top-color: #5a5a5a; }
@@ -3870,7 +3891,8 @@ body .jumbotron-material-lightgrey,
     left: 12px;
     width: 18px;
     height: 18px;
-    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     border-color: #5a5a5a;
     border-left-color: #5a5a5a;
     border-top-color: #5a5a5a; } }
@@ -4014,7 +4036,8 @@ body .jumbotron-material-lightgrey,
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.84);
   -webkit-transform: scale(0);
-  transform: scale(0); }
+  -ms-transform: scale(0);
+      transform: scale(0); }
 
 .radio label .check:after {
   display: block;
@@ -4030,7 +4053,8 @@ body .jumbotron-material-lightgrey,
   opacity: 0;
   margin: 0;
   -webkit-transform: scale(1.5);
-  transform: scale(1.5); }
+  -ms-transform: scale(1.5);
+      transform: scale(1.5); }
 
 .radio label input[type=radio]:not(:checked) ~ .check:after {
   -webkit-animation: rippleOff 500ms;
@@ -4191,7 +4215,8 @@ body .jumbotron-material-lightgrey,
 
 .radio input[type=radio]:checked ~ .check {
   -webkit-transform: scale(0.55);
-  transform: scale(0.55); }
+  -ms-transform: scale(0.55);
+      transform: scale(0.55); }
 
 .radio input[type=radio][disabled] ~ .circle {
   border-color: rgba(0, 0, 0, 0.84); }
@@ -4374,14 +4399,16 @@ select[multiple].form-control.focus {
   background-color: #5264ae;
   bottom: -1px;
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  -ms-transform: scaleX(0);
+      transform: scaleX(0);
   -webkit-transition: -webkit-transform 0s;
   transition: transform 0s; }
 
 .form-control-wrapper .form-control:focus ~ .material-input:before,
 .form-control-wrapper .form-control.focus ~ .material-input:before {
   -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: transform 0.2s ease-out; }
 
@@ -4396,7 +4423,8 @@ select[multiple].form-control.focus {
   pointer-events: none;
   opacity: 0.9;
   -webkit-transform-origin: left;
-  transform-origin: left; }
+  -ms-transform-origin: left;
+      transform-origin: left; }
 
 .form-control-wrapper .input-lg ~ .material-input:after {
   height: 26px; }
@@ -4844,9 +4872,11 @@ select.form-control.focus {
 @-ms-keyframes input-highlight {
   0% {
     left: 20%;
-    transform: scaleX(20%); }
+    -ms-transform: scaleX(20%);
+        transform: scaleX(20%); }
   99% {
-    transform: scaleX(0);
+    -ms-transform: scaleX(0);
+        transform: scaleX(0);
     left: 0;
     opacity: 1; }
   100% {
@@ -5554,7 +5584,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, padding 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: translateY(200%);
-  transform: translateY(200%); }
+  -ms-transform: translateY(200%);
+      transform: translateY(200%); }
 
 .snackbar.snackbar-opened {
   padding: 14px 15px;
@@ -5563,7 +5594,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in, height 0 linear 0.2s, height 0 linear 0.2s;
   -webkit-transform: none;
-  transform: none; }
+  -ms-transform: none;
+      transform: none; }
 
 .snackbar.toast {
   border-radius: 200px; }
@@ -5655,7 +5687,8 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .noUi-horizontal .noUi-handle:active {
   -webkit-transform: scale(2.5);
-  transform: scale(2.5); }
+  -ms-transform: scale(2.5);
+      transform: scale(2.5); }
 
 [disabled].noUi-slider {
   opacity: 0.5; }
@@ -5905,8 +5938,6 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .ripple.ripple-on {
   -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  -ms-transition: opacity 0.15s ease-in 0s, -ms-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  -moz-transition: opacity 0.15s ease-in 0s, -moz-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
   opacity: 1; }
 
@@ -5917,17 +5948,11 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .at-view-slide-in-bottom.ng-enter {
   -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  -o-transition-property: -o-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
   transition-duration: 0.25s;
   -webkit-transform: translate(0px, 90px);
-  -moz-transform: translate(0px, 90px);
   -ms-transform: translate(0px, 90px);
-  -o-transform: translate(0px, 90px);
   transform: translate(0px, 90px);
   opacity: 0;
   z-index: 1;
@@ -5935,26 +5960,18 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .at-view-slide-in-bottom.ng-enter-active {
   -webkit-transform: translate(0px, 0px);
-  -moz-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   opacity: 1;
   position: absolute; }
 
 .at-view-slide-out-bottom.ng-leave {
   -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  -o-transition-property: -o-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transition-duration: 0.15s;
-  -moz-transition-duration: 0.15s;
-  -o-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-transform: translate(0px, 0px);
-  -moz-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   opacity: 1;
   z-index: 3;
@@ -5962,9 +5979,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 
 .at-view-slide-out-bottom.ng-leave-active {
   -webkit-transform: translate(0px, 0%);
-  -moz-transform: translate(0px, 0%);
   -ms-transform: translate(0px, 0%);
-  -o-transform: translate(0px, 0%);
   transform: translate(0px, 0%);
   opacity: 0;
   z-index: 1; }
@@ -5975,6 +5990,11 @@ html, body {
 body {
   font-weight: 300;
   background: white; }
+
+::-moz-selection {
+  background: #4285f4;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.5); }
 
 ::selection {
   background: #4285f4;
@@ -6034,19 +6054,22 @@ header {
   background-position: middle;
   background-repeat: no-repeat;
   position: relative;
-  transform: rotateZ(0); }
+  -webkit-transform: rotateZ(0);
+          transform: rotateZ(0); }
 
 .header-sunset {
   background-image: url(/img/header/metropolis.png);
   background-position: bottom;
   background-size: contain;
-  animation: header-sunset-inverse 25s linear infinite;
+  -webkit-animation: header-sunset-inverse 25s linear infinite;
+          animation: header-sunset-inverse 25s linear infinite;
   overflow: hidden; }
   .header-sunset .container {
     z-index: 500;
     position: relative; }
   .header-sunset .moon {
-    animation: header-sunset-moon 25s linear infinite;
+    -webkit-animation: header-sunset-moon 25s linear infinite;
+            animation: header-sunset-moon 25s linear infinite;
     z-index: 400;
     position: absolute;
     background: #e4f3ff;
@@ -6055,7 +6078,8 @@ header {
     width: 80px;
     border-radius: 200px;
     display: inline-block;
-    transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+        transform: rotate(120deg);
     -webkit-transform: rotate(120deg);
     margin-top: 100px;
     margin-left: -60px; }
@@ -6065,7 +6089,8 @@ header {
       border-radius: 70px 70px 0 0;
       background: gray; }
   .header-sunset .sun {
-    animation: header-sunset-sun 25s linear infinite;
+    -webkit-animation: header-sunset-sun 25s linear infinite;
+            animation: header-sunset-sun 25s linear infinite;
     z-index: 400;
     position: absolute;
     background: yellow;
@@ -6074,7 +6099,8 @@ header {
     width: 80px;
     border-radius: 200px;
     display: inline-block;
-    transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+        transform: rotate(120deg);
     -webkit-transform: rotate(120deg);
     margin-top: 100px;
     margin-left: -60px; }
@@ -6130,9 +6156,11 @@ header {
     -webkit-transform: rotate(360deg) translate(-500px) rotate(-360deg); } }
 @keyframes header-sunset-moon {
   from {
-    transform: rotate(0deg) translate(-500px) rotate(120deg); }
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg);
+            transform: rotate(0deg) translate(-500px) rotate(120deg); }
   to {
-    transform: rotate(360deg) translate(-500px) rotate(-360deg); } }
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(-360deg);
+            transform: rotate(360deg) translate(-500px) rotate(-360deg); } }
 @-webkit-keyframes header-sunset-sun {
   from {
     -webkit-transform: rotate(360deg) translate(-500px) rotate(360deg); }
@@ -6140,9 +6168,11 @@ header {
     -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg); } }
 @keyframes header-sunset-sun {
   from {
-    transform: rotate(360deg) translate(-500px) rotate(360deg); }
+    -webkit-transform: rotate(360deg) translate(-500px) rotate(360deg);
+            transform: rotate(360deg) translate(-500px) rotate(360deg); }
   to {
-    transform: rotate(0deg) translate(-500px) rotate(120deg); } }
+    -webkit-transform: rotate(0deg) translate(-500px) rotate(120deg);
+            transform: rotate(0deg) translate(-500px) rotate(120deg); } }
 section {
   padding: 60px 0; }
 
@@ -6159,7 +6189,8 @@ section {
 .events .event {
   display: block;
   padding: 0px;
-  transition: 300ms all linear;
+  -webkit-transition: 300ms all linear;
+          transition: 300ms all linear;
   border-radius: 6px;
   overflow: hidden;
   text-align: center; }
@@ -6179,7 +6210,9 @@ section {
     position: relative; }
     .events .event .cover .banner.national {
       background: #FFF480;
-      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
       position: absolute;
       top: 20px;
       right: -32px;
@@ -6191,7 +6224,9 @@ section {
       box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25); }
     .events .event .cover .banner.major {
       background: #b0ff71;
-      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
       position: absolute;
       top: 20px;
       right: -44px;
@@ -6372,12 +6407,25 @@ section {
   width: 50px;
   height: 50px;
   background: white;
-  animation: ripple-animation 2s; }
+  -webkit-animation: ripple-animation 2s;
+          animation: ripple-animation 2s; }
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.4; }
+  to {
+    -webkit-transform: scale(100);
+            transform: scale(100);
+    opacity: 0; } }
 
 @keyframes ripple-animation {
   from {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 0.4; }
   to {
-    transform: scale(100);
+    -webkit-transform: scale(100);
+            transform: scale(100);
     opacity: 0; } }
