@@ -66,7 +66,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			//var url = param.substring(19, param.length);
 			//console.log(url);
 			console.log(param);
-			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/minor-league-hacking/feed'}).
 			    success(function(feed, status, headers, config) {
 			      var articles = feed.responseData.feed.entries;
 			      for (x in articles) {
@@ -84,7 +84,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 		}
 		//display all blog posts
 		else {
-			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/major-league-hacking-announcements/feed'}).
+			$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=http://news.mlh.io/category/minor-league-hacking/feed'}).
 			    success(function(feed, status, headers, config) {
 			      $scope.news = feed.responseData.feed.entries;
 			      console.log($scope.news);
