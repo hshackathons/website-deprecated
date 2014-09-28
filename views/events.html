@@ -65,13 +65,13 @@
         </div>
       </div>
       
-      <h2 ng-show="(events | filter:search).length == 0" class="text-center" class="loading-message">
-        <i class="icon icon-poo"></i>
+      <h2 ng-hide="events.length" class="text-center loading-message">
+        <i class="icon icon-material-auto-fix"></i>
         <br>
-        Nothing here!
+        Fetching Events!
       </h2>
 
-      <h2 ng-show="(events | filter:search).length == 0" class="text-center" class="loading-message">
+      <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
         <i class="icon icon-poo"></i>
         <br>
         Nothing here!
