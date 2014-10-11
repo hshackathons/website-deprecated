@@ -9,14 +9,14 @@
     <meta name="author" content="Minor League Hacking">
     <title>Minor League Hacking</title>
     <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <!--<base href="/">-->
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Material Design -->
     <link href="css/style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="icons/icons-material-design.css">
+    <link rel="stylesheet" href="icons/icons-haxicons.css">
     <script>
       !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
       arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
@@ -34,44 +34,126 @@
 </head>
   <body ng-controller="indexController">
     
-
-    <div class="header" id="header">
+    <nav class="navbar-material-teal" id="top">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <h1>Minor League Hacking</h1>
-          </div>
-          <div class="col-lg-7">
-            <ul class="text-right">
-              <li><a href="#/">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="mailto:sicong.liu98@gmail.com">CONTACT</a></li>
-              <li><a href="http://mlh.io">MLH.IO</a></li>
-            </ul>
-          </div>
+        <a href="#" class="btn btn-brand hidden-xs withripple">Minor League Hacking</a>
+        <a href="#" class="btn btn-fab icon-material-home withripple" data-toggle="tooltip" data-placement="bottom" title="Home">
+        <a href="#events" class="btn btn-fab icon-material-event withripple" data-toggle="tooltip" data-placement="bottom" title="Events">
+        <a href="#news" class="btn btn-fab icon-material-news withripple" data-toggle="tooltip" data-placement="bottom" title="News">
+        </a>
+
+        <div class="pull-right">
+          <a href="#about" class="btn btn-fab icon-material-info withripple" data-toggle="tooltip" data-placement="bottom" title="About">
+          </a>
+          <a href="#faq" class="btn btn-fab icon-material-help withripple" data-toggle="tooltip" data-placement="bottom" title="FAQ">
+          </a>
+          <a href="#organize" class="btn btn-fab icon-material-add withripple" data-toggle="tooltip" data-placement="bottom" title="Organize">
+          </a>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div id="main">
       <!-- angular templating -->
       <!-- this is where content will be injected -->
-      <div ng-view autoscroll="true"></div>
+      <div ng-view autoscroll="true" class="animate at-view-slide-in-bottom at-view-slide-out-bottom" style="width:100%;"></div>
+      <div class="push"></div>
     </div>
-
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <center><p>&copy; Minor League Hacking 2014. Part of <a href="http://mlh.io">MLH</a>. Hackathons are of their respective owners.</p></center>
-          </div>
+        <div class="logo hidden-xs">
+          <a href="http://mlh.io/" class="btn withripple" target="_blank" data-toggle="tooltip" data-placement="top" title="Open Site">
+            <b>Proudly part of</b>
+            <br>
+            <br>
+            <img src="/img/mlh.png" alt="">
+          </a>
+        </div>
+        <a href="javascript:$('html, body').animate({ scrollTop: 0 }, 'slow');" class="btn btn-warning btn-fab btn-raised icon-pointer-up to-the-moon"></a>
+        <p class="social">
+          <a href="http://facebook.com/groups/PennAppsHS/" target="_blank" class="btn btn-fab btn-facebook icon-facebook withripple" data-toggle="tooltip" data-placement="top" title="HS Hackers">
+          </a>
+          <a href="http://twitter.com/MLHacks" target="_blank" class="btn btn-fab btn-twitter icon-twitter withripple" data-toggle="tooltip" data-placement="top" title="@MLHacks">
+          </a>
+          <a href="javascript:void(0)" target="_blank" class="btn btn-fab btn-twitter icon-github withripple" data-toggle="tooltip" data-placement="top" title="GitHub (Soon)">
+          </a>
+          <a href="http://hshackers.org/" target="_blank" class="btn btn-fab btn-twitter icon-tools withripple" data-toggle="tooltip" data-placement="top" title="Meetups">
+          </a>
+        </p>
+        <p>
+          v1.0 Stargazing Starlord - <a href="#changelog">Changelog</a> - <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Code of Conduct</a>.
+          <br>
+          &copy; Minor League Hacking. Hackathons are of their respective owners.
+          <br>
+        </p>
         </div>
       </div>
-    </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/material.js"></script>
+    <script src="js/ripples.js"></script> 
+
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.js"></script>
+    <script src="/js/angular-animate.js"></script>
+    <script src="/js/angular-sanitize.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-sanitize.js"></script> -->
+    <script src="js/script.js"></script>
+  
+    <script>
+    /* Move this to JS file */
+    $('[data-toggle="tooltip"]').tooltip();
+
+    /* Ripples */
+    $( document ).ready(function() {
+      
+    (function (window, $) {
+      
+      $(function() {
+        
+        
+        $('.altripple').on('click', function (event) {
+          event.preventDefault();
+          
+          var $div = $('<div/>'),
+              btnOffset = $(this).offset(),
+              xPos = event.pageX - btnOffset.left,
+              yPos = event.pageY - btnOffset.top;
+          
+
+          
+          $div.addClass('ripple-effect');
+          var $ripple = $(".ripple-effect");
+          
+          $ripple.css("height", $(this).height());
+          $ripple.css("width", $(this).height());
+          $div
+            .css({
+              top: yPos - ($ripple.height()/2),
+              left: xPos - ($ripple.width()/2),
+              background: $(this).data("ripple-color")
+            }) 
+            .appendTo($(this));
+
+          window.setTimeout(function(){
+            $div.remove();
+          }, 2000);
+        });
+        
+      });
+      
+    })(window, jQuery);
+
+    });
+
+    </script> 
   </body>
 </html>
