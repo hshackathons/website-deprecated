@@ -63,7 +63,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	});
 
 	mlhApp.controller('eventsController', function($scope, $http) {
-		$scope.message = '2014 Season Events';
+		$scope.message = '2015 Spring Season';
 	});
 
 	mlhApp.controller('aboutController', function($scope, $http) {

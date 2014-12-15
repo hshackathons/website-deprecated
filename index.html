@@ -10,13 +10,10 @@
     <title>Minor League Hacking</title>
     <link rel="icon" type="image/ico" href="favicon.ico"/>
     <!--<base href="/">-->
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- Material Design -->
+    <!-- Icons -->
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="icons/icons-material-design.css">
     <link rel="stylesheet" href="icons/icons-haxicons.css">
+    <link rel="stylesheet" href="icons/octicons.css">
     <script>
       !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
       arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
@@ -34,11 +31,11 @@
 </head>
   <body ng-controller="indexController">
     
-    <nav class="navbar-material-teal" id="top">
+    <!-- <nav class="navbar-material navbar-material-teal" id="top">
       <div class="container">
         <a href="#" class="btn btn-brand hidden-xs withripple">Minor League Hacking</a>
-        <a href="#" class="btn btn-fab icon-material-home withripple" data-toggle="tooltip" data-placement="bottom" title="Home">
-        <a href="#events" class="btn btn-fab icon-material-event withripple" data-toggle="tooltip" data-placement="bottom" title="Events">
+        <a href="#" class="btn btn-fab icon-material-home withripple" data-toggle="tooltip" data-placement="bottom" title="Home"></a>
+        <a href="#events" class="btn btn-fab icon-material-event withripple" data-toggle="tooltip" data-placement="bottom" title="Events"></a>
         <a href="#news" class="btn btn-fab icon-material-news withripple" data-toggle="tooltip" data-placement="bottom" title="News">
         </a>
 
@@ -51,6 +48,42 @@
           </a>
         </div>
       </div>
+    </nav> -->
+      <nav class="menubar">
+        <div class="container">
+          <a href="#" class="logo">
+            <b>Minor League Hacking</b>
+          </a>
+          <div class="pull-right">
+            <a href="#" class="link" title="Welcome">
+              <i class="octicon octicon-globe"></i>
+              <span>Intro</span>
+            </a><a href="#events" class="link" title="Events">
+              <i class="octicon octicon-calendar"></i>
+              <span>Events</span>
+            </a><a href="#news" class="link" title="News">
+              <i class="octicon octicon-megaphone"></i>
+              <span>News</span>
+            </a><a href="#organize" class="withripple" title="Toolkit">
+              <i class="octicon octicon-package"></i>
+              <span>Toolkit</span>
+            </a><span class="has-dropdown"><a href="#about" class="link" title="About">
+                <i class="octicon octicon-three-bars"></i>
+                <span>More</span>
+              </a>
+              <div class="dropdown">
+                <a href="#about" class="withripple" title="Organize">
+                  <i class="octicon octicon-organization"></i>
+                  <span>About</span>
+                </a>
+                <a href="#faq" class="withripple" title="FAQ">
+                  <i class="octicon octicon-question"></i>
+                  <span>FAQ</span>
+                </a>
+              </div>
+            </span>
+          </div>
+        </div>
     </nav>
 
     <div id="main">
