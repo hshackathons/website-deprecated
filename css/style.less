@@ -158,7 +158,7 @@ nav.navbar-material {
 }
 
 // New Navigation
-nav.menubar {
+/* nav.menubar {
 	position: relative;
 	background: #225378;
 	color: white;
@@ -188,6 +188,61 @@ nav.menubar {
 				display: block;
 				font-size: 16px;
 				line-height: 2em;
+			}
+		}
+	}
+} */
+
+nav.menubar {
+	// background: #252525;
+	// background: rgba(0,0,0,.75);
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9000;
+	a {
+		display: inline-block;
+		line-height: 75px;
+		color: white;
+		padding: 0 0.75em;
+		&.logo {
+			margin-left: -0.75em;
+		}
+		i {
+			margin-right: 0.25em;
+			opacity: 0.8;
+			font-size: 1.2em;
+		}
+		&:hover {
+			text-decoration: none;
+			background: rgba(255,255,255,.15);
+		}
+	}
+	.has-dropdown {
+		position: relative;
+		.dropdown {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			background: #252525;
+			background: rgba(0,0,0,.75);
+			right: 0;
+			width: 150px;
+			.transition-bounce;
+			transform: scale(0.8) translateX(-20px);
+			transform-origin: top right;
+			a {
+				display: block;
+			}
+		}
+		&:hover {
+			.dropdown {
+				opacity: 1;
+				visibility: visible;
+				transform: scale(1) translateX(0px);
+				transform-origin: top right;
 			}
 		}
 	}
