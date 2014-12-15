@@ -12834,7 +12834,7 @@ nav.navbar-material .container {
 	}
 } */
 nav.menubar {
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   top: 0;
   left: 0;
@@ -12896,7 +12896,7 @@ nav.menubar .has-dropdown:hover .dropdown {
 header {
   text-align: center;
   background: #009688;
-  margin-top: -390px;
+  margin-top: -350px;
   padding-top: 490px;
   padding-bottom: 100px;
   color: white;
