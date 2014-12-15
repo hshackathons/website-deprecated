@@ -42,7 +42,7 @@
         <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details">
-              <div class="banner major">MAJOR LEAGUE</div>
+              <!-- <div class="banner major">MAJOR LEAGUE</div> -->
             </div>
           </div>
           <h3>{{event.Name}}</h3>
@@ -61,19 +61,19 @@
             Hardware({{event.hardware}}) Application({{event.application}})
           </div>
           <a href="{{event.URL}}" class="event-link navbar-primary">
-            <i class="icon icon-material-arrow-forward"></i> {{event.URL}}
+            <i class="octicon octicon-chevron-right"></i> {{event.URL}}
           </a>
         </div>
       </div>
       
       <h2 ng-hide="events.length" class="text-center loading-message">
-        <i class="icon icon-material-auto-fix"></i>
+        <i class="octicon octicon-squirrel"></i>
         <br>
         Fetching Events!
       </h2>
 
       <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
-        <i class="icon icon-poo"></i>
+        <i class="octicon octicon-gist-secret"></i>
         <br>
         Nothing here!
       </h2>
