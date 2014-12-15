@@ -12703,6 +12703,7 @@ h2,
 h3,
 h4,
 h5 {
+  color: inherit;
   font-family: 'Roboto', sans-serif;
 }
 h1 {
@@ -12711,10 +12712,10 @@ h1 {
 h4 {
   font-weight: 300;
 }
-nav {
+nav.navbar-material {
   padding: 10px 0;
 }
-nav a {
+nav.navbar-material a {
   display: inline-block;
   padding: 14px;
   font-size: 24px;
@@ -12723,11 +12724,11 @@ nav a {
   margin-right: 10px!important;
   vertical-align: middle;
 }
-nav a:hover {
+nav.navbar-material a:hover {
   color: white;
   text-decoration: none;
 }
-nav a.btn-brand {
+nav.navbar-material a.btn-brand {
   color: white!important;
   text-decoration: none;
   text-transform: none;
@@ -12735,12 +12736,43 @@ nav a.btn-brand {
   padding: 12px 20px;
   background: rgba(0, 0, 0, 0.15);
 }
-nav .pull-right {
+nav.navbar-material .pull-right {
   padding-top: 3px;
 }
-nav .container {
+nav.navbar-material .container {
   position: relative;
   z-index: 9001;
+}
+nav.menubar {
+  position: relative;
+  background: #225378;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+nav.menubar .logo {
+  float: left;
+  color: white;
+  font-size: 40px;
+  font-family: Roboto, Arial, sans-serif;
+}
+nav.menubar p {
+  font-size: 18px;
+}
+nav.menubar .links a {
+  display: inline-block;
+  color: white;
+  padding: 15px;
+  font-size: 36px;
+  height: 56px;
+  text-align: center;
+  padding: 0 40px;
+}
+nav.menubar .links a span {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  font-size: 16px;
+  line-height: 2em;
 }
 header {
   text-align: center;

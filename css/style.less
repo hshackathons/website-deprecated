@@ -3,6 +3,8 @@
 @import "_ng-animate.less";
 
 @dark: #455a64;
+@headings: Roboto, Arial, sans-serif;
+@content: 'Roboto', sans-serif;
 
 html, body {
 	height: 100%;
@@ -30,7 +32,8 @@ body {
 }
 
 p, h1, h2, h3, h4, h5 {
-	font-family: 'Roboto', sans-serif;
+	color: inherit;
+	font-family: @content;
 }
 
 h1 {
@@ -42,7 +45,7 @@ h4 {
 }
 
 // Navigation
-nav {
+nav.navbar-material {
 	padding: 10px 0;
 	a {
 		display: inline-block;
@@ -72,6 +75,42 @@ nav {
 	.container {
 		position: relative;
 		z-index: 9001;
+	}
+}
+
+// New Navigation
+nav.menubar {
+	position: relative;
+	background: #225378;
+	color: white;
+	padding: 20px 0;
+	text-align: center;
+	.logo {
+		float: left;
+		color: white;
+		font-size: 40px;
+		font-family: @headings;
+	}
+	p {
+		font-size: 18px;
+	}
+	.links {
+		a {
+			display: inline-block;
+			color: white;
+			padding: 15px;
+			font-size: 36px;
+			// width: 56px;
+			height: 56px;
+			text-align: center;
+			padding: 0 40px;
+			span {
+				font-family: @content;
+				display: block;
+				font-size: 16px;
+				line-height: 2em;
+			}
+		}
 	}
 }
 
