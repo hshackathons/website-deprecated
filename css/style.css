@@ -12712,6 +12712,62 @@ h1 {
 h4 {
   font-weight: 300;
 }
+.button {
+  display: inline-block;
+  padding: 10px 12px;
+  background-color: gray;
+  border-radius: 6px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.button:hover {
+  color: white;
+  text-decoration: none;
+  background-color: gray;
+  -webkit-transition-delay: initial;
+  transition-delay: initial;
+}
+.button:focus {
+  outline: 2px solid blue;
+}
+.transition-faster {
+  -webkit-transition: all 90ms linear;
+  transition: all 90ms linear;
+  translateZ: 0px;
+}
+.transition {
+  -webkit-transition: all 180ms linear;
+  transition: all 180ms linear;
+  translateZ: 0px;
+}
+.transition-longer {
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  translateZ: 0px;
+}
+.transition-bounce {
+  -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  translateZ: 0px;
+}
+.transition-bounce-longer {
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  translateZ: 0px;
+}
+a {
+  -webkit-transition: all 180ms linear;
+  transition: all 180ms linear;
+  translateZ: 0px;
+}
 nav.navbar-material {
   padding: 10px 0;
 }
