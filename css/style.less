@@ -1,18 +1,24 @@
-@import "_bootstrap.min.less";
-@import "_material-wfont-ripple.less";
+@import "_normalize.less";
+@import "_preboot.less";
+// @import "_material-wfont-ripple.less";
 @import "_ng-animate.less";
+@import "_variables.less";
+@import "_base.less";
+@import "_bootstrap-tooltips.less";
 
 @dark: #455a64;
-@headings: Roboto, Arial, sans-serif;
-@content: 'Roboto', sans-serif;
+@headings: @font-family-sans-serif;
+@content: "Proxima Nova";
 
 html, body {
 	height: 100%;
 }
 
 body {
-	font-weight: 300;
+	font-weight: normal;
+	font-family: @content;
 	background: white;
+	font-size: @font-size;
 }
 
 ::selection {
@@ -31,9 +37,9 @@ body {
 	}
 }
 
-p, h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
 	color: inherit;
-	font-family: @content;
+	font-family: @headings;
 }
 
 h1 {
@@ -70,7 +76,7 @@ h4 {
   }
 }
 
-.button-outline(@text, @background) {
+.button-fill(@text, @background) {
   color: @text;
   background: @background;
   border: 2px solid @background;
@@ -83,14 +89,19 @@ h4 {
   }
 }
 
-.button-fill(@text, @background) {
+.button-outline(@text, @background) {
   background: @background;
   border: 2px solid @background;
   color: @text;
   &:hover, &:focus, &.active {
     background: @text;
-    color: white;
+    color: @background;
   }
+}
+
+.btn {
+	.button;
+	.button-fill(black, yellow);
 }
 
 // Transitions
@@ -124,75 +135,6 @@ a {
 }
 
 // Navigation
-nav.navbar-material {
-	padding: 10px 0;
-	a {
-		display: inline-block;
-		padding: 14px;
-		font-size: 24px;
-		color: white;
-		border-radius: 100px;
-		margin-right: 10px!important;
-		vertical-align: middle;
-		&:hover {
-			color: white;
-			text-decoration: none;
-		}
-		&.btn-brand {
-			color: white!important;
-			text-decoration: none;
-			text-transform: none;
-			font-size: 18px;
-			padding: 12px 20px;
-			background: rgba(0, 0, 0, 0.15);
-		}
-	}
-	.pull-right {
-		padding-top: 3px;
-	}
-	// Bleed for header background
-	.container {
-		position: relative;
-		z-index: 9001;
-	}
-}
-
-// New Navigation
-/* nav.menubar {
-	position: relative;
-	background: #225378;
-	color: white;
-	padding: 20px 0;
-	text-align: center;
-	.logo {
-		float: left;
-		color: white;
-		font-size: 40px;
-		font-family: @headings;
-	}
-	p {
-		font-size: 18px;
-	}
-	.links {
-		a {
-			display: inline-block;
-			color: white;
-			padding: 15px;
-			font-size: 36px;
-			// width: 56px;
-			height: 56px;
-			text-align: center;
-			padding: 0 40px;
-			span {
-				font-family: @content;
-				display: block;
-				font-size: 16px;
-				line-height: 2em;
-			}
-		}
-	}
-} */
-
 nav.menubar {
 	// background: #252525;
 	// background: rgba(0,0,0,.75);
@@ -207,6 +149,7 @@ nav.menubar {
 		line-height: 75px;
 		color: white;
 		padding: 0 0.75em;
+		text-decoration: none;
 		&.logo {
 			margin-left: -0.75em;
 		}
@@ -263,6 +206,23 @@ header {
 	background-repeat: no-repeat;
 	position: relative;
 	transform: rotateZ(0);
+}
+
+.header-like {
+	margin-top: -250px;
+	padding-top: 350px;
+	padding-bottom: 60px;
+}
+
+// Intro
+.intro {
+	background: @purple;
+	color: white;
+	.header-like;
+	.button-more {
+		.button;
+		.button-outline(black, yellow);
+	}
 }
 
 // Header Day Cycle
@@ -659,12 +619,41 @@ section {
 }
 
 .footer {
-	background-color: #EEEEEE;
+	background-color: @dark-purple;
 	padding: 50px 0;
+	color: lighten(@purple, 40%);
+	text-align: center;
+	&:after, &:before {
+		bottom: 100%;
+		left: 0;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-color: @dark-purple;
+		border-bottom-color: @dark-purple;
+		border-left: 50vw solid @dark-purple;
+		border-top: 60px solid transparent;
+		border-right: 0;
+		border-bottom: 0;
+		left: 50%;
+	}
+	&:before {
+		border-color: @dark-purple;
+		border-bottom-color: @dark-purple;
+		border-right: 50vw solid @dark-purple;
+		border-top: 60px solid transparent;
+		border-left: 0;
+		border-bottom: 0;
+	}
 	.container {
 		position: relative;
 	}
-	.logo {
+	/* .logo {
 		float: left;
 		padding-right: 30px;
 		border-right: 1px solid gray;
@@ -673,11 +662,16 @@ section {
 			max-height: 5em;
 			width: auto;
 		}
-	}
+	} */
 	.to-the-moon {
 		position: absolute;
-		right: 24px;
-		top: -80px;
+		z-index: 9000;
+		top: -60px;
+		left: 50%;
+		margin-top: -65px;
+		margin-left: -25px;
+		// right: 24px;
+		// top: -80px;
 	}
 	.social {
 		vertical-align: middle;
