@@ -30,11 +30,10 @@
     <![endif]-->
 </head>
   <body ng-controller="indexController">
-
+ 
       <nav class="menubar">
-        <div class="container">
           <a href="#" class="logo">
-            <b>Minor League Hacking</b>
+            <img src="/assets/brand/milh-white.svg" alt="Minor League Hacking" height="40" width="120"/>
           </a>
           <div class="pull-right">
             <a href="#" class="link" title="Welcome">
@@ -65,38 +64,35 @@
               </div>
             </span>
           </div>
-        </div>
     </nav>
 
-    <div id="main">
-      <!-- angular templating -->
-      <!-- this is where content will be injected -->
-      <div ng-view autoscroll="true" class="animate at-view-slide-in-bottom at-view-slide-out-bottom" style="width:100%;"></div>
-      <div class="push"></div>
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view autoscroll="true" class="content animate at-view-slide-in-bottom at-view-slide-out-bottom" style="width:100%;">
+      <header>
+        <div class="container">
+          <h1>Loading...</h1>
+        </div>
+      </header>
     </div>
+
     <footer class="footer">
       <div class="container">
-        <div class="logo hidden-xs">
-          <a href="http://mlh.io/" class="btn withripple" target="_blank" data-toggle="tooltip" data-placement="top" title="Open Site">
-            <b>Proudly part of</b>
-            <br>
-            <br>
-            <img src="/img/mlh.png" alt="">
-          </a>
-        </div>
-        <a href="javascript:$('html, body').animate({ scrollTop: 0 }, 'slow');" class="btn btn-warning btn-fab btn-raised icon-pointer-up to-the-moon"></a>
+        <a href="javascript:$('html, body').animate({ scrollTop: 0 }, 'slow');" class="octicon octicon-chevron-up to-the-moon" data-toggle="tooltip" data-placement="top" title="Back to Top"></a>
         <p class="social">
-          <a href="http://facebook.com/groups/PennAppsHS/" target="_blank" class="btn btn-fab btn-facebook icon-facebook withripple" data-toggle="tooltip" data-placement="top" title="HS Hackers">
+          <a href="http://facebook.com/groups/PennAppsHS/" target="_blank" class="icon-facebook withripple" data-toggle="tooltip" data-placement="top" title="HS Hackers">
           </a>
-          <a href="http://twitter.com/MLHacks" target="_blank" class="btn btn-fab btn-twitter icon-twitter withripple" data-toggle="tooltip" data-placement="top" title="@MLHacks">
+          <a href="http://twitter.com/MLHacks" target="_blank" class="icon-twitter withripple" data-toggle="tooltip" data-placement="top" title="@MLHacks">
           </a>
-          <a href="javascript:void(0)" target="_blank" class="btn btn-fab btn-twitter icon-github withripple" data-toggle="tooltip" data-placement="top" title="GitHub (Soon)">
+          <a href="javascript:void(0)" target="_blank" class="icon-github withripple" data-toggle="tooltip" data-placement="top" title="GitHub (Soon)">
           </a>
-          <a href="http://hshackers.org/" target="_blank" class="btn btn-fab btn-twitter icon-tools withripple" data-toggle="tooltip" data-placement="top" title="Meetups">
+          <a href="http://hshackers.org/" target="_blank" class="icon-tools withripple" data-toggle="tooltip" data-placement="top" title="Meetups">
           </a>
         </p>
         <p>
-          v1.0.1 Stargazing Starlord - <a href="#changelog">Changelog</a> - <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Code of Conduct</a>.
+          <strong class="logo hidden-xs">Proudly part of <a href="http://mlh.io/">Major League Hacking</a></strong>
+          <br>
+          <a href="#changelog">Changelog</a> - <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Code of Conduct</a>.
           <br>
           &copy; Minor League Hacking. Hackathons are of their respective owners.
           <br>
