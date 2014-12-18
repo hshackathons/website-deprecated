@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="3543px" height="1181px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g>
+        <g>
+            <path d="M130.943,100.153C143.343,99.3093 746.229,91.2671 1015.39,108.512C1091.18,113.368 1114.62,153.96 1138.65,194.235C1162.67,234.51 1159.54,350.161 1159.54,350.161L130.943,350.161L130.943,100.153Z" style="fill:white;"/>
+        </g>
+        <g>
+            <path d="M375.022,346.986L375.022,1076.87L131.363,1076.87L131.363,346.986L375.022,346.986Z" style="fill:white;fill-opacity:0.803922;"/>
+        </g>
+        <g>
+            <path d="M774,346.986L774,1076.87L530.34,1076.87L530.34,346.986L774,346.986Z" style="fill:white;fill-opacity:0.803922;"/>
+        </g>
+        <g>
+            <path d="M1159.36,346.986L1159.36,1076.87L915.696,1076.87L915.696,346.986L1159.36,346.986Z" style="fill:white;fill-opacity:0.803922;"/>
+        </g>
+        <g>
+            <path d="M1578.36,382.538L1578.36,1077.02L1334.7,1077.02L1334.7,382.538L1578.36,382.538Z" style="fill:white;"/>
+        </g>
+        <g>
+            <path d="M2002.36,109.134L2002.36,1077.02L1758.7,1077.02L1758.7,109.134L2002.36,109.134Z" style="fill:white;"/>
+        </g>
+        <g>
+            <path d="M2804.36,109.134L2804.36,1077.02L2560.7,1077.02L2560.7,109.134L2804.36,109.134Z" style="fill:white;"/>
+        </g>
+        <g>
+            <path d="M3383.87,109.134L3383.87,1077.02L3140.21,1077.02L3140.21,109.134L3383.87,109.134Z" style="fill:white;"/>
+        </g>
+        <g>
+            <rect x="2001.73" y="834.246" width="397.735" height="243.66" style="fill:white;fill-opacity:0.803922;"/>
+        </g>
+        <g>
+            <rect x="2804.73" y="471.246" width="335.735" height="243.66" style="fill:white;fill-opacity:0.803922;"/>
+        </g>
+        <g>
+            <path d="M1334.7,356.075L1334.7,109.723C1430.35,109.723 1491.93,114.942 1532.73,156.001C1573.52,197.059 1579.45,257.105 1579.45,356.075L1334.7,356.075Z" style="fill:white;fill-opacity:0.8;"/>
+        </g>
+    </g>
+</svg>
