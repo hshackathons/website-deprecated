@@ -350,6 +350,7 @@ table {
   opacity: 0;
   z-index: 1;
   position: absolute;
+  z-index: 60;
 }
 .at-view-slide-in-bottom.ng-enter-active {
   -webkit-transform: translate(0px, 0px);
@@ -357,6 +358,7 @@ table {
   transform: translate(0px, 0px);
   opacity: 1;
   position: absolute;
+  z-index: 60;
 }
 .at-view-slide-out-bottom.ng-leave {
   -webkit-transition-property: -webkit-transform, opacity;
@@ -369,6 +371,7 @@ table {
   opacity: 1;
   z-index: 3;
   position: absolute;
+  z-index: 40;
 }
 .at-view-slide-out-bottom.ng-leave-active {
   -webkit-transform: translate(0px, 0%);
@@ -376,6 +379,7 @@ table {
   transform: translate(0px, 0%);
   opacity: 0;
   z-index: 1;
+  z-index: 40;
 }
 header,
 section,

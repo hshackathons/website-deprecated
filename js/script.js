@@ -1,3 +1,5 @@
+$('[data-toggle="tooltip"]').tooltip();
+
 var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	
 	mlhApp.config(function($routeProvider, $locationProvider) {
