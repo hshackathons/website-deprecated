@@ -57,7 +57,8 @@
         <a href="#" class="button">Website</a>
       </div>
     </div>
-    <br><br>
+    <br><br> 
+      <!-- <div class="event-wrapper">
         <a class="well event withripple" href="">
           <div class="cover">
             <div class="details">
@@ -83,6 +84,7 @@
             <i class="icon icon-material-arrow-forward"></i> http://voodoohacks.com/
           </div>
         </a>
+      </div> -->
       <div class="event-wrapper" ng-repeat="event in events | filter:search" >
         <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">

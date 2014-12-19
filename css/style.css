@@ -1463,6 +1463,7 @@ section {
 }
 .events {
   vertical-align: top;
+  text-align: center;
 }
 .events .event-wrapper {
   display: inline-block;
@@ -1546,7 +1547,7 @@ section {
   padding: 5px 15px;
 }
 .events .event h3 {
-  padding-top: 0px;
+  padding-top: 20px;
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
