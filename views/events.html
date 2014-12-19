@@ -1,26 +1,64 @@
 <header class="altripple navbar-material-orange">
   <div class="container">
-    <h1>{{ message }}</h1>
-    <div class="btn-group">
+    <!-- <h1>{{ message }}</h1> -->
+    <h1>Events</h1>
+    <p class="lead">Get involved in our Spring 2015 season!</p>
+    <!-- <div class="btn-group">
       <a href="#events" class="btn btn-material-orange btn-disabled" data-toggle="tooltip" data-placement="top">Fall 2014</a>
       <a href="#events" class="btn btn-material-lightgreen" data-toggle="tooltip" data-placement="top" title="Coming Soon!" disabled>Spring 2015</a>
-    </div>
+    </div> -->
   </div>
 </header>
 </section>
+<section class="map" id="map">
+  <div class="container">
+    Mapbox embed goes here!
+  </div>
+</section>
 <section class="events section-events" id="events">
   <div class="container">
-    <div class="form-control-wrapper"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus=""><div class="floating-label">Search Events</div><span class="material-input"></span></div>
+    <div class="search-bar"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Events"></div>
     <div class="hexagons">
       <div class="hexagon">
         <img src="/img/events/s2015/pennapps-s2015.png" alt="">
+        <h2>PennApps</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
         <img src="/img/events/s2015/mhacks-s2015.png" alt="">
-        <img src="/img/events/s2015/hackgeny-s2015.png" alt="">
+        <h2>MHacks</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
+        <span position="relative"><img src="/img/events/s2015/hackgeny-s2015.png" alt=""></span>
+        <h2>Hacking Gen Y</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
         <img src="/img/events/s2015/pilotphilly-s2015.png" alt="">
+        <h2>PilotPhilly</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
       </div>
     </div>
     <br><br>
-        <!-- <a class="well event withripple" href="">
+        <a class="well event withripple" href="">
           <div class="cover">
             <div class="details">
               <div class="banner major">MAJOR LEAGUE</div>
@@ -44,7 +82,7 @@
           <div class="event-link navbar-primary">
             <i class="icon icon-material-arrow-forward"></i> http://voodoohacks.com/
           </div>
-        </a> -->
+        </a>
       <div class="event-wrapper" ng-repeat="event in events | filter:search" >
         <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">

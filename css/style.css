@@ -1043,6 +1043,9 @@ h1 {
 h4 {
   font-weight: 300;
 }
+img {
+  display: inline-block;
+}
 .button {
   display: inline-block;
   padding: 10px 12px;
@@ -1068,6 +1071,9 @@ h4 {
 }
 .button:focus {
   outline: 2px solid blue;
+}
+.button-large {
+  padding: 1em 1.5em;
 }
 .btn {
   display: inline-block;
@@ -1215,6 +1221,10 @@ header {
   -webkit-transform: rotateZ(0);
   transform: rotateZ(0);
 }
+header h1,
+.page-title {
+  font-size: 56px;
+}
 .header-like {
   margin-top: -250px;
   padding-top: 350px;
@@ -1246,6 +1256,7 @@ header {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-select: none;
+  padding: 1em 1.5em;
   background: transparent;
   border: 2px solid #ffff00;
   color: inherit;
@@ -1446,6 +1457,9 @@ section {
   max-width: 300px;
   margin: auto;
   padding: 1em 1em;
+}
+.search-bar {
+  background: rgba(0, 0, 0, 0.5);
 }
 .events {
   vertical-align: top;
