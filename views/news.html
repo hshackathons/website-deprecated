@@ -8,7 +8,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-8 col-offset-2">
         <h1 ng-click="showDetails = ! showDetails" ng-hide="single" style="cursor:pointer; text-transform:uppercase;">{{article.title}}</h1><br>
         <a ng-show="single" href="#news">&#8592; Back to all posts</a>
         <h1 ng-show="single" style="text-transform:uppercase;">{{article.title}}</h1><br>
@@ -24,7 +24,7 @@
 <!--<div class="news-old">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-12">
         <div class="article" ng-repeat="article in news">
           <a ng-click="showDetails = ! showDetails"><h3>{{article.title}}</h3></a>
         </div>

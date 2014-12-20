@@ -16,7 +16,7 @@
 
 html, body {
 	height: 100%;
-	background: @purple;
+	background: @accent;
 	color: white;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .content {
-	background: @purple;
+	background: @accent;
 	z-index: 50;
 	position: relative;
 }
@@ -82,21 +82,58 @@ img {
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
+
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  padding: 12px 18px 12px;
+  border: 1px solid #494949;
+  border-radius: 5px;
+  background-color: #555;
+  background-image: linear-gradient(0deg, #4C4C4C, lighten(#4C4C4C, 10%));
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4), inset 0 0 5px 0 rgba(255,255,255,0.2), inset 0 67px 67px -40px rgba(255,255,255,0), 0 2px 0 0 #2e2e2e, 0 3px 6px 0 rgba(0,0,0,0.4);
+  transition: all 230ms ease-in-out;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.27);
+  vertical-align: middle;
+  cursor: pointer;
   &:hover {
     color: white;
     text-decoration: none;
     background-color: gray;
     transition-delay: initial;
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255,255,255,0.6),
+        inset 0 0 5px 0 rgba(255,255,255,0.2),
+        inset 0 67px 67px -40px rgba(255,255,255,0.3),
+        0 2px 0 0 #2e2e2e,
+        0 3px 8px 0 rgba(0,0,0,0.4);
   }
-  &:focus {
-    outline: 2px solid blue;
+  &:focus, &:active {
+    // outline: 2px solid white;
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255,255,255,0),
+        inset 0 1px 7px -1px rgba(0,0,0,0.35),
+        inset 0 67px 67px -40px rgba(255,255,255,0),
+        0 2px 0 0 #2e2e2e,
+        0 3px 8px 0 rgba(0,0,0,0);
+        transform: translateY(1px);
   }
+}
+
+.button-normal(@accent) {
+	background-image: linear-gradient(0deg, @accent, lighten(@accent, 10%));
 }
 
 .button-fill(@text, @background) {
   color: @text;
   background: @background;
   border: 2px solid @background;
+  background-image: linear-gradient(0deg, @background, lighten(@background, 10%));
   // border: 1px solid @text;
   &:hover, &:focus, &.active {
     background: @text;
@@ -108,7 +145,7 @@ img {
 
 .button-outline(@text, @background) {
   background: @background;
-  border: 2px solid @background;
+  border: 3px solid @background;
   color: @text;
   &:hover, &:focus, &.active {
     background: @text;
@@ -118,7 +155,7 @@ img {
 
 .button-transparent(@text, @border) {
   background: transparent;
-  border: 2px solid @border;
+  border: 3px solid @border;
   color: inherit;
   &:hover, &:focus, &.active {
     background: @border;
@@ -129,11 +166,12 @@ img {
 
 .button-large {
 	padding: 1em 1.5em;
+	font-size: 20px;
 }
 
 .btn {
 	.button;
-	.button-fill(black, yellow);
+	.button-normal(@green);
 }
 
 // Transitions
@@ -260,13 +298,14 @@ header h1, .page-title {
 
 // Intro
 .intro {
-	background-color: @purple;
+	background-color: @accent;
 	color: white;
 	.header-like;
 	.button-more {
 		.button;
 		.button-large;
-		.button-transparent(black, yellow);
+		.button-normal(@red);
+		// color: black!important;
 	}
 	background-size: cover;
 }
@@ -399,7 +438,7 @@ section {
 }
 .section-dark, .section-black {
 	background-color: #1f1d1f;
-	background-color: darken(@dark-purple, 5%);
+	background-color: darken(@accent-dark, 5%);
 	color: white;
 }
 .content section:last-of-type {
@@ -661,7 +700,7 @@ section {
 		padding: 1em 2em;
 	}
 	a {
-		color: @purple;
+		color: @accent;
 	}
 	h1 {
 		font-size:30px;
@@ -690,9 +729,9 @@ section {
 }
 
 .footer {
-	background-color: @dark-purple;
+	background-color: @accent-dark;
 	padding: 30px 0 20px 0;
-	color: lighten(@purple, 40%);
+	color: lighten(@accent, 40%);
 	text-align: center;
 	z-index: 60;
 	&:after, &:before {
@@ -705,18 +744,18 @@ section {
 		pointer-events: none;
 	}
 	&:after {
-		border-color: @dark-purple;
-		border-bottom-color: @dark-purple;
-		border-left: 50vw solid @dark-purple;
+		border-color: @accent-dark;
+		border-bottom-color: @accent-dark;
+		border-left: 50vw solid @accent-dark;
 		border-top: 50px solid transparent;
 		border-right: 0;
 		border-bottom: 0;
 		right: 0;
 	}
 	&:before {
-		border-color: @dark-purple;
-		border-bottom-color: @dark-purple;
-		border-right: 50vw solid @dark-purple;
+		border-color: @accent-dark;
+		border-bottom-color: @accent-dark;
+		border-right: 50vw solid @accent-dark;
 		border-top: 50px solid transparent;
 		border-left: 0;
 		border-bottom: 0;
@@ -752,7 +791,7 @@ section {
 		vertical-align: middle;
 		a {
 			.button;
-			.button-fill(@purple, white);
+			.button-fill(@accent, white);
 			padding: 10px;
 			margin: 0 10px;
 		}

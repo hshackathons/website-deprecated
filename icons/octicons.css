@@ -16,7 +16,7 @@
 */
 .octicon, .mega-octicon {
   font-family: octicons;
-  font-style: normal;
+  font-style: normal!important;
   display: inline-block;
   text-decoration: none;
   text-rendering: auto;
