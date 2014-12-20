@@ -19,7 +19,32 @@
   <div class="container">
     <div class="search-bar"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Events"></div>
     <div class="hexagons">
-      <div class="hexagon">
+
+      <div class="hexagon" ng-repeat="event in events | filter:search" >
+        <a href="{{event.URL}}" class="" target="_blank"><div class="event" href="{{event.URL}}"> <!--ng-click="addClient = !addClient">-->
+          <div class="cover" style="background-image:url({{event.Image}});">
+          </div>
+          <img src="{{event.Hexagon}}" alt="{{event.Name}} logo" class="image"/>
+          <h2>{{event.Name}}</h2>
+          <p>
+            <i class="octicon octicon-organization"></i> {{event.Location}} <br>
+            <i class="octicon octicon-location"></i> {{event.City}} <br>
+            <i class="octicon octicon-calendar"></i> {{event.Date}}
+          </p>
+          <!-- <div class="event-details" ng-show="addClient">
+            <span class="desc">{{event.Desc}}</span>
+            <br>
+            HS({{event.hs}}) &amp; College({{event.college}}) Admitted
+            <br>
+            {{event.travel}} Travel Reimbursement
+            <br>
+            Hardware({{event.hardware}}) Application({{event.application}})
+          </div>
+          <i class="octicon octicon-chevron-right"></i> Website -->
+        </div></a>
+      </div>
+
+      <!-- <div class="hexagon">
         <img src="/img/events/s2015/pennapps-s2015.png" alt="">
         <h2>PennApps</h2>
         <p>
@@ -57,7 +82,7 @@
         <a href="#" class="button">Website</a>
       </div>
     </div>
-    <br><br> 
+    <br><br> --> 
       <!-- <div class="event-wrapper">
         <a class="well event withripple" href="">
           <div class="cover">
@@ -85,11 +110,11 @@
           </div>
         </a>
       </div> -->
-      <div class="event-wrapper" ng-repeat="event in events | filter:search" >
+      <!-- <div class="event-wrapper" ng-repeat="event in events | filter:search" >
         <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details">
-              <!-- <div class="banner major">MAJOR LEAGUE</div> -->
+              <div class="banner major">MAJOR LEAGUE</div>
             </div>
           </div>
           <h3>{{event.Name}}</h3>
@@ -111,7 +136,7 @@
             <i class="octicon octicon-chevron-right"></i> {{event.URL}}
           </a>
         </div>
-      </div>
+      </div> -->
       
       <h2 ng-hide="events.length" class="text-center loading-message">
         <i class="octicon octicon-squirrel"></i>

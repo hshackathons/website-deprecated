@@ -8,7 +8,7 @@
 
 @dark: #455a64;
 @headings: @font-family-sans-serif;
-@content: "Proxima Nova";
+@content: @font-family-serif;
 
 * {
 	box-sizing: border-box;
@@ -448,12 +448,30 @@ section {
 // New Events
 .hexagons {
 	text-align: center;
+	vertical-align: top;
 	.hexagon {
+		vertical-align: top;
 		width: 25%;
 		display: inline-block;
 		max-width: 300px;
 		margin: auto;
-		padding: 1em 1em; 
+		padding: 1em .5em; 
+		.image {
+			max-height: 150px;
+			margin-top: -75px;
+			position: relative;
+		}
+		h2 {
+			font-size: 28px;
+		}
+		p {
+			text-align: left;
+			font-size: 0.9;
+			// font-size: 0.8em;
+		}
+		.cover {
+			height: 200px;
+		}
 	}
 }
 
@@ -483,7 +501,7 @@ section {
 		overflow: hidden;	
 		text-align: center;
 		vertical-align: top;
-		cursor: crosshair;
+		// cursor: crosshair;
 		&:hover {
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
 			text-decoration: none;

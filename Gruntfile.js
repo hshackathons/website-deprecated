@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 livereload: true,
             },
             scripts: {
-                files: ['*.html', 'views/*.html', 'js/*.js', 'css/style.css'],
+                files: ['index.html', 'views/*.html', 'js/*.js', 'css/*.less', 'css/style.css'],
                 tasks: ['concat', 'less'],
                 options: {
                     spawn: false,

@@ -505,7 +505,7 @@ pre code {
 .container {
   display: block;
   width: 100%;
-  max-width: 1136px;
+  max-width: 1200px;
   margin: auto;
   padding: 0 1em;
   *zoom: 1;
@@ -520,7 +520,7 @@ pre code {
   clear: both;
 }
 x-c[width="expanded"] {
-  max-width: 1276px;
+  max-width: 1340px;
 }
 [position="relative"] {
   position: relative;
@@ -585,7 +585,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-1 {
     float: left;
     width: 8.33333333%;
@@ -599,7 +599,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-2 {
     float: left;
     width: 16.66666667%;
@@ -613,7 +613,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-3 {
     float: left;
     width: 25%;
@@ -627,7 +627,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-4 {
     float: left;
     width: 33.33333333%;
@@ -641,7 +641,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-5 {
     float: left;
     width: 41.66666667%;
@@ -655,7 +655,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-6 {
     float: left;
     width: 50%;
@@ -669,7 +669,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-7 {
     float: left;
     width: 58.33333333%;
@@ -683,7 +683,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-8 {
     float: left;
     width: 66.66666667%;
@@ -697,7 +697,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-9 {
     float: left;
     width: 75%;
@@ -711,7 +711,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-10 {
     float: left;
     width: 83.33333333%;
@@ -725,7 +725,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-11 {
     float: left;
     width: 91.66666667%;
@@ -739,7 +739,7 @@ x-c[width="expanded"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 1136px) {
+@media (min-width: 1200px) {
   .col-12 {
     float: left;
     width: 100%;
@@ -1007,16 +1007,16 @@ x-c[width="expanded"] {
 html,
 body {
   height: 100%;
-  background: #4e3f30;
+  background: #23272b;
   color: white;
 }
 body {
   font-weight: normal;
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
 }
 .content {
-  background: #4e3f30;
+  background: #23272b;
   z-index: 50;
   position: relative;
 }
@@ -1240,7 +1240,7 @@ header h1,
   text-align: center;
 }
 .intro {
-  background-color: #4e3f30;
+  background-color: #23272b;
   color: white;
   margin-top: -250px;
   padding-top: 350px;
@@ -1446,7 +1446,7 @@ section {
 .section-dark,
 .section-black {
   background-color: #1f1d1f;
-  background-color: #1f1913;
+  background-color: #0c0d0f;
   color: white;
 }
 .content section:last-of-type {
@@ -1454,13 +1454,30 @@ section {
 }
 .hexagons {
   text-align: center;
+  vertical-align: top;
 }
 .hexagons .hexagon {
+  vertical-align: top;
   width: 25%;
   display: inline-block;
   max-width: 300px;
   margin: auto;
-  padding: 1em 1em;
+  padding: 1em .5em;
+}
+.hexagons .hexagon .image {
+  max-height: 150px;
+  margin-top: -75px;
+  position: relative;
+}
+.hexagons .hexagon h2 {
+  font-size: 28px;
+}
+.hexagons .hexagon p {
+  text-align: left;
+  font-size: 0.9;
+}
+.hexagons .hexagon .cover {
+  height: 200px;
 }
 .search-bar {
   background: rgba(0, 0, 0, 0.5);
@@ -1486,7 +1503,6 @@ section {
   overflow: hidden;
   text-align: center;
   vertical-align: top;
-  cursor: crosshair;
 }
 .events .event:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.28);
@@ -1694,7 +1710,7 @@ section {
   padding: 1em 2em;
 }
 .news a {
-  color: #4e3f30;
+  color: #23272b;
 }
 .news h1 {
   font-size: 30px;
@@ -1718,9 +1734,9 @@ section {
   color: gray;
 }
 .footer {
-  background-color: #2e261d;
+  background-color: #181a1d;
   padding: 30px 0 20px 0;
-  color: #baa590;
+  color: #818d99;
   text-align: center;
   z-index: 60;
   /* .logo {
@@ -1745,18 +1761,18 @@ section {
   pointer-events: none;
 }
 .footer:after {
-  border-color: #2e261d;
-  border-bottom-color: #2e261d;
-  border-left: 50vw solid #2e261d;
+  border-color: #181a1d;
+  border-bottom-color: #181a1d;
+  border-left: 50vw solid #181a1d;
   border-top: 50px solid transparent;
   border-right: 0;
   border-bottom: 0;
   right: 0;
 }
 .footer:before {
-  border-color: #2e261d;
-  border-bottom-color: #2e261d;
-  border-right: 50vw solid #2e261d;
+  border-color: #181a1d;
+  border-bottom-color: #181a1d;
+  border-right: 50vw solid #181a1d;
   border-top: 50px solid transparent;
   border-left: 0;
   border-bottom: 0;
@@ -1806,7 +1822,7 @@ section {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.27);
   vertical-align: middle;
   cursor: pointer;
-  color: #4e3f30;
+  color: #23272b;
   background: #ffffff;
   border: 2px solid #ffffff;
   background-image: linear-gradient(0deg, #ffffff, #ffffff);
@@ -1828,8 +1844,8 @@ section {
 .footer .social a:hover,
 .footer .social a:focus,
 .footer .social a.active {
-  background: #4e3f30;
-  border: 2px solid #4e3f30;
+  background: #23272b;
+  border: 2px solid #23272b;
   color: #ffffff;
 }
 .altripple {
