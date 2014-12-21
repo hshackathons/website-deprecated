@@ -1,8 +1,8 @@
 <header class="altripple navbar-material-orange" id="events-header">
   <div class="container">
     <!-- <h1>{{ message }}</h1> -->
-    <h1>Events</h1>
-    <p class="lead">Get involved in our Spring 2015 season!</p>
+    <h1>Upcoming Events</h1>
+    <p class="lead">Get involved with the largest, most diverse high school hackathons in the world!</p>
     <!-- <div class="btn-group">
       <a href="#events" class="btn btn-material-orange btn-disabled" data-toggle="tooltip" data-placement="top">Fall 2014</a>
       <a href="#events" class="btn btn-material-lightgreen" data-toggle="tooltip" data-placement="top" title="Coming Soon!" disabled>Spring 2015</a>
@@ -46,6 +46,18 @@
         </a>
       </div>
     </div> -->
+
+    <h2 ng-hide="events.length" class="text-center loading-message">
+      <i class="octicon octicon-squirrel"></i>
+      <br>
+      Fetching Events!
+    </h2>
+
+    <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
+      <i class="octicon octicon-gist-secret"></i>
+      <br>
+      Nothing here!
+    </h2>
 
     <div class="hexagons">
 
@@ -180,18 +192,6 @@
         </div>
       </div> -->
       
-      <h2 ng-hide="events.length" class="text-center loading-message">
-        <i class="octicon octicon-squirrel"></i>
-        <br>
-        Fetching Events!
-      </h2>
-
-      <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
-        <i class="octicon octicon-gist-secret"></i>
-        <br>
-        Nothing here!
-      </h2>
-
   </div>
 </section>
 <section id="events-organize">

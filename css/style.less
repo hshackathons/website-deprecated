@@ -19,6 +19,7 @@ html, body {
 	height: 100%;
 	background: @accent;
 	color: white;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -202,6 +203,10 @@ img {
     translateZ: 0px;
 }
 
+.shadow {
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);;
+}
+
 a {
 	color: inherit;
   .transition;
@@ -218,6 +223,7 @@ nav.menubar {
 	width: 100%;
 	z-index: 9000;
 	background: rgba(0,0,0,.5);
+	.shadow;
 	a {
 		display: inline-block;
 		line-height: 60px;
@@ -539,6 +545,7 @@ section {
 			overflow: hidden;
 			padding-bottom: 20px;
 			outline: 5px solid transparent;
+			box-shadow: 0px 2px 0px 0px #2E2E2E, 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
 			&:hover {
 				outline: 5px solid white;
 				border-radius: 0;
@@ -630,6 +637,8 @@ section {
 	// text-align: left;
 	padding: 20px;
 	border-radius: 4px;
+	.shadow;
+	margin: 0 9px;
 	.button, .button.filter {
 		margin-bottom: 0;
 	}
@@ -968,10 +977,19 @@ input.text {
 		margin-top: 0;
 		margin-left: -25px;
 		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 50%;
 		text-align: center;
 		font-size: 35px;
 		// right: 24px;
 		// top: -80px;
+		.transition-bounce;
+		transform: scale(1.0);
+		&:hover {
+			transform: scale(1.2);
+			background: rgba(255,255,255,.25);
+		}
 	}
 	.social {
 		vertical-align: middle;
