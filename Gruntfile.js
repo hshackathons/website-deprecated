@@ -44,6 +44,16 @@ module.exports = function(grunt) {
             } 
         },
 
+        autoprefixer: {
+            single_file: {
+                options: {
+                    // Target-specific options go here.
+                },
+                src: 'css/style.css',
+                dest: 'css/style.css'
+            },
+        },
+
         express: {
             server: {
                 options: {
@@ -60,7 +70,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: ['index.html', 'views/*.html', 'js/*.js', 'css/*.less', 'css/style.css'],
-                tasks: ['concat', 'less'],
+                tasks: ['concat', 'less', 'autoprefixer'],
                 options: {
                     spawn: false,
                 },
@@ -76,9 +86,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');       
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-express');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'less']);
+    grunt.registerTask('default', ['concat', 'less', 'autoprefixer']);
     grunt.registerTask('server', ['express', 'watch']);
 
 };
