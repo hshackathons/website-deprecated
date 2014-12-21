@@ -416,7 +416,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Proxima Nova Condensed", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
   margin: .15em 0;
   font-weight: bold;
   line-height: 1em;
@@ -1007,16 +1007,16 @@ x-c[width="expanded"] {
 html,
 body {
   height: 100%;
-  background: #23272b;
+  background: #2e3135;
   color: white;
 }
 body {
   font-weight: normal;
-  font-family: "Proxima Nova", Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 .content {
-  background: #23272b;
+  background: #2e3135;
   z-index: 50;
   position: relative;
 }
@@ -1040,7 +1040,8 @@ h3,
 h4,
 h5 {
   color: inherit;
-  font-family: "Proxima Nova Condensed", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
 h1 {
   font-size: 48px;
@@ -1240,7 +1241,7 @@ header h1,
   text-align: center;
 }
 .intro {
-  background-color: #23272b;
+  background-color: #2e3135;
   color: white;
   margin-top: -250px;
   padding-top: 350px;
@@ -1446,11 +1447,55 @@ section {
 .section-dark,
 .section-black {
   background-color: #1f1d1f;
-  background-color: #0c0d0f;
+  background-color: #181a1d;
   color: white;
 }
 .content section:last-of-type {
   padding-bottom: 100px;
+}
+.cards {
+  text-align: center;
+  vertical-align: top;
+}
+.cards .card {
+  vertical-align: top;
+  width: 50%;
+  display: inline-block;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em 1em;
+  position: relative;
+  height: 225px;
+  overflow: hidden;
+  color: white;
+  border-radius: 8px;
+}
+.cards .card .background {
+  opacity: 0.25;
+  width: 100%;
+  height: auto;
+}
+.cards .card .background img {
+  margin-top: -30%;
+  width: 120%;
+}
+.cards .card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  opacity: 1;
+  text-align: left;
+  text-decoration: none;
+}
+.cards .card a img {
+  float: left;
+  margin: 0.5em 2em;
+  max-width: 175px;
 }
 .hexagons {
   text-align: center;
@@ -1464,25 +1509,63 @@ section {
   margin: auto;
   padding: 1em .5em;
 }
+.hexagons .hexagon a {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
 .hexagons .hexagon .image {
   max-height: 150px;
   margin-top: -75px;
   position: relative;
 }
 .hexagons .hexagon h2 {
-  font-size: 28px;
-}
-.hexagons .hexagon p {
-  text-align: left;
-  font-size: 0.9;
+  font-size: 24px;
 }
 .hexagons .hexagon .cover {
-  height: 200px;
+  height: 180px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-color: #dfdfdf;
+  background-image: url(/img/hackathons/cover/placeholder.png);
+  position: relative;
+  user-select: none;
+}
+.hexagons .hexagon .cover .banner.national {
+  background: #FFF480;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 20px;
+  right: -32px;
+  padding: 4px 40px;
+  color: #3E4B07;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #FEFFDA;
+  font-size: 10px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+}
+.hexagons .hexagon .cover .banner.major {
+  background: #b0ff71;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 20px;
+  right: -44px;
+  padding: 4px 40px;
+  color: #234e00;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #8bbe62;
+  font-size: 10px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
 }
 .search-bar {
   background: rgba(0, 0, 0, 0.5);
 }
 .events {
+  background: #23272b;
   vertical-align: top;
   text-align: center;
 }
@@ -1710,7 +1793,7 @@ section {
   padding: 1em 2em;
 }
 .news a {
-  color: #23272b;
+  color: #2e3135;
 }
 .news h1 {
   font-size: 30px;
@@ -1734,9 +1817,9 @@ section {
   color: gray;
 }
 .footer {
-  background-color: #181a1d;
+  background-color: #23272b;
   padding: 30px 0 20px 0;
-  color: #818d99;
+  color: #90969f;
   text-align: center;
   z-index: 60;
   /* .logo {
@@ -1761,18 +1844,18 @@ section {
   pointer-events: none;
 }
 .footer:after {
-  border-color: #181a1d;
-  border-bottom-color: #181a1d;
-  border-left: 50vw solid #181a1d;
+  border-color: #23272b;
+  border-bottom-color: #23272b;
+  border-left: 50vw solid #23272b;
   border-top: 50px solid transparent;
   border-right: 0;
   border-bottom: 0;
   right: 0;
 }
 .footer:before {
-  border-color: #181a1d;
-  border-bottom-color: #181a1d;
-  border-right: 50vw solid #181a1d;
+  border-color: #23272b;
+  border-bottom-color: #23272b;
+  border-right: 50vw solid #23272b;
   border-top: 50px solid transparent;
   border-left: 0;
   border-bottom: 0;
@@ -1822,7 +1905,7 @@ section {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.27);
   vertical-align: middle;
   cursor: pointer;
-  color: #23272b;
+  color: #2e3135;
   background: #ffffff;
   border: 2px solid #ffffff;
   background-image: linear-gradient(0deg, #ffffff, #ffffff);
@@ -1844,8 +1927,8 @@ section {
 .footer .social a:hover,
 .footer .social a:focus,
 .footer .social a.active {
-  background: #23272b;
-  border: 2px solid #23272b;
+  background: #2e3135;
+  border: 2px solid #2e3135;
   color: #ffffff;
 }
 .altripple {

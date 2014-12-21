@@ -51,6 +51,7 @@ body {
 
 h1, h2, h3, h4, h5 {
 	color: inherit;
+	font-weight: 200;
 	font-family: @headings;
 }
 
@@ -445,6 +446,52 @@ section {
 	padding-bottom: 100px;
 }
 
+// Event Cards
+.cards {
+	text-align: center;
+	vertical-align: top;
+	.card {
+		vertical-align: top;
+		width: 50%;
+		display: inline-block;
+		max-width: 800px;
+		margin: auto;
+		padding: 1em 1em;
+		position: relative;
+		height: 225px;
+		overflow: hidden;
+		color: white;
+		border-radius: 8px;
+		.background {
+			opacity: 0.25;
+			width: 100%;
+			height: auto;
+			img {
+				margin-top: -30%;
+				width: 120%;
+			}
+		}
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			opacity: 1;
+			text-align: left;
+			text-decoration: none;
+			img {
+				float: left;
+				margin: 0.5em 2em;
+				max-width: 175px;
+			}
+		}
+	}
+}
+
 // New Events
 .hexagons {
 	text-align: center;
@@ -456,21 +503,62 @@ section {
 		max-width: 300px;
 		margin: auto;
 		padding: 1em .5em; 
+		a {
+			display: block;
+			background: rgba(0,0,0,.5);
+			text-decoration: none;
+			border-radius: 4px;
+			overflow: hidden;
+			padding-bottom: 20px;
+		}
 		.image {
 			max-height: 150px;
 			margin-top: -75px;
 			position: relative;
 		}
 		h2 {
-			font-size: 28px;
+			font-size: 24px;
 		}
 		p {
-			text-align: left;
-			font-size: 0.9;
+			// text-align: left;
+			// font-size: 0.9;
 			// font-size: 0.8em;
 		}
 		.cover {
-			height: 200px;
+			height: 180px;
+			display: block;
+			background-size: cover;
+			background-position: center;
+			background-color: rgb(223, 223, 223);
+			background-image: url(/img/hackathons/cover/placeholder.png);
+			position: relative;
+			user-select: none;
+			.banner.national {
+				background: #FFF480;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 20px;
+				right: -32px;
+				padding: 4px 40px;
+				color: #3E4B07;
+				font-weight: bold;
+				text-shadow: 0 1px 0 #FEFFDA;
+				font-size: 10px;
+				box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+			}
+			.banner.major {
+				background: rgb(176, 255, 113);
+				transform: rotate(45deg);
+				position: absolute;
+				top: 20px;
+				right: -44px;
+				padding: 4px 40px;
+				color: rgb(35, 78, 0);
+				font-weight: bold;
+				text-shadow: 0 1px 0 rgb(139, 190, 98);
+				font-size: 10px;
+				box-shadow: 0 4px 0 0 rgba(0,0,0,.25);
+			}	
 		}
 	}
 }
@@ -482,6 +570,7 @@ section {
 
 // Events
 .events {
+	background: @accent-dark;
 	vertical-align: top;
 	text-align: center;
 	.event-wrapper {

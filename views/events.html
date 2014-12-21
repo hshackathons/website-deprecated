@@ -18,18 +18,40 @@
 <section class="events section-events" id="events">
   <div class="container">
     <div class="search-bar"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Events"></div>
+    
+    <!-- <div class="cards">
+      <div class="card">
+        <div class="background">
+          <img src="https://s3.amazonaws.com/assets.mlh.io/events/splashes/000/000/115/thumb/10662219_338541129639657_8037141605747233230_o.jpg" alt="">
+        </div>
+        <a href="#">
+          <div class="image">
+            <img src="http://localhost:4000/img/events/s2015/mhacks-s2015.png" alt="">
+          </div>
+          <div class="info">
+            <h3>MHacks</h3>
+            <p>
+              <i class="octicon octicon-organization"></i> University of Michigan <br>
+              <i class="octicon octicon-location"></i> Ann Arbor, MI <br>
+              <i class="octicon octicon-calendar"></i> January 16-18
+            </p>
+            <span class="btn">Learn More</span>
+          </div>
+        </a>
+      </div>
+    </div> -->
+
     <div class="hexagons">
 
       <div class="hexagon" ng-repeat="event in events | filter:search" >
-        <a href="{{event.URL}}" class="" target="_blank"><div class="event" href="{{event.URL}}"> <!--ng-click="addClient = !addClient">-->
+        <a href="{{event.URL}}" class="" target="_blank"> <!--ng-click="addClient = !addClient">-->
           <div class="cover" style="background-image:url({{event.Image}});">
           </div>
           <img src="{{event.Hexagon}}" alt="{{event.Name}} logo" class="image"/>
           <h2>{{event.Name}}</h2>
           <p>
-            <i class="octicon octicon-organization"></i> {{event.Location}} <br>
-            <i class="octicon octicon-location"></i> {{event.City}} <br>
-            <i class="octicon octicon-calendar"></i> {{event.Date}}
+            {{event.Date}} <br>
+            {{event.Location}} <br>
           </p>
           <!-- <div class="event-details" ng-show="addClient">
             <span class="desc">{{event.Desc}}</span>
@@ -41,7 +63,7 @@
             Hardware({{event.hardware}}) Application({{event.application}})
           </div>
           <i class="octicon octicon-chevron-right"></i> Website -->
-        </div></a>
+        </a>
       </div>
 
       <!-- <div class="hexagon">
