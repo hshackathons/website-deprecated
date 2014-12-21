@@ -44,6 +44,16 @@ module.exports = function(grunt) {
             } 
         },
 
+        express: {
+            server: {
+                options: {
+                    bases: ['.'],
+                    port: 9000,
+                    hostname: "0.0.0.0"
+                }
+            }
+        },
+
         watch: {
             options: {
                 livereload: true,
@@ -57,7 +67,6 @@ module.exports = function(grunt) {
             } 
         }
 
-
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
@@ -66,8 +75,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-less');       
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-livereload');
+    grunt.loadNpmTasks('grunt-express');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['concat', 'less']);
+    grunt.registerTask('server', ['express', 'watch']);
+
 };
