@@ -1,4 +1,4 @@
-<header class="altripple navbar-material-orange">
+<header class="altripple navbar-material-orange" id="events-header">
   <div class="container">
     <!-- <h1>{{ message }}</h1> -->
     <h1>Events</h1>
@@ -10,15 +10,21 @@
   </div>
 </header>
 </section>
-<section class="map" id="map">
-  <div class="container">
-    Mapbox embed goes here!
-  </div>
-</section>
+<!-- <section class="mapbox" id="mapbox">
+  <div id="map"></div>
+  <script>
+    // Provide your access token
+    L.mapbox.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6Imo2TnUwRVEifQ.Lym1WQrkrRlIXtSKS7n15w';
+    // Create a map in the div #map
+    var geocoder = L.mapbox.geocoder('mapbox.places-v1'),
+        map = L.mapbox.map('map', 'viclou.j65bc2b3')
+        .addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+        autocomplete: true
+      }));
+  </script>
+</section> -->
 <section class="events section-events" id="events">
-  <div class="container">
-    <div class="search-bar"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Events"></div>
-    
+  <div class="container">    
     <!-- <div class="cards">
       <div class="card">
         <div class="background">
@@ -46,6 +52,12 @@
       <div class="hexagon" ng-repeat="event in events | filter:search" >
         <a href="{{event.URL}}" class="" target="_blank"> <!--ng-click="addClient = !addClient">-->
           <div class="cover" style="background-image:url({{event.Image}});">
+            <div class="details" ng-show="event.major">
+              <div class="banner major">MAJOR LEAGUE</div>
+            </div>
+            <div class="details" ng-show="event.national">
+              <div class="banner national">NATIONAL</div>
+            </div>
           </div>
           <img src="{{event.Hexagon}}" alt="{{event.Name}} logo" class="image"/>
           <h2>{{event.Name}}</h2>
@@ -64,6 +76,14 @@
           </div>
           <i class="octicon octicon-chevron-right"></i> Website -->
         </a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="search-bar">
+        <input class="text" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Coming Soon!" disabled>
+        <a class="button filter">Type: <strong>All</strong></a>
+        <a class="button filter">Location: <strong>All</strong></a>
       </div>
 
       <!-- <div class="hexagon">
@@ -174,10 +194,11 @@
 
   </div>
 </section>
-<section class="text-center">
+<section id="events-organize">
   <div class="container">
-    <h2>Where's your hackathon?</h2>
-    <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank"><i class="octicon octicon-plus"></i> Add Hackathon</a>
-    <a class="btn btn-primary btn-lg hasripple" href="#organize" target="_blank"><i class="octicon octicon-package"></i> Thinking about organizing?</a>
+    <h1>Where's your hackathon?</h1>
+    <br>
+      <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank"><i class="octicon octicon-plus"></i> Add Hackathon</a>
+      <a class="btn btn-primary btn-lg hasripple" href="#organize" target="_blank"><i class="octicon octicon-package"></i> Thinking about organizing?</a>
   </div>
 </section>

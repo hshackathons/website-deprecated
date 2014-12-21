@@ -51,7 +51,7 @@ body {
 
 h1, h2, h3, h4, h5 {
 	color: inherit;
-	font-weight: 200;
+	font-weight: bold;
 	font-family: @headings;
 }
 
@@ -277,17 +277,20 @@ header {
 	// margin-top: -90px;
 	// padding-top: 190px;
 	margin-top: -350px;
-	padding-top: 490px;
-	padding-bottom: 100px;
+	padding-top: 450px;
+	padding-bottom: 60px;
 	color: white;
 	background-size: cover;
 	background-position: middle;
 	background-repeat: no-repeat;
 	position: relative;
 	transform: rotateZ(0);
+	p.lead {
+		margin-top: 0.25em;
+	}
 }
 header h1, .page-title {
-	font-size: 56px;
+	font-size: 64px;
 }
 
 .header-like {
@@ -446,6 +449,30 @@ section {
 	padding-bottom: 100px;
 }
 
+// Mapbox
+.mapbox {
+	#map {
+		display: block;
+		width: 100%;
+		height: 400px;
+	}
+}
+
+// Events Section
+#events-header {
+	background: @gray;
+	padding-bottom: 0px;
+}
+
+#events {
+	background: @gray;
+}
+
+#events-organize {
+	background: darken(@gray, 10%);
+	text-align: center;
+}
+
 // Event Cards
 .cards {
 	text-align: center;
@@ -502,7 +529,7 @@ section {
 		display: inline-block;
 		max-width: 300px;
 		margin: auto;
-		padding: 1em .5em; 
+		padding: .5em .5em;
 		a {
 			display: block;
 			background: rgba(0,0,0,.5);
@@ -510,22 +537,37 @@ section {
 			border-radius: 4px;
 			overflow: hidden;
 			padding-bottom: 20px;
+			outline: 5px solid transparent;
+			&:hover {
+				outline: 5px solid white;
+				border-radius: 0;
+				.image {
+					margin-top: -85px;
+					margin-bottom: 10px;
+				}
+			}
 		}
 		.image {
 			max-height: 150px;
 			margin-top: -75px;
 			position: relative;
+			transform: translateY(0px);
+			transition: margin 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			animation: hexagon-image 1s ease;
 		}
 		h2 {
-			font-size: 24px;
+			font-size: 35px;
+			vertical-align: middle;
+			animation: hexagon-text 1s ease;
 		}
 		p {
 			// text-align: left;
 			// font-size: 0.9;
 			// font-size: 0.8em;
+			animation: hexagon-text 1s ease;
 		}
 		.cover {
-			height: 180px;
+			height: 180px; // 180px;
 			display: block;
 			background-size: cover;
 			background-position: center;
@@ -542,9 +584,10 @@ section {
 				padding: 4px 40px;
 				color: #3E4B07;
 				font-weight: bold;
-				text-shadow: 0 1px 0 #FEFFDA;
+				// text-shadow: 0 1px 0 #FEFFDA;
 				font-size: 10px;
 				box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+				animation: hexagon-banner 1s ease;
 			}
 			.banner.major {
 				background: rgb(176, 255, 113);
@@ -555,17 +598,51 @@ section {
 				padding: 4px 40px;
 				color: rgb(35, 78, 0);
 				font-weight: bold;
-				text-shadow: 0 1px 0 rgb(139, 190, 98);
+				// text-shadow: 0 1px 0 rgb(139, 190, 98);
 				font-size: 10px;
 				box-shadow: 0 4px 0 0 rgba(0,0,0,.25);
+				animation: hexagon-banner 1s ease;
 			}	
 		}
 	}
 }
 
+@keyframes hexagon-image {
+	0%   { opacity: 0; transform: translateY(20px) scale(0.25); }
+	65%  { opacity: 1; transform: translateY(0px)  scale(1.0); }
+}
+
+@keyframes hexagon-text {
+	0%    { opacity: 0; transform: translateY(30px) scale(0.95); }
+	35%   { opacity: 0; transform: translateY(30px) scale(0.95); }
+	90%   { opacity: 1; transform: translateY(0px)  scale(1.0); }
+}
+
+@keyframes hexagon-banner {
+	0%    { opacity: 0; transform: translateY(30px) scale(2.5) rotate(25deg); }
+	75%   { opacity: 0; transform: translateY(30px) scale(2.5) rotate(25deg); }
+	90%  { opacity: 1; transform: translateY(0px)  scale(1.0) rotate(45deg); }
+}
+
 .search-bar {
 	background: rgba(0,0,0,.5);
-
+	// text-align: left;
+	padding: 20px;
+	border-radius: 4px;
+	.button, .button.filter {
+		margin-bottom: 0;
+	}
+	input.text {
+		width: 60%;
+		margin-bottom: 0;
+		opacity: 0.8;
+	}
+}
+input.text {
+	.button;
+	.button-normal(white);
+	color: black!important;
+	cursor: text;
 }
 
 // Events
@@ -639,6 +716,7 @@ section {
 			padding: 5px 15px;
 		}
 		h3 {
+			font-style: 38px;
 			padding-top: 20px;
 			padding-bottom: 0px;
 			margin-bottom: 0px;
@@ -744,16 +822,16 @@ section {
 		text-align: center;
 	}
 	h5 {
-		background-color:black;
-		color:white;
-		font-weight:300;
-		text-align:center;
-		border-radius:180px;
+		background-color: black;
+		color: white;
+		font-weight: 300;
+		text-align: center;
+		border-radius: 180px;
 		padding: 12px 10px 10px 10px;
 		height:52px;
 		line-height: 52px;
 		display: block;
-		font-size:30px;
+		font-size: 30px;
 	}
 	.col-3 {
 		font-size: 54px;

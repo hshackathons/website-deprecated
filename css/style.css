@@ -416,7 +416,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-family: Freight, 'Freight Sans', Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
   margin: .15em 0;
   font-weight: bold;
   line-height: 1em;
@@ -1012,8 +1012,8 @@ body {
 }
 body {
   font-weight: normal;
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: Freight, 'Freight Sans', Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 .content {
   background: #2e3135;
@@ -1040,8 +1040,8 @@ h3,
 h4,
 h5 {
   color: inherit;
-  font-weight: 200;
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-family: Freight, 'Freight Sans', Roboto, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 }
 h1 {
   font-size: 48px;
@@ -1221,8 +1221,8 @@ nav.menubar .has-dropdown:hover .dropdown {
 header {
   text-align: center;
   margin-top: -350px;
-  padding-top: 490px;
-  padding-bottom: 100px;
+  padding-top: 450px;
+  padding-bottom: 60px;
   color: white;
   background-size: cover;
   background-position: middle;
@@ -1230,9 +1230,12 @@ header {
   position: relative;
   transform: rotateZ(0);
 }
+header p.lead {
+  margin-top: 0.25em;
+}
 header h1,
 .page-title {
-  font-size: 56px;
+  font-size: 64px;
 }
 .header-like {
   margin-top: -250px;
@@ -1453,6 +1456,22 @@ section {
 .content section:last-of-type {
   padding-bottom: 100px;
 }
+.mapbox #map {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+#events-header {
+  background: #455a64;
+  padding-bottom: 0px;
+}
+#events {
+  background: #455a64;
+}
+#events-organize {
+  background: #303f46;
+  text-align: center;
+}
 .cards {
   text-align: center;
   vertical-align: top;
@@ -1507,7 +1526,7 @@ section {
   display: inline-block;
   max-width: 300px;
   margin: auto;
-  padding: 1em .5em;
+  padding: .5em .5em;
 }
 .hexagons .hexagon a {
   display: block;
@@ -1516,14 +1535,31 @@ section {
   border-radius: 4px;
   overflow: hidden;
   padding-bottom: 20px;
+  outline: 5px solid transparent;
+}
+.hexagons .hexagon a:hover {
+  outline: 5px solid white;
+  border-radius: 0;
+}
+.hexagons .hexagon a:hover .image {
+  margin-top: -85px;
+  margin-bottom: 10px;
 }
 .hexagons .hexagon .image {
   max-height: 150px;
   margin-top: -75px;
   position: relative;
+  transform: translateY(0px);
+  transition: margin 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: hexagon-image 1s ease;
 }
 .hexagons .hexagon h2 {
-  font-size: 24px;
+  font-size: 35px;
+  vertical-align: middle;
+  animation: hexagon-text 1s ease;
+}
+.hexagons .hexagon p {
+  animation: hexagon-text 1s ease;
 }
 .hexagons .hexagon .cover {
   height: 180px;
@@ -1544,9 +1580,9 @@ section {
   padding: 4px 40px;
   color: #3E4B07;
   font-weight: bold;
-  text-shadow: 0 1px 0 #FEFFDA;
   font-size: 10px;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  animation: hexagon-banner 1s ease;
 }
 .hexagons .hexagon .cover .banner.major {
   background: #b0ff71;
@@ -1557,12 +1593,104 @@ section {
   padding: 4px 40px;
   color: #234e00;
   font-weight: bold;
-  text-shadow: 0 1px 0 #8bbe62;
   font-size: 10px;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
+  animation: hexagon-banner 1s ease;
+}
+@keyframes hexagon-image {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.25);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes hexagon-text {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes hexagon-banner {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(2.5) rotate(25deg);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(30px) scale(2.5) rotate(25deg);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px) scale(1) rotate(45deg);
+  }
 }
 .search-bar {
   background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 4px;
+}
+.search-bar .button,
+.search-bar .button.filter {
+  margin-bottom: 0;
+}
+.search-bar input.text {
+  width: 60%;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+input.text {
+  padding: 10px 12px;
+  background-color: gray;
+  border-radius: 6px;
+  transition: all 300ms ease;
+  font-size: 1em;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  padding: 12px 18px 12px;
+  border: 1px solid #494949;
+  border-radius: 5px;
+  background-color: #555;
+  background-image: linear-gradient(0deg, #4c4c4c, #666666);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4), inset 0 0 5px 0 rgba(255, 255, 255, 0.2), inset 0 67px 67px -40px rgba(255, 255, 255, 0), 0 2px 0 0 #2e2e2e, 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+  transition: all 230ms ease-in-out;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.27);
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, #ffffff, #ffffff);
+  color: black!important;
+  cursor: text;
+}
+input.text:hover {
+  color: white;
+  text-decoration: none;
+  background-color: gray;
+  transition-delay: initial;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.6), inset 0 0 5px 0 rgba(255, 255, 255, 0.2), inset 0 67px 67px -40px rgba(255, 255, 255, 0.3), 0 2px 0 0 #2e2e2e, 0 3px 8px 0 rgba(0, 0, 0, 0.4);
+}
+input.text:focus,
+input.text:active {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0), inset 0 1px 7px -1px rgba(0, 0, 0, 0.35), inset 0 67px 67px -40px rgba(255, 255, 255, 0), 0 2px 0 0 #2e2e2e, 0 3px 8px 0 rgba(0, 0, 0, 0);
+  transform: translateY(1px);
 }
 .events {
   background: #23272b;
@@ -1637,6 +1765,7 @@ section {
   padding: 5px 15px;
 }
 .events .event h3 {
+  font-style: 38px;
   padding-top: 20px;
   padding-bottom: 0px;
   margin-bottom: 0px;
