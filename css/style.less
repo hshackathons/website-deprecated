@@ -188,31 +188,31 @@ img {
 // Transitions
 .transition-faster {
   transition: all 90ms linear;
-  translateZ: 0px;
+  translateZ: 0;
 }
 
 .transition {
   transition: all 180ms linear;
-  translateZ: 0px;
+  translateZ: 0;
 }
 
 .transition-longer {
   transition: all 300ms linear;
-  translateZ: 0px;
+  translateZ: 0;
 }
 
 .transition-bounce {
   transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    translateZ: 0px;
+    translateZ: 0;
 }
 
 .transition-bounce-longer {
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    translateZ: 0px;
+    translateZ: 0;
 }
 
 .shadow {
-	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.4);;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);;
 }
 
 a {
@@ -334,7 +334,7 @@ header h1, .page-title {
 	animation: header-sunset-inverse 24s linear infinite;
 	overflow: hidden;
 	position: relative;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px rgba(0, 0, 0, 0.5);
     h1 {
     	line-height: 1em;
     }
@@ -556,7 +556,7 @@ section {
 	}
 	.album-info {
 		.button {
-			margin-bottom: .75em;
+			margin-bottom: .5em;
 		}
 	}
 }
@@ -564,14 +564,14 @@ section {
 #home-for {
 	.button, .btn {
 		margin-left: 0;
-		margin-right: 1em;
+		margin-right: .5em;
 	}
 }
 
 // Events Section
 #events-header {
 	background: @gray;
-	padding-bottom: 0px;
+	padding-bottom: 0;
 }
 
 #events {
@@ -656,7 +656,7 @@ section {
 			overflow: hidden;
 			padding-bottom: 20px;
 			outline: 5px solid transparent;
-			box-shadow: 0px 2px 0px 0px #2E2E2E, 0px 3px 6px 0px rgba(0, 0, 0, 0.4);
+			box-shadow: 0 2px 0 0 #2E2E2E, 0 3px 6px 0 rgba(0, 0, 0, 0.4);
 			&:hover {
 				outline: 5px solid white;
 				border-radius: 0;
@@ -782,7 +782,7 @@ input.text {
 		background: white;
 		color: black;
 		display: block;
-		padding: 0px;
+		padding: 0;
 		transition: 300ms all linear;
 		border-radius: 6px;
 		overflow: hidden;	
@@ -839,11 +839,11 @@ input.text {
 		h3 {
 			font-style: 38px;
 			padding-top: 20px;
-			padding-bottom: 0px;
-			margin-bottom: 0px;
+			padding-bottom: 0;
+			margin-bottom: 0;
 		}
 		p {
-			padding-bottom: 0px;
+			padding-bottom: 0;
 		}
 		& > p:last-of-type {
 			padding-bottom: 0.25em;
@@ -881,7 +881,7 @@ input.text {
 
 .dim {
 	background-color: rgba(0,0,0,0.6);
-	padding: 75px 0px 75px 0px;
+	padding: 75px 0 75px 0;
 }
 
 // News
@@ -957,7 +957,7 @@ input.text {
 // About
 .about {
 	margin-bottom: 25px;
-	padding: 30px 0px 30px 0px;
+	padding: 30px 0 30px 0;
 	background-color:rgb(248, 244, 240);
 	color:rgb(198, 194, 190);
 	h1 {
@@ -979,7 +979,7 @@ input.text {
 }
 
 .aboutus {
-	margin: 30px 0px 80px 0px;
+	margin: 30px 0 80px 0;
 	h1 {
 		font-size:23px;
 		font-weight:700;
@@ -1010,7 +1010,7 @@ input.text {
 
 // Organize
 .organize {
-	margin: 30px 0px 100px 0px;
+	margin: 30px 0 100px 0;
 	h1 {
 		text-align: center;
 	}
@@ -1028,13 +1028,13 @@ input.text {
 	}
 	.col-3 {
 		font-size: 54px;
-		margin-top: 0px;
+		margin-top: 0;
 		text-align: right;
 	}
 }
 
 .faq {
-	margin: 30px 0px 80px 0px;
+	margin: 30px 0 80px 0;
 	h1 {
 		font-size:23px;
 		font-weight:700;
