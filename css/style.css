@@ -3939,7 +3939,17 @@ input:focus {
   cursor: text;
   margin: auto;
   margin-bottom: 3em;
+  text-align: center;
+  min-height: 160px;
+  line-height: 160px;
+  vertical-align: middle;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+}
+#partners-content .content img {
+  max-height: 160px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
 }
 .footer {
   background-color: #23272b;
