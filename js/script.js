@@ -8,7 +8,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			// route for the home page
 			.when('/', {
 				templateUrl : 'views/home.html',
-				controller  : 'mainController'
+				controller  : 'indexController'
 			})
 
 			.when('/events', {
@@ -148,6 +148,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	});
 
 	mlhApp.controller('indexController', function($scope, $http) {
+		$('[data-typer-targets]').typer();
 		$scope.events = {};
 		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=1214435617&format=csv'}).
 		    success(function(csv, status, headers, config) {

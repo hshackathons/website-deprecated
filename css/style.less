@@ -168,8 +168,8 @@ img {
 }
 
 .button-large {
-	padding: 1em 1.5em;
-	font-size: 20px;
+	padding: .75em 1.0em;
+	font-size: 24px;
 }
 
 .btn {
@@ -326,6 +326,10 @@ header h1, .page-title {
 	animation: header-sunset-inverse 24s linear infinite;
 	overflow: hidden;
 	position: relative;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.5);
+    h1 {
+    	line-height: 1em;
+    }
 	.metropolis {
 		position: absolute;
 		top: 0;
@@ -346,7 +350,7 @@ header h1, .page-title {
 		animation: header-sunset-moon 24s linear infinite;
 		z-index: 300;
 		position: absolute;
-		background: rgb(228, 243, 255);
+		background: rgb(200, 200, 200);
 		padding: 5px;
 		height: 80px;
 		width: 80px;
@@ -465,6 +469,97 @@ section {
 	}
 }
 
+.button-events {
+	.button-normal(@red);
+}
+.button-gplus {
+	.button-normal(darken(#DD4B39,15%));
+}
+.button-facebook {
+	.button-normal(darken(#3B5998,15%));
+}
+.button-flickr {
+	.button-normal(darken(#FF0084,15%));
+}
+.button-hshackers {
+	.button-normal(darken(#8F499C,15%));
+}
+
+// Homepage
+#home-events {
+	background: #1F1D1F;
+	.button-album {
+		margin-left: 0;
+		margin-bottom: 0;
+		margin-right: 1em;
+	}
+	.button, .btn {
+		margin-left: 0;
+		margin-right: 0.25em;
+	}
+}
+.photos {
+	.album {
+		white-space: nowrap;
+		// overflow: hidden;
+		a {
+			// max-height: 150px;
+			width: auto;
+			border: 5px solid white;
+			background: white;
+			display: inline-block;
+			margin-right: -50px;
+			.shadow;
+			img {
+				display: inline-block;
+				max-height: 150px;
+			}
+			span {
+				color: black;
+				display: block;
+				font-size: 12px;
+				font-family: "Indie Flower", "Monaco", @font-family-sans-serif;
+			}
+		}
+	}
+	.photo-1, .photo-2, .photo-3, .photo-4 {
+		position: relative;
+		z-index: 350;
+		.transition-bounce;
+		&:hover {
+			transform: scale(1.25) rotate(0deg);
+			z-index: 400;
+		}
+	}
+	.photo-1 {
+		transform: scale(0.85) rotate(-10deg);
+	}
+	.photo-2 {
+		transform: scale(0.85) rotate(15deg);
+	}
+	.photo-3 {
+		transform: scale(0.85) rotate(-5deg);
+	}
+	.photo-4 {
+		transform: scale(0.85) rotate(6deg);
+	}
+	p {
+		vertical-align: middle;
+	}
+	.album-info {
+		.button {
+			margin-bottom: .75em;
+		}
+	}
+}
+
+#home-for {
+	.button, .btn {
+		margin-left: 0;
+		margin-right: 1em;
+	}
+}
+
 // Events Section
 #events-header {
 	background: @gray;
@@ -486,16 +581,23 @@ section {
 	vertical-align: top;
 	.card {
 		vertical-align: top;
-		width: 50%;
-		display: inline-block;
+		margin: 0;
+		// width: 100%;
+		display: block;
 		max-width: 800px;
 		margin: auto;
-		padding: 1em 1em;
 		position: relative;
-		height: 225px;
+		height: 188px;
 		overflow: hidden;
 		color: white;
 		border-radius: 8px;
+		margin-bottom: 1em;
+		.transition;
+		outline: 5px solid transparent;
+		&:hover {
+			outline: 5px solid white;
+			border-radius: 0;
+		}
 		.background {
 			opacity: 0.25;
 			width: 100%;
@@ -517,9 +619,10 @@ section {
 			opacity: 1;
 			text-align: left;
 			text-decoration: none;
+			padding: 1em 1em;
 			img {
 				float: left;
-				margin: 0.5em 2em;
+				margin: -0.5em 2em 0em 0.5em;
 				max-width: 175px;
 			}
 		}
