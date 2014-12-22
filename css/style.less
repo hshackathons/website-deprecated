@@ -70,6 +70,14 @@ img {
 	display: inline-block;
 }
 
+// Secret links
+.secret-link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 // Buttons
 .button {
   display: inline-block;
@@ -876,6 +884,77 @@ input.text {
 	padding: 75px 0px 75px 0px;
 }
 
+// News
+#news-header {
+	background: @purple;
+}
+.news {
+	position: relatve;
+	// background: gray;
+	// color: white;
+	background: @purple;
+	padding: 60px 0;
+	background: none;
+	.pointer {
+		cursor: pointer;
+	}
+	.container {
+		position: relative;
+	}
+	.article-icon {
+		position: absolute;
+		color: black !important;
+		font-size: 10em;
+		left: 20px;
+		line-height: 0.5em;
+		z-index: -1;
+		opacity: 0.5;
+	}
+	.content {
+		animation: news-show 1s 0s ease;
+		transform-origin: top center;
+		background: white;
+		color: black;
+		max-width: 90%;
+		padding: 1em 2em;
+		display: block;
+		cursor: text;
+		margin-bottom: 1em;
+		margin: auto;
+		.shadow;
+	}
+	.button {
+		color: white;
+		margin: auto;
+	}
+	a {
+		color: @accent;
+	}
+	h1 {
+		font-size:30px;
+		text-align: center;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	img {
+		width:50%;
+		height:50%;
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+	}
+}
+.news:last-of-type {
+	padding-bottom: 150px;
+}
+@keyframes news-show {
+	0%   { opacity: 0; transform: translateY(20px) scale(0.75); }
+	5%   { opacity: 0; transform: translateY(20px) scale(0.75); }
+	65%  { opacity: 1; transform: translateY(0px)  scale(1.0); }
+}
+
+// About
 .about {
 	margin-bottom: 25px;
 	padding: 30px 0px 30px 0px;
@@ -929,6 +1008,7 @@ input.text {
 	}
 }
 
+// Organize
 .organize {
 	margin: 30px 0px 100px 0px;
 	h1 {
@@ -983,46 +1063,6 @@ input.text {
 	}
 	.question {
 		margin-bottom:30px;
-	}
-}
-
-.news {
-	// background: gray;
-	// color: white;
-	padding: 60px 0;
-	background: none;
-	.container {
-		background: white;
-		color: black;
-		max-width: 90%;
-		padding: 1em 2em;
-	}
-	a {
-		color: @accent;
-	}
-	h1 {
-		font-size:30px;
-	}
-	img {
-		width:50%;
-		height:50%;
-		display: block;
-    	margin-left: auto;
-    	margin-right: auto;
-	}
-}
-
-.news-old {
-	margin: 30px 0px 80px 0px;
-	.article {
-		a {
-			color:black;
-			text-decoration:none;
-			cursor:pointer;
-			&:hover {
-				color:gray;
-			}
-		}
 	}
 }
 
