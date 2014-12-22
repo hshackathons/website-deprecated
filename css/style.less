@@ -113,26 +113,26 @@ img {
   vertical-align: middle;
   cursor: pointer;
   &:hover {
-    color: white;
-    text-decoration: none;
-    background-color: gray;
-    transition-delay: initial;
-    box-shadow: 
-        inset 0 1px 0 0 rgba(255,255,255,0.6),
-        inset 0 0 5px 0 rgba(255,255,255,0.2),
-        inset 0 67px 67px -40px rgba(255,255,255,0.3),
-        0 2px 0 0 #2e2e2e,
-        0 3px 8px 0 rgba(0,0,0,0.4);
+	color: white;
+	text-decoration: none;
+	background-color: gray;
+	transition-delay: initial;
+	box-shadow: 
+		inset 0 1px 0 0 rgba(255,255,255,0.6),
+		inset 0 0 5px 0 rgba(255,255,255,0.2),
+		inset 0 67px 67px -40px rgba(255,255,255,0.3),
+		0 2px 0 0 #2e2e2e,
+		0 3px 8px 0 rgba(0,0,0,0.4);
   }
   &:focus, &:active {
-    // outline: 2px solid white;
-    box-shadow: 
-        inset 0 1px 0 0 rgba(255,255,255,0),
-        inset 0 1px 7px -1px rgba(0,0,0,0.35),
-        inset 0 67px 67px -40px rgba(255,255,255,0),
-        0 2px 0 0 #2e2e2e,
-        0 3px 8px 0 rgba(0,0,0,0);
-        transform: translateY(1px);
+	// outline: 2px solid white;
+	box-shadow: 
+		inset 0 1px 0 0 rgba(255,255,255,0),
+		inset 0 1px 7px -1px rgba(0,0,0,0.35),
+		inset 0 67px 67px -40px rgba(255,255,255,0),
+		0 2px 0 0 #2e2e2e,
+		0 3px 8px 0 rgba(0,0,0,0);
+		transform: translateY(1px);
   }
 }
 
@@ -147,10 +147,10 @@ img {
   background-image: linear-gradient(0deg, @background, lighten(@background, 10%));
   // border: 1px solid @text;
   &:hover, &:focus, &.active {
-    background: @text;
-    border: 2px solid @text;
-    color: @background;
-    // outline: 2px solid @background;
+	background: @text;
+	border: 2px solid @text;
+	color: @background;
+	// outline: 2px solid @background;
   }
 }
 
@@ -159,8 +159,8 @@ img {
   border: 3px solid @background;
   color: @text;
   &:hover, &:focus, &.active {
-    background: @text;
-    color: @background;
+	background: @text;
+	color: @background;
   }
 }
 
@@ -169,9 +169,9 @@ img {
   border: 3px solid @border;
   color: inherit;
   &:hover, &:focus, &.active {
-    background: @border;
-    border-color: @border;
-    color: @text;
+	background: @border;
+	border-color: @border;
+	color: @text;
   }
 }
 
@@ -203,12 +203,12 @@ img {
 
 .transition-bounce {
   transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    translateZ: 0;
+	translateZ: 0;
 }
 
 .transition-bounce-longer {
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    translateZ: 0;
+	translateZ: 0;
 }
 
 .shadow {
@@ -292,8 +292,8 @@ header {
 	// margin-top: -90px;
 	// padding-top: 190px;
 	margin-top: -350px;
-	padding-top: 450px;
-	padding-bottom: 60px;
+	padding-top: 460px;
+	padding-bottom: 40px;
 	color: white;
 	background-size: cover;
 	background-position: middle;
@@ -321,12 +321,18 @@ header h1, .page-title {
 	color: white;
 	.header-like;
 	.button-more {
+		// animation: home-zoomin 0.75s 0s ease;
 		.button;
 		.button-large;
 		.button-normal(@red);
+		// .transition;
 		// color: black!important;
 	}
 	background-size: cover;
+}
+@keyframes home-zoomin {
+  0% {opacity: 0.5; transform: scale(1.5);}
+  100% {opacity: 1; transform: scale(1);}
 }
 
 // Header Day Cycle
@@ -334,10 +340,14 @@ header h1, .page-title {
 	animation: header-sunset-inverse 24s linear infinite;
 	overflow: hidden;
 	position: relative;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.5);
-    h1 {
-    	line-height: 1em;
-    }
+	text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+	h1 {
+		margin-top: 25px;
+		line-height: 1em;
+		.typer span {
+			color: #1F1D1F!important;
+		}
+	}
 	.metropolis {
 		position: absolute;
 		top: 0;
@@ -505,10 +515,26 @@ section {
 		margin-left: 0;
 		margin-right: 0.25em;
 	}
+	.cards {
+		// animation: event-fadein 1s 0s ease;
+	}
 }
+// Photo Fly-in
+@keyframes event-fadein {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0) scale(1);
+	}
+	100% {
+		opacity: 1;
+		transform: inherit scale(1);
+	}
+}
+
 .photos {
 	.album {
 		white-space: nowrap;
+		// animation: album-flyin 1s 0s ease;
 		// overflow: hidden;
 		a {
 			// max-height: 150px;
@@ -558,6 +584,18 @@ section {
 		.button {
 			margin-bottom: .5em;
 		}
+	}
+}
+
+// Photo Fly-in
+@keyframes album-flyin {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 200px, 0) scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: inherit scale(1);
 	}
 }
 
@@ -743,7 +781,7 @@ section {
 	90%  { opacity: 1; transform: translateY(0px)  scale(1.0) rotate(45deg); }
 }
 
-.search-bar {
+.search-bar, .form {
 	background: rgba(0,0,0,.5);
 	// text-align: left;
 	padding: 20px;
@@ -753,17 +791,21 @@ section {
 	.button, .button.filter {
 		margin-bottom: 0;
 	}
-	input.text {
+	input {
 		width: 60%;
 		margin-bottom: 0;
 		opacity: 0.8;
 	}
 }
-input.text {
+input {
 	.button;
 	.button-normal(white);
 	color: black!important;
 	cursor: text;
+	&:active, &:focus {
+		outline: 2px solid @blue;
+		border-radius: 0px;
+	}
 }
 
 // Events
@@ -941,8 +983,8 @@ input.text {
 		width:50%;
 		height:50%;
 		display: block;
-    	margin-left: auto;
-    	margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 .news:last-of-type {
@@ -1015,22 +1057,26 @@ input.text {
 		text-align: center;
 	}
 	h5 {
-		background-color: black;
-		color: white;
+		background-color: @accent-dark;
+		color: #FFF;
 		font-weight: 300;
 		text-align: center;
 		border-radius: 180px;
-		padding: 12px 10px 10px 10px;
-		height:52px;
+		padding: 5px 10px 5px;
+		height: 72px;
 		line-height: 52px;
 		display: block;
-		font-size: 30px;
+		font-size: 40px;
+		vertical-align: middle;
 	}
 	.col-3 {
 		font-size: 54px;
 		margin-top: 0;
 		text-align: right;
 	}
+}
+#organize-header {
+	background: @teal;
 }
 
 .faq {
@@ -1157,20 +1203,20 @@ input.text {
   height: 50px;
   background: white;
 
-    
+	
   animation: ripple-animation 2s;
 }
 
 
 @keyframes ripple-animation {
-    from {
-      transform: scale(1);
-      opacity: 0.4;
-    }
-    to {
-      transform: scale(100);
-      opacity: 0;
-    }
+	from {
+	  transform: scale(1);
+	  opacity: 0.4;
+	}
+	to {
+	  transform: scale(100);
+	  opacity: 0;
+	}
 }
 
 i {
