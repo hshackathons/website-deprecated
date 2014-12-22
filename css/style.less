@@ -1066,9 +1066,10 @@ input {
 	}
 }
 #organize-header {
-	background: @teal;
+	background: @cyan;
 }
 
+// FAQ
 .faq {
 	margin: 30px 0 80px 0;
 	h1 {
@@ -1101,13 +1102,37 @@ input {
 		margin-bottom:30px;
 	}
 }
+#faq-header {
+	background: darken(@green, 10%);
+}
 
-.footer {
-	background-color: @accent-dark;
-	padding: 30px 0 20px 0;
-	color: lighten(@accent, 40%);
-	text-align: center;
-	z-index: 60;
+// Partners
+#parnters-header {
+	background: @pink;
+}
+
+#partners-content {
+	// .trangle-above(white);
+	h1 {
+		// text-align: center;
+	}
+	.content {
+		display: block;
+		background: white;
+		color: black;
+		// max-width: 90%;
+		padding: 1em 2em;
+		display: block;
+		cursor: text;
+		margin: auto;
+		margin-bottom: 3em;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+		.shadow;
+	}
+}
+
+// Triangle effect
+.trangle-above(@color) {
 	&:after, &:before {
 		bottom: 100%;
 		border: solid transparent;
@@ -1118,23 +1143,33 @@ input {
 		pointer-events: none;
 	}
 	&:after {
-		border-color: @accent-dark;
-		border-bottom-color: @accent-dark;
-		border-left: 50vw solid @accent-dark;
+		border-color: @color;
+		border-bottom-color: @color;
+		border-left: 50vw solid @color;
 		border-top: 50px solid transparent;
 		border-right: 0;
 		border-bottom: 0;
 		right: 0;
 	}
 	&:before {
-		border-color: @accent-dark;
-		border-bottom-color: @accent-dark;
-		border-right: 50vw solid @accent-dark;
+		border-color: @color;
+		border-bottom-color: @color;
+		border-right: 50vw solid @color;
 		border-top: 50px solid transparent;
 		border-left: 0;
 		border-bottom: 0;
 		left: 0;
 	}
+}
+
+// Footer
+.footer {
+	background-color: @accent-dark;
+	padding: 30px 0 20px 0;
+	color: lighten(@accent, 40%);
+	text-align: center;
+	z-index: 60;
+	.trangle-above(@accent-dark);
 	.container {
 		position: relative;
 	}

@@ -3891,7 +3891,7 @@ input:focus {
   text-align: right;
 }
 #organize-header {
-  background: #00796b;
+  background: #0097a7;
 }
 .faq {
   margin: 30px 0 80px 0;
@@ -3924,6 +3924,22 @@ input:focus {
 }
 .faq .question {
   margin-bottom: 30px;
+}
+#faq-header {
+  background: #00635a;
+}
+#parnters-header {
+  background: #c2185b;
+}
+#partners-content .content {
+  background: white;
+  color: black;
+  padding: 1em 2em;
+  display: block;
+  cursor: text;
+  margin: auto;
+  margin-bottom: 3em;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
 }
 .footer {
   background-color: #23272b;

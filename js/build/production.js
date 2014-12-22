@@ -3539,8 +3539,14 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 				controller  : 'faqController'
 			})
 
+			//route for the partners page
+			.when('/partners', {
+				templateUrl : 'views/partners.html',
+				controller  : 'faqController'
+			})
+
 			//route for the chagelog page
-			.when('/changelog/', {
+			.when('/changelog', {
 				templateUrl : 'views/changelog.html',
 				controller  : 'faqController'
 			})
