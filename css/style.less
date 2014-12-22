@@ -496,6 +496,9 @@ section {
 .button-facebook {
 	.button-normal(darken(#3B5998,15%));
 }
+.button-twitter {
+	.button-normal(darken(#55ACEE,15%));
+}
 .button-flickr {
 	.button-normal(darken(#FF0084,15%));
 }
@@ -547,6 +550,8 @@ section {
 			img {
 				display: inline-block;
 				max-height: 150px;
+				min-height: 150px;
+				background: @accent;
 			}
 			span {
 				color: black;
@@ -997,68 +1002,47 @@ input {
 }
 
 // About
-.about {
-	margin-bottom: 25px;
-	padding: 30px 0 30px 0;
-	background-color:rgb(248, 244, 240);
-	color:rgb(198, 194, 190);
-	h1 {
-		font-weight:700;
-		font-size:20px;
-		margin-bottom:10px;
-	}
-	p {
-		line-height:25px;
-	}
-	a {
-		color:rgb(198, 194, 190);
-		font-weight:700;
-		text-decoration:none;
-		&:hover {
-			opacity:0.8;
-		}
-	}
+#about-header {
+	background: @brown;
 }
 
-.aboutus {
-	margin: 30px 0 80px 0;
-	h1 {
-		font-size:23px;
-		font-weight:700;
-		margin-bottom:20px;
-	}
-	p {
-		line-height:23px;
-		margin-bottom:15px;
-	}
-	h3 {
-		font-size:20px;
-	}
-	h4 {
-		font-size:24px;
-	}
+#about-subheader {
+	background: darken(@brown, 15%);
+}
+
+#about-content {
 	img {
-		border-radius:180px;
+		.shadow;
+		border-radius: 8px;
 	}
-	a {
-		font-size:14px;
-		color:#95a5a6;
-		text-decoration:none;
-		&:hover {
-			opacity:0.8;
-		}
+	.label-info {
+		font-weight: normal;
+		font-size: 0.7em;
+		padding: 2px 6px;
+		background: @accent-dark;
+		border-radius: 4px;
 	}
 }
 
 #about-proud {
-	background: @blue;
+	background: #757575;
 	color: white;
 	text-align: center;
+	font-style: 1.5em;
+}
+
+#about-conduct {
+	background: @red;
+	text-align: center;
+	.button {
+		.button-large;
+		.button-normal(darken(@red,20%));
+	}
 }
 
 // Organize
 .organize {
-	margin: 30px 0 100px 0;
+	// margin: 30px 0 100px 0;
 	h1 {
 		text-align: center;
 	}
