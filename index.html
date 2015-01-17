@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Minor League Hacking, the definitive high school hackathon league">
+    <meta name="description" content="Ignition, the definitive high school hackathon league">
     <meta name="keywords" content="hacking, hackathons, mlh, milh">
-    <meta name="author" content="Minor League Hacking">
-    <title>Minor League Hacking</title>
+    <meta name="author" content="Ignition">
+    <title>Ignition</title>
     <link rel="icon" type="image/ico" href="favicon.ico"/>
     <!--<base href="/">-->
     <!-- Icons -->
@@ -29,13 +29,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .header-sunset .sun, .header-sunset .moon { display: none!important; }
+      .header-sunset { animation: none!important; -webkit-animation: none!important; }
+    </style>
 </head>
   <body ng-controller="indexController">
  
       <nav class="menubar">
         <div class="container">
           <a href="#" class="logo">
-            <img src="/assets/brand/milh-white.svg" alt="Minor League Hacking" height="40" width="120"/> &nbsp; &nbsp; <strong>Minor League Hacking</strong>
+            <!-- <img src="/assets/brand/milh-white.svg" alt="Ignition" height="40" width="120"/> &nbsp; &nbsp; --><strong>Ignition</strong>
           </a>
           <div class="pull-right">
             <a href="#" class="link" title="Welcome">
@@ -97,8 +101,6 @@
           </a>
         </p>
         <p>
-          <strong class="logo hidden-xs">Proudly part of <a href="http://mlh.io/">Major League Hacking</a></strong>
-          <br>
           &copy; 2015 - <a href="#changelog">Changelog</a> - <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Code of Conduct</a>
           <br>
           We are a nonprofit student-run organization. Hackathons are of their respective owners.

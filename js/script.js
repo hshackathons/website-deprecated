@@ -62,7 +62,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 				controller  : 'newsController'
 			});
 
-			//$locationProvider.html5Mode(true)
+			$locationProvider.html5Mode(true)
 	});
 
 	// create the controller and inject Angular's $scope
