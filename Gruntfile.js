@@ -78,7 +78,7 @@ module.exports = function(grunt) {
                       // ***
                       middlewares.push(function(req, res){
                         for(var file, i = 0; i < options.base.length; i++){
-                          file = options.base + "/index.html"; 
+                          file = options.base + "/404.html"; 
                           if (grunt.file.exists(file)){
                             require('fs').createReadStream(file).pipe(res);
                             return; // we're done
