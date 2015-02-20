@@ -54,12 +54,41 @@ module.exports = function(grunt) {
             },
         },
 
-        express: {
+        connect: {
             server: {
                 options: {
                     bases: ['.'],
                     port: 9000,
-                    hostname: "0.0.0.0"
+                    hostname: "0.0.0.0",
+                    middleware: function(connect, options) {
+                      var middlewares = [];
+                      if (!Array.isArray(options.base)) {
+                        options.base = [options.base];
+                      }
+                      var directory = options.directory || options.base[options.base.length - 1];
+                      options.base.forEach(function(base) {
+                        // Serve static files.
+                        middlewares.push(connect.static(base));
+                      });
+                      // Make directory browse-able.
+                      middlewares.push(connect.directory(directory));
+                      
+                      // ***
+                      // Not found - just serve index.html
+                      // ***
+                      middlewares.push(function(req, res){
+                        for(var file, i = 0; i < options.base.length; i++){
+                          file = options.base + "/index.html"; 
+                          if (grunt.file.exists(file)){
+                            require('fs').createReadStream(file).pipe(res);
+                            return; // we're done
+                          }
+                        }
+                        res.statusCode(404); // where's index.html?
+                        res.end();
+                      });
+                      return middlewares;
+                    },
                 }
             }
         },
@@ -81,6 +110,7 @@ module.exports = function(grunt) {
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-less');       
@@ -90,6 +120,6 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['concat', 'less', 'autoprefixer']);
-    grunt.registerTask('server', ['express', 'watch']);
+    grunt.registerTask('server', ['connect', 'watch']);
 
 };
