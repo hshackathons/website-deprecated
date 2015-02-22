@@ -3573,6 +3573,14 @@ section {
   margin-bottom: 0;
   opacity: 0.8;
 }
+.search-bar input:focus,
+.form input:focus,
+.search-bar input:active,
+.form input:active,
+.search-bar input.ng-dirty,
+.form input.ng-dirty {
+  opacity: 1;
+}
 input {
   padding: 10px 12px;
   background-color: gray;
