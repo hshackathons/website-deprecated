@@ -1,0 +1,187 @@
+// Layout
+header, section, footer {
+  position: relative;
+  padding: 50px 0;
+  background-size: cover;
+  background-position: middle;
+  background-repeat: no-repeat;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-sans-serif;
+  margin: .15em 0;
+  font-weight: bold;
+  line-height: 1em;
+  color: inherit;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 26px;
+  a, a:hover {
+    color: inherit;
+  }
+}
+h4 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+p {
+  // margin: 0 0 15px;
+  line-height: 1.5em;
+  a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid
+    }
+  }
+
+}
+.lead {
+  font-size: 1.5em;
+}
+
+ol,
+ul {
+  margin: 0 0 15px 25px;
+  padding: 0;
+}
+.list-unstyled {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+}
+
+hr {
+  border: 1px solid black;
+  opacity: 0.5;
+}
+
+// Inline and block code styles
+code,
+pre {
+  padding: 0 .5em 1em;
+  color: #333;
+  border-radius: 4px;
+}
+
+// Inline code
+code {
+  padding: 2px 4px;
+  font-size: 0.9em;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+}
+
+// Blocks of code
+pre {
+  display: block;
+  padding: 15px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    color: inherit;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+// Super simple grid
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1em;
+  .clearfix;
+}
+
+x-c[width="expanded"] {
+  max-width: @grid-float-breakpoint + 140px;
+}
+
+[position="relative"] {
+  position: relative;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+  .clearfix;
+}
+
+.row {
+  .make-row();
+  display: block;
+  // width: 100%;
+  // margin: auto;
+  // margin: 1em -15px;
+  .clearfix;
+}
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8, 
+.col-9, .col-10, .col-11, .col-12 { display: block; }
+.col-1 { .make-column(1); }
+.col-2 { .make-column(2); }
+.col-3 { .make-column(3); }
+.col-4 { .make-column(4); }
+.col-5 { .make-column(5); }
+.col-6 { .make-column(6); }
+.col-7 { .make-column(7); }
+.col-8 { .make-column(8); }
+.col-9 { .make-column(9); }
+.col-10 { .make-column(10); }
+.col-11 { .make-column(11); }
+.col-12 { .make-column(12); }
+
+.pull-left { float: left; }
+.margin-center { margin: auto; }
+.pull-right { float: right; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.narrow { max-width: 400px; }
+.medium { max-width: 780px; }
+
+.alert {
+  background: red;
+  color: white;
+  display: block;
+  padding: 8px 16px;
+}
+
+.muted {
+  opacity: 0.5;
+}

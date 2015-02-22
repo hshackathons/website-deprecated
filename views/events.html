@@ -1,19 +1,149 @@
-<header class="altripple navbar-material-orange">
+<header class="altripple navbar-material-orange" id="events-header">
   <div class="container">
-    <h1>{{ message }}</h1>
-    <div class="btn-group">
+    <!-- <h1>{{ message }}</h1> -->
+    <h1>Upcoming Events</h1>
+    <p class="lead">Get involved with the largest, most diverse high school hackathons in the world!</p>
+    <!-- <div class="btn-group">
       <a href="#events" class="btn btn-material-orange btn-disabled" data-toggle="tooltip" data-placement="top">Fall 2014</a>
       <a href="#events" class="btn btn-material-lightgreen" data-toggle="tooltip" data-placement="top" title="Coming Soon!" disabled>Spring 2015</a>
-    </div>
+    </div> -->
   </div>
 </header>
 </section>
-<section class="events section-events section-gray" id="events">
-  <div class="container">
-    <div class="form-control-wrapper"><input class="form-control input-xl" id="focusedInput" ng-model="search.Name" type="text" autofocus=""><div class="floating-label">Search Events</div><span class="material-input"></span></div>
-    
-    <br><br>
-        <!-- <a class="well event withripple" href="">
+<!-- <section class="mapbox" id="mapbox">
+  <div id="map"></div>
+  <script>
+    // Provide your access token
+    L.mapbox.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6Imo2TnUwRVEifQ.Lym1WQrkrRlIXtSKS7n15w';
+    // Create a map in the div #map
+    var geocoder = L.mapbox.geocoder('mapbox.places-v1'),
+        map = L.mapbox.map('map', 'viclou.j65bc2b3')
+        .addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+        autocomplete: true
+      }));
+  </script>
+</section> -->
+<section class="events section-events" id="events">
+  <div class="container">    
+    <!-- <div class="cards">
+      <div class="card">
+        <div class="background">
+          <img src="https://s3.amazonaws.com/assets.mlh.io/events/splashes/000/000/115/thumb/10662219_338541129639657_8037141605747233230_o.jpg" alt="">
+        </div>
+        <a href="#">
+          <div class="image">
+            <img src="http://localhost:4000/img/events/s2015/mhacks-s2015.png" alt="">
+          </div>
+          <div class="info">
+            <h3>MHacks</h3>
+            <p>
+              <i class="octicon octicon-organization"></i> University of Michigan <br>
+              <i class="octicon octicon-location"></i> Ann Arbor, MI <br>
+              <i class="octicon octicon-calendar"></i> January 16-18
+            </p>
+            <span class="btn">Learn More</span>
+          </div>
+        </a>
+      </div>
+    </div> -->
+
+    <div class="hexagons">
+      <div class="search-bar">
+        <input class="text" id="focusedInput" ng-model="search" type="text" autofocus="" placeholder="Filter events by name, location, or date...">
+        <a class="button filter" disabled>Type: <strong>All</strong></a>
+        <a class="button filter" disabled>Location: <strong>All</strong></a>
+      </div>
+
+      <br>
+
+    <h2 ng-hide="events.length" class="text-center loading-message">
+      <i class="octicon octicon-squirrel"></i>
+      <br>
+      Fetching Events!
+      <br>
+      <br>
+    </h2>
+
+    <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
+      <i class="octicon octicon-gist-secret"></i>
+      <br>
+      Nothing here!
+      <br>
+      <br>
+    </h2>
+
+      <div class="hexagon" ng-repeat="event in events | filter:search" >
+        <a href="{{event.URL}}" class="" target="_blank"> <!--ng-click="addClient = !addClient">-->
+          <div class="cover" style="background-image:url({{event.Image}});">
+            <div class="details" ng-show="event.major">
+              <div class="banner major">COLLEGIATE  &nbsp; &nbsp;</div>
+            </div>
+            <div class="details" ng-show="event.national">
+              <div class="banner national">NATIONAL</div>
+            </div>
+          </div>
+          <img src="{{event.Hexagon}}" alt="{{event.Name}} logo" class="image"/>
+          <h2>{{event.Name}}</h2>
+          <p>
+            {{event.Date}} <br>
+            {{event.Location}} <br>
+            {{event.City}} <br>
+          </p>
+          <!-- <div class="event-details" ng-show="addClient">
+            <span class="desc">{{event.Desc}}</span>
+            <br>
+            HS({{event.hs}}) &amp; College({{event.college}}) Admitted
+            <br>
+            {{event.travel}} Travel Reimbursement
+            <br>
+            Hardware({{event.hardware}}) Application({{event.application}})
+          </div>
+          <i class="octicon octicon-chevron-right"></i> Website -->
+        </a>
+      </div>
+      <br>
+
+      <!-- <div class="hexagon">
+        <img src="/img/events/s2015/pennapps-s2015.png" alt="">
+        <h2>PennApps</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
+        <img src="/img/events/s2015/mhacks-s2015.png" alt="">
+        <h2>MHacks</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
+        <span position="relative"><img src="/img/events/s2015/hackgeny-s2015.png" alt=""></span>
+        <h2>Hacking Gen Y</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div><div class="hexagon">
+        <img src="/img/events/s2015/pilotphilly-s2015.png" alt="">
+        <h2>PilotPhilly</h2>
+        <p>
+          <i class="octicon octicon-organization"></i> University of Penn <br>
+          <i class="octicon octicon-location"></i> Philadelphia, PA <br>
+          <i class="octicon octicon-calendar"></i> January 16-18
+        </p>
+        <a href="#" class="button">Website</a>
+      </div>
+    </div>
+    <br><br> --> 
+      <!-- <div class="event-wrapper">
+        <a class="well event withripple" href="">
           <div class="cover">
             <div class="details">
               <div class="banner major">MAJOR LEAGUE</div>
@@ -37,12 +167,13 @@
           <div class="event-link navbar-primary">
             <i class="icon icon-material-arrow-forward"></i> http://voodoohacks.com/
           </div>
-        </a> -->
-      <div class="event-wrapper" ng-repeat="event in events | filter:search" >
+        </a>
+      </div> -->
+      <!-- <div class="event-wrapper" ng-repeat="event in events | filter:search" >
         <div class="well event withripple" href="{{event.URL}}" ng-click="addClient = !addClient">
           <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details">
-              <!-- <div class="banner major">MAJOR LEAGUE</div> -->
+              <div class="banner major">MAJOR LEAGUE</div>
             </div>
           </div>
           <h3>{{event.Name}}</h3>
@@ -64,26 +195,17 @@
             <i class="octicon octicon-chevron-right"></i> {{event.URL}}
           </a>
         </div>
-      </div>
+      </div> -->
       
-      <h2 ng-hide="events.length" class="text-center loading-message">
-        <i class="octicon octicon-squirrel"></i>
-        <br>
-        Fetching Events!
-      </h2>
-
-      <h2 ng-show="(events | filter:search).length == 0" class="text-center loading-message">
-        <i class="octicon octicon-gist-secret"></i>
-        <br>
-        Nothing here!
-      </h2>
-
   </div>
 </section>
-<section class="text-center">
+<section id="events-organize">
   <div class="container">
-    <h2>Where's your hackation?</h2>
-    <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank"><i class="icon icon-material-add"></i> Add Hackathon</a>
-    <a class="btn btn-primary btn-lg hasripple" href="#organize" target="_blank">Thinking about organizing?</a>
+    <h1>Where's your hackathon?</h1>
+    <br>
+      <a class="btn btn-primary btn-lg hasripple" href="mailto:hello@hsignition.com" target="_blank"><i class="octicon octicon-mail"></i> &nbsp;Contact Us</a>
+      <a class="btn btn-primary btn-lg hasripple" href="/organize" target="_blank"><i class="octicon octicon-package"></i> Thinking about organizing?</a>
+      <br>
+      <a href="http://hshackers.org/" class="button button-hshackers" target="_blank"><i class="icon icon-tools"></i> Looking for HS Hackers Meetups?</a>
   </div>
 </section>

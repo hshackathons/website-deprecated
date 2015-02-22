@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="igniter">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ignition, the definitive high school hackathon league">
+    <meta name="keywords" content="hacking, hackathons, mlh, Ignition">
+    <meta name="author" content="Ignition">
+    <title>Ignition</title>
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <!--<base href="/">-->
+    <!-- Icons -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+    <!-- <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' /> -->
+    <script>
+      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+      insertBefore(d,q)}(window,document,'script','_gs');
+      _gs('GSN-900216-J');
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .header-sunset .sun, .header-sunset .moon { display: none!important; }
+      .header-sunset { animation: none!important; -webkit-animation: none!important; }
+    </style>
+</head>
+  <body ng-controller="indexController">
+ 
+      <nav class="menubar">
+        <div class="container">
+          <a href="/" class="logo">
+            <img src="/img/brand/logo-mono-nav.svg" alt="Ignition" height="50" width="50"/> &nbsp; <strong>Ignition</strong> <span>PILOT</span>
+          </a>
+          <div class="pull-right">
+            <a href="/" class="link" title="Welcome">
+              <i class="octicon octicon-globe"></i>
+              <span>Intro</span>
+            </a><a href="/events" class="link" title="Events">
+              <i class="octicon octicon-calendar"></i>
+              <span>Events</span>
+            </a><a href="/organize" class="withripple" title="Toolkit">
+              <i class="octicon octicon-package"></i>
+              <span>Toolkit</span>
+            </a><span class="has-dropdown"><a href="#about" class="link" title="About">
+                <i class="octicon octicon-three-bars"></i>
+                <span>More</span>
+              </a>
+              <div class="dropdown">
+                <a href="/about" class="withripple" title="About">
+                  <i class="octicon octicon-organization"></i>
+                  <span>About</span>
+                </a>
+                <a href="/photos" class="withripple" title="FAQ">
+                  <i class="octicon octicon-device-camera"></i>
+                  <span>Photos</span>
+                </a>
+                <a href="/faq" class="withripple" title="FAQ">
+                  <i class="octicon octicon-question"></i>
+                  <span>FAQ</span>
+                </a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view autoscroll="true" class="content animate at-view-slide-in-bottom at-view-slide-out-bottom" style="width:100%;min-height:100vh!important;">
+      <header>
+        <div class="container">
+          <h1>Loading...</h1>
+        </div>
+      </header>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <a onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');" href="" class="octicon octicon-chevron-up to-the-moon" data-toggle="tooltip" data-placement="top" title="Back to Top"></a>
+        <p class="social">
+          <a href="http://facebook.com/groups/PennAppsHS/" target="_blank" class="icon-tools withripple" data-toggle="tooltip" data-placement="top" title="HS Hackers">
+          </a>
+          <a href="http://facebook.com/HSIgnition/" target="_blank" class="icon-facebook withripple" data-toggle="tooltip" data-placement="top" title="Facebook">
+          </a>
+          <a href="http://twitter.com/MLHacks" target="_blank" class="icon-twitter withripple" data-toggle="tooltip" data-placement="top" title="@HSIgnition">
+          </a>
+          <a href="http://github.com/hsignition" target="_blank" class="icon-github withripple" data-toggle="tooltip" data-placement="top" title="GitHub.com/HSIgnition">
+          </a>
+        </p>
+        <p>
+          &copy; Ignition - Please read our <a href="https://github.com/hsignition/docs/blob/master/Conduct.md" target="_blank">Code of Conduct</a>
+          <br>
+          We are a nonprofit student-run organization. Hackathons are of their respective owners.
+          <br>
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/build/production.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>

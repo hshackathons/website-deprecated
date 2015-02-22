@@ -1,22 +1,29 @@
-<header class="altripple navbar-material-deeppurple">
+<header id="news-header">
   <div class="container">
     <h1>{{ message }}</h1>
+    <p class="lead">Here are the latest updates from Ignition:</p>
   </div>
 </header>
 
 <article class="news" ng-repeat="article in news">
-
+  <div class="container pointer" ng-click="showDetails = ! showDetails">
+      <i class="octicon octicon-book article-icon"></i>
+      <h1 ng-hide="single" style="cursor:pointer;">{{article.title}}</h1><br>
+      <h1 ng-show="single" style="cursor:pointer;">{{article.title}}</h1><br> 
+  </div>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h1 ng-click="showDetails = ! showDetails" ng-hide="single" style="cursor:pointer; text-transform:uppercase;">{{article.title}}</h1><br>
-        <a ng-show="single" href="#news">&#8592; Back to all posts</a>
-        <h1 ng-show="single" style="text-transform:uppercase;">{{article.title}}</h1><br>
-        <div ng-bind-html="article.content" ng-show="showDetails"></div><br>
-        <a ng-click="showDetails = ! showDetails" ng-hide="single || !showDetails" style="cursor:pointer;">COLLAPSE</a>
-      </div>
+    <!-- Show articles by defualt - show="showDetails" once we have content-->
+    <div class="content" onclick="e.preventDefault();" ng-show="!showDetails">
+        <div ng-bind-html="article.content"></div><br>
+    </div>
+    <br><br>
+    <div class="text-center pointer" ng-click="showDetails = ! showDetails">
+      <a ng-show="single" class="button" href="#news">&#8592; Back to all posts</a>
+      <!-- <a ng-hide="single || !showDetails" class="button" style="cursor:pointer;">Collapse</a> -->
+      <a ng-hide="single || !showDetails" class="button" style="cursor:pointer;">Read Article</a>
     </div>
   </div>
+
 
 </article>
 
@@ -24,7 +31,7 @@
 <!--<div class="news-old">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-12">
         <div class="article" ng-repeat="article in news">
           <a ng-click="showDetails = ! showDetails"><h3>{{article.title}}</h3></a>
         </div>
