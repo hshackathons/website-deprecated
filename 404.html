@@ -11,17 +11,9 @@
     <link rel="icon" type="image/ico" href="favicon.ico"/>
     <!--<base href="/">-->
     <!-- Icons -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+    <link href="/css/style.css" rel="stylesheet">
     <!-- <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' /> -->
-    <script>
-      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-      insertBefore(d,q)}(window,document,'script','_gs');
-      _gs('GSN-900216-J');
-    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -105,7 +97,23 @@
       </div>
     </footer>
 
+    <script>
+      (function(h,a,c,k,e,r,s){h['GoogleAnalyticsObject']=e;h[e]=h[e]||function(){
+      (h[e].q=h[e].q||[]).push(arguments)},h[r].l=1*new Date();r=a.createElement(c),
+      s=a.getElementsByTagName(c)[0];r.async=1;r.src=k;s.parentNode.insertBefore(r,s)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60005388-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+      insertBefore(d,q)}(window,document,'script','_gs');
+      _gs('GSN-900216-J');
+    </script>
     <script src="/js/build/production.js"></script>
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- <script src="http://localhost:35729/livereload.js"></script> -->
   </body>
 </html>

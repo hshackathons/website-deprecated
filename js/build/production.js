@@ -3506,7 +3506,7 @@ String.prototype.rightChars = function(n){
 
 $('[data-toggle="tooltip"]').tooltip();
 
-var igniter = angular.module('igniter', ['ngRoute', 'ngAnimate', 'ngSanitize']);
+var igniter = angular.module('igniter', ['ngRoute', 'ngAnimate', 'ngSanitize', 'analytics']);
 	
 	igniter.config(function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -3693,3 +3693,17 @@ var igniter = angular.module('igniter', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 
 /* Move this to JS file */
 $('[data-toggle="tooltip"]').tooltip();
+
+/* Analytics */
+(function(angular) { 
+
+  angular.module('analytics', ['ng']).service('analytics', [
+    '$rootScope', '$window', '$location', function($rootScope, $window, $location) {
+      var track = function() {
+        ga('send', 'pageview', { page: $location.path() });
+      };
+      $rootScope.$on('$viewContentLoaded', track);
+    }
+  ]);
+
+}(window.angular));
