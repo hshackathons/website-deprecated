@@ -732,6 +732,9 @@ x-c[width="expanded"] {
   display: block;
   padding: 8px 16px;
 }
+.muted {
+  opacity: 0.5;
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -2786,6 +2789,16 @@ nav.menubar a {
   color: white;
   padding: 0 0.75em;
   text-decoration: none;
+}
+nav.menubar a.logo span {
+  background: none repeat scroll 0% 0% #C55A00;
+  padding: 1px 4px;
+  margin-left: 0.25em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-weight: bold;
+  opacity: 0.8;
+  vertical-align: top;
 }
 nav.menubar a i {
   margin-right: 0.25em;

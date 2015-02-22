@@ -47,6 +47,15 @@
       </div>
     </div> -->
 
+    <div class="hexagons">
+      <div class="search-bar">
+        <input class="text" id="focusedInput" ng-model="search" type="text" autofocus="" placeholder="Filter events by name, location, or date...">
+        <a class="button filter" disabled>Type: <strong>All</strong></a>
+        <a class="button filter" disabled>Location: <strong>All</strong></a>
+      </div>
+
+      <br>
+
     <h2 ng-hide="events.length" class="text-center loading-message">
       <i class="octicon octicon-squirrel"></i>
       <br>
@@ -63,13 +72,11 @@
       <br>
     </h2>
 
-    <div class="hexagons">
-
       <div class="hexagon" ng-repeat="event in events | filter:search" >
         <a href="{{event.URL}}" class="" target="_blank"> <!--ng-click="addClient = !addClient">-->
           <div class="cover" style="background-image:url({{event.Image}});">
             <div class="details" ng-show="event.major">
-              <div class="banner major">MAJOR LEAGUE</div>
+              <div class="banner major">COLLEGIATE  &nbsp; &nbsp;</div>
             </div>
             <div class="details" ng-show="event.national">
               <div class="banner national">NATIONAL</div>
@@ -95,13 +102,6 @@
         </a>
       </div>
       <br>
-      <br>
-      <br>
-      <div class="search-bar">
-        <input class="text" id="focusedInput" ng-model="search.Name" type="text" autofocus="" placeholder="Search Coming Soon!" disabled>
-        <a class="button filter">Type: <strong>All</strong></a>
-        <a class="button filter">Location: <strong>All</strong></a>
-      </div>
 
       <!-- <div class="hexagon">
         <img src="/img/events/s2015/pennapps-s2015.png" alt="">
@@ -203,8 +203,8 @@
   <div class="container">
     <h1>Where's your hackathon?</h1>
     <br>
-      <a class="btn btn-primary btn-lg hasripple" href="https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/edit?usp=sharing" target="_blank"><i class="octicon octicon-plus"></i> Add Hackathon</a>
-      <a class="btn btn-primary btn-lg hasripple" href="#organize" target="_blank"><i class="octicon octicon-package"></i> Thinking about organizing?</a>
+      <a class="btn btn-primary btn-lg hasripple" href="mailto:hello@hsignition.com" target="_blank"><i class="octicon octicon-mail"></i> &nbsp;Contact Us</a>
+      <a class="btn btn-primary btn-lg hasripple" href="/organize" target="_blank"><i class="octicon octicon-package"></i> Thinking about organizing?</a>
       <br>
       <a href="http://hshackers.org/" class="button button-hshackers" target="_blank"><i class="icon icon-tools"></i> Looking for HS Hackers Meetups?</a>
   </div>

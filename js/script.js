@@ -1,8 +1,8 @@
 $('[data-toggle="tooltip"]').tooltip();
 
-var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
+var igniter = angular.module('igniter', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	
-	mlhApp.config(function($routeProvider, $locationProvider) {
+	igniter.config(function($routeProvider, $locationProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -46,7 +46,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			})
 
 			//route for the style page
-			.when('/style/', {
+			.when('/style', {
 				templateUrl : 'views/style.html',
 				controller  : 'faqController'
 			})
@@ -55,6 +55,12 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 			.when('/news/:param?', {
 				templateUrl : 'views/news.html',
 				controller  : 'newsController'
+			})
+
+			// route for the photos page
+			.when('/photos', {
+				templateUrl : 'views/photos.html',
+				controller  : 'mainController'
 			})
 
 			.otherwise({
@@ -66,23 +72,23 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 	});
 
 	// create the controller and inject Angular's $scope
-	mlhApp.controller('mainController', function($scope, $http) {
+	igniter.controller('mainController', function($scope, $http) {
 		$scope.message = 'The Official High School Hackathon League';
 	});
 
-	mlhApp.controller('eventsController', function($scope, $http) {
+	igniter.controller('eventsController', function($scope, $http) {
 		$scope.message = '2015 Spring Season';
 	});
 
-	mlhApp.controller('aboutController', function($scope, $http) {
+	igniter.controller('aboutController', function($scope, $http) {
 		$scope.message = 'About Us';
 	});
 
-	mlhApp.controller('organizeController', function($scope, $http) {
+	igniter.controller('organizeController', function($scope, $http) {
 		$scope.message = 'Organize An Event';
 	});
 
-	mlhApp.controller('newsController', function($scope, $http, $routeParams, $filter) {
+	igniter.controller('newsController', function($scope, $http, $routeParams, $filter) {
 		$scope.message = 'News';
 		$scope.single = false;
 		var param = $routeParams.param;
@@ -122,7 +128,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 		}
 	});
 
-	mlhApp.controller('faqController', function($scope, $http, $routeParams) {
+	igniter.controller('faqController', function($scope, $http, $routeParams) {
 		var param = $routeParams.param;
 		$scope.s = true;
 		$scope.t = false;
@@ -153,7 +159,7 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 		};
 	});
 
-	mlhApp.controller('indexController', function($scope, $http) {
+	igniter.controller('indexController', function($scope, $http) {
 		$('[data-typer-targets]').typer();
 		$scope.events = {};
 		$http({method: 'GET', url: 'https://cors-anywhere.herokuapp.com/https://docs.google.com/spreadsheets/d/1y5iBt2jEQU3g8b9rxVtLyvfafkpxQ1oNZqKoAaqckAI/export?gid=1214435617&format=csv'}).
@@ -181,38 +187,3 @@ var mlhApp = angular.module('mlhApp', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 
 /* Move this to JS file */
 $('[data-toggle="tooltip"]').tooltip();
-
-/* Ripples */  
-$(function() {
-  
-  
-  $('.altripple').on('click', function (event) {
-    event.preventDefault();
-    
-    var $div = $('<div/>'),
-        btnOffset = $(this).offset(),
-        xPos = event.pageX - btnOffset.left,
-        yPos = event.pageY - btnOffset.top;
-    
-
-    
-    $div.addClass('ripple-effect');
-    var $ripple = $(".ripple-effect");
-    
-    $ripple.css("height", $(this).height());
-    $ripple.css("width", $(this).height());
-    $div
-      .css({
-        top: yPos - ($ripple.height()/2),
-        left: xPos - ($ripple.width()/2),
-        background: $(this).data("ripple-color")
-      }) 
-      .appendTo($(this));
-
-    window.setTimeout(function(){
-      $div.remove();
-    }, 2000);
-  });
-  
-});
-
