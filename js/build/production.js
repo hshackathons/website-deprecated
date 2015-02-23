@@ -3712,3 +3712,5 @@ $('[data-toggle="tooltip"]').tooltip();
 $(".menu-toggle").click(function(){
     $("body").toggleClass("menu-open");
 });
+
+console.log("I see what you did there, stargazer. ;)");
