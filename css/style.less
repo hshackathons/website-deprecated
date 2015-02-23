@@ -267,29 +267,34 @@ nav.menubar {
 			vertical-align: middle;
 		}
 	}
-	.has-dropdown {
-		position: relative;
-		.dropdown {
-			opacity: 0;
-			visibility: hidden;
-			position: absolute;
-			background: #252525;
-			background: rgba(0,0,0,.75);
-			right: 0;
-			width: 150px;
-			.transition-bounce;
-			transform: scale(0.8) translateX(-20px);
-			transform-origin: top right;
-			a {
-				display: block;
-			}
-		}
-		&:hover {
+}
+
+@media (min-width: (@mobile + 1px)) {
+	nav.menubar {
+		.has-dropdown {
+			position: relative;
 			.dropdown {
-				opacity: 1;
-				visibility: visible;
-				transform: scale(1) translateX(0px);
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				background: #252525;
+				background: rgba(0,0,0,.75);
+				right: 0;
+				width: 150px;
+				.transition-bounce;
+				transform: scale(0.8) translateX(-20px);
 				transform-origin: top right;
+				a {
+					display: block;
+				}
+			}
+			&:hover {
+				.dropdown {
+					opacity: 1;
+					visibility: visible;
+					transform: scale(1) translateX(0px);
+					transform-origin: top right;
+				}
 			}
 		}
 	}
@@ -1270,3 +1275,5 @@ input {
 i {
 	color: inherit!important;
 }
+
+@import "mobile.less";

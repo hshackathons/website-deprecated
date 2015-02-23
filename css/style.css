@@ -2815,39 +2815,41 @@ nav.menubar .logo {
 nav.menubar .logo img {
   vertical-align: middle;
 }
-nav.menubar .has-dropdown {
-  position: relative;
-}
-nav.menubar .has-dropdown .dropdown {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  background: #252525;
-  background: rgba(0, 0, 0, 0.75);
-  right: 0;
-  width: 150px;
-  -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  translateZ: 0;
-  -webkit-transform: scale(0.8) translateX(-20px);
-      -ms-transform: scale(0.8) translateX(-20px);
-          transform: scale(0.8) translateX(-20px);
-  -webkit-transform-origin: top right;
-      -ms-transform-origin: top right;
-          transform-origin: top right;
-}
-nav.menubar .has-dropdown .dropdown a {
-  display: block;
-}
-nav.menubar .has-dropdown:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1) translateX(0px);
-      -ms-transform: scale(1) translateX(0px);
-          transform: scale(1) translateX(0px);
-  -webkit-transform-origin: top right;
-      -ms-transform-origin: top right;
-          transform-origin: top right;
+@media (min-width: 1025px) {
+  nav.menubar .has-dropdown {
+    position: relative;
+  }
+  nav.menubar .has-dropdown .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background: #252525;
+    background: rgba(0, 0, 0, 0.75);
+    right: 0;
+    width: 150px;
+    -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    translateZ: 0;
+    -webkit-transform: scale(0.8) translateX(-20px);
+        -ms-transform: scale(0.8) translateX(-20px);
+            transform: scale(0.8) translateX(-20px);
+    -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+            transform-origin: top right;
+  }
+  nav.menubar .has-dropdown .dropdown a {
+    display: block;
+  }
+  nav.menubar .has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1) translateX(0px);
+        -ms-transform: scale(1) translateX(0px);
+            transform: scale(1) translateX(0px);
+    -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+            transform-origin: top right;
+  }
 }
 header {
   text-align: center;
@@ -4149,4 +4151,231 @@ input:focus {
 }
 i {
   color: inherit!important;
+}
+.visible-mobile,
+.hidden-desktop {
+  visibility: hidden;
+  display: none;
+}
+.visible-desktop,
+.hidden-mobile {
+  visibility: visible;
+}
+@media (max-width: 1024px) {
+  .visible-mobile,
+  .hidden-desktop {
+    visibility: visible;
+    display: block;
+  }
+  .visible-desktop,
+  .hidden-mobile {
+    visibility: hidden;
+    display: none;
+  }
+  body {
+    font-size: 15px;
+  }
+  .col-1 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-2 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-3 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-4 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-5 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-6 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-7 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-8 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-9 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-10 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-11 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  .col-12 {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 48px!important;
+  }
+  h2 {
+    font-size: 36px!important;
+  }
+  nav.menubar .pull-right a {
+    display: none;
+  }
+  nav.menubar .pull-right a.one-true-menu-toggle {
+    display: block!important;
+  }
+  nav.menubar .pull-right a.more-link {
+    display: none!important;
+  }
+  body.menu-open nav.menubar {
+    background: black;
+  }
+  body.menu-open nav.menubar .pull-right a {
+    display: inline-block !important;
+  }
+  body.menu-open nav.menubar .pull-right a.more-link {
+    display: none!important;
+  }
+  .hexagons .hexagon {
+    width: 100%;
+    min-width: 300px;
+  }
+  .search-bar {
+    display: none;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .right {
+    float: none;
+  }
+  footer .clicky {
+    display: block!important;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-1 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-2 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-3 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-4 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-5 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-6 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-7 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-8 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-9 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-10 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-11 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .col-12 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 580px) {
+  .hexagons .hexagon {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hexagons .hexagon .cover {
+    background: none!important;
+    height: 0;
+  }
+  .hexagons .hexagon .image {
+    float: none;
+    margin: 1em;
+  }
+  .hexagons .hexagon a:hover .image {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }

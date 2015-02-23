@@ -3707,3 +3707,8 @@ $('[data-toggle="tooltip"]').tooltip();
   ]);
 
 }(window.angular));
+
+
+$(".menu-toggle").click(function(){
+    $("body").toggleClass("menu-open");
+});
